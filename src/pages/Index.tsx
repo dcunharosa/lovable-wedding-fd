@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import PageLayout from "@/components/PageLayout";
 import { ChevronDown } from "lucide-react";
 
@@ -59,18 +58,18 @@ export const HomeSection = () => (
           </p>
         </div>
         <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center animate-fade-in" style={{ animationDelay: "0.8s" }}>
-          <Link
-            to="/rsvp"
+          <a
+            href="#rsvp"
             className="inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 hover:shadow-md transition-all duration-300 text-sm md:text-base"
           >
             RSVP
-          </Link>
-          <Link
-            to="/weekend"
+          </a>
+          <a
+            href="#weekend"
             className="inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3.5 border-2 border-foreground/90 text-foreground font-medium rounded-md hover:bg-foreground/10 transition-all duration-300 text-sm md:text-base"
           >
             View Weekend
-          </Link>
+          </a>
         </div>
       </div>
 
