@@ -17,8 +17,8 @@ const Stay = () => (
       </p>
 
       <div className="max-w-2xl w-full space-y-6 animate-fade-in">
-        {accommodations.map((acc, i) => (
-          <div key={i} className="bg-accent/50 rounded-sm p-8 text-left flex justify-between items-start gap-4">
+        {accommodations.map((acc) => (
+          <div key={acc.name} className="bg-accent/50 rounded-sm p-8 text-left flex justify-between items-start gap-4">
             <div>
               <h3 className="font-display text-2xl text-foreground mb-2">{acc.name}</h3>
               <p className="font-body text-sm text-foreground/70 leading-relaxed">{acc.desc}</p>

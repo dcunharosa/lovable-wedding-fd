@@ -2,6 +2,8 @@ import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import { toast } from "sonner";
 
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT as string;
+
 const Rsvp = () => {
   const [form, setForm] = useState({
     name: "",
@@ -12,15 +14,30 @@ const Rsvp = () => {
     message: "",
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.attending) {
       toast.error("Please fill in all required fields.");
       return;
     }
-    setSubmitted(true);
-    toast.success("Thank you for your RSVP!");
+
+    setLoading(true);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (!res.ok) throw new Error("Submission failed");
+      setSubmitted(true);
+      toast.success("Thank you for your RSVP!");
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   const inputClass =
@@ -53,10 +70,11 @@ const Rsvp = () => {
 
         <form onSubmit={handleSubmit} className="max-w-lg w-full space-y-6 animate-fade-in">
           <div>
-            <label className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+            <label htmlFor="name" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
               Full Name *
             </label>
             <input
+              id="name"
               type="text"
               className={inputClass}
               placeholder="Your name"
@@ -66,10 +84,11 @@ const Rsvp = () => {
           </div>
 
           <div>
-            <label className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+            <label htmlFor="email" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
               Email *
             </label>
             <input
+              id="email"
               type="email"
               className={inputClass}
               placeholder="your@email.com"
@@ -82,7 +101,7 @@ const Rsvp = () => {
             <label className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
               Will you attend? *
             </label>
-            <div className="flex gap-4">
+            <div className="flex gap-4" role="group" aria-label="Attendance">
               {["yes", "no"].map((opt) => (
                 <button
                   key={opt}
@@ -103,10 +122,11 @@ const Rsvp = () => {
           {form.attending === "yes" && (
             <>
               <div>
-                <label className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+                <label htmlFor="guests" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
                   Number of Guests
                 </label>
                 <select
+                  id="guests"
                   className={inputClass}
                   value={form.guests}
                   onChange={(e) => setForm({ ...form, guests: e.target.value })}
@@ -120,10 +140,11 @@ const Rsvp = () => {
               </div>
 
               <div>
-                <label className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+                <label htmlFor="dietary" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
                   Dietary Requirements
                 </label>
                 <input
+                  id="dietary"
                   type="text"
                   className={inputClass}
                   placeholder="Any allergies or preferences"
@@ -135,10 +156,11 @@ const Rsvp = () => {
           )}
 
           <div>
-            <label className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+            <label htmlFor="message" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
               Message (optional)
             </label>
             <textarea
+              id="message"
               className={`${inputClass} min-h-[100px] resize-none`}
               placeholder="A note for the couple..."
               value={form.message}
@@ -148,9 +170,10 @@ const Rsvp = () => {
 
           <button
             type="submit"
-            className="w-full bg-primary text-primary-foreground py-3 rounded-sm font-body text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors"
+            disabled={loading}
+            className="w-full bg-primary text-primary-foreground py-3 rounded-sm font-body text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors disabled:opacity-60"
           >
-            Send RSVP
+            {loading ? "Sending..." : "Send RSVP"}
           </button>
         </form>
       </section>

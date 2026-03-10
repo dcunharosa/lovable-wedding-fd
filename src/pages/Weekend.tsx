@@ -16,7 +16,7 @@ const Weekend = () => (
 
       <div className="max-w-2xl w-full space-y-12">
         {events.map((event, i) => (
-          <div key={i} className="border-l border-foreground/20 pl-8 animate-fade-in" style={{ animationDelay: `${i * 0.15}s` }}>
+          <div key={event.title} className="border-l border-foreground/20 pl-8 animate-fade-in" style={{ animationDelay: `${i * 0.15}s` }}>
             <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/50 mb-1">{event.time}</p>
             <h3 className="font-display text-2xl text-foreground mb-2">{event.title}</h3>
             <p className="font-body text-sm text-foreground/70 leading-relaxed">{event.desc}</p>
