@@ -1,9 +1,8 @@
 import PageLayout from "@/components/PageLayout";
 import { Plane, Car } from "lucide-react";
 
-const Travel = () => (
-  <PageLayout>
-    <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center">
+export const TravelSection = () => (
+  <section id="travel" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(235_45%_76%)]">
       <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Getting There</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">Travel</h1>
 
@@ -36,6 +35,11 @@ const Travel = () => (
         </div>
       </div>
     </section>
+);
+
+const Travel = () => (
+  <PageLayout>
+    <TravelSection />
   </PageLayout>
 );
 

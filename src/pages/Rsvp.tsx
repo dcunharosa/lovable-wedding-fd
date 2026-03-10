@@ -4,7 +4,9 @@ import { toast } from "sonner";
 
 const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT as string;
 
-const Rsvp = () => {
+// Exported so SinglePage can embed it without an extra PageLayout wrapper.
+// All state is self-contained, so it works correctly in both contexts.
+export const RsvpSection = () => {
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -45,25 +47,22 @@ const Rsvp = () => {
 
   if (submitted) {
     return (
-      <PageLayout>
-        <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center">
-          <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Thank You</p>
-          <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8">
-            {form.attending === "yes" ? "See You There!" : "We'll Miss You"}
-          </h1>
-          <p className="font-display text-lg text-foreground/70 italic max-w-md">
-            {form.attending === "yes"
-              ? "We can't wait to celebrate with you in Comporta."
-              : "Thank you for letting us know. We'll be thinking of you."}
-          </p>
-        </section>
-      </PageLayout>
+      <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_55%_75%)]">
+        <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Thank You</p>
+        <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8">
+          {form.attending === "yes" ? "See You There!" : "We'll Miss You"}
+        </h1>
+        <p className="font-display text-lg text-foreground/70 italic max-w-md">
+          {form.attending === "yes"
+            ? "We can't wait to celebrate with you in Comporta."
+            : "Thank you for letting us know. We'll be thinking of you."}
+        </p>
+      </section>
     );
   }
 
   return (
-    <PageLayout>
-      <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20">
+      <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_55%_75%)]">
         <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">We'd Love to Know</p>
         <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-4">RSVP</h1>
         <p className="font-display text-lg text-foreground/70 italic mb-12">Please respond by July 1st, 2026</p>
@@ -177,8 +176,13 @@ const Rsvp = () => {
           </button>
         </form>
       </section>
-    </PageLayout>
   );
 };
+
+const Rsvp = () => (
+  <PageLayout>
+    <RsvpSection />
+  </PageLayout>
+);
 
 export default Rsvp;

@@ -10,9 +10,8 @@ const faqs = [
   { q: "Can I take photos during the ceremony?", a: "We kindly ask for an unplugged ceremony. Our photographer will capture every moment. Feel free to snap away at the reception!" },
 ];
 
-const Faq = () => (
-  <PageLayout>
-    <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20">
+export const FaqSection = () => (
+  <section id="faq" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(205_40%_72%)]">
       <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Questions</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">FAQ</h1>
 
@@ -31,6 +30,11 @@ const Faq = () => (
         </Accordion>
       </div>
     </section>
+);
+
+const Faq = () => (
+  <PageLayout>
+    <FaqSection />
   </PageLayout>
 );
 

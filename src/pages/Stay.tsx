@@ -7,9 +7,8 @@ const accommodations = [
   { name: "Airbnb & Local Rentals", desc: "Plenty of charming local houses available for rent. Perfect for groups.", price: "€–€€" },
 ];
 
-const Stay = () => (
-  <PageLayout>
-    <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center">
+export const StaySection = () => (
+  <section id="stay" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(215_60%_68%)]">
       <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Where to Rest</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-6">Stay</h1>
       <p className="font-display text-lg text-foreground/70 italic max-w-lg mb-16">
@@ -28,6 +27,11 @@ const Stay = () => (
         ))}
       </div>
     </section>
+);
+
+const Stay = () => (
+  <PageLayout>
+    <StaySection />
   </PageLayout>
 );
 

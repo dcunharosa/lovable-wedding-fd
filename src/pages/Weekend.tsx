@@ -8,22 +8,26 @@ const events = [
   { time: "Sunday, Sept 13 — 11:00", title: "Farewell Brunch", desc: "A relaxed goodbye over brunch by the pool." },
 ];
 
+export const WeekendSection = () => (
+  <section id="weekend" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(215_50%_82%)]">
+    <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">The Plan</p>
+    <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">The Weekend</h1>
+
+    <div className="max-w-2xl w-full space-y-12">
+      {events.map((event, i) => (
+        <div key={event.title} className="border-l border-foreground/20 pl-8 animate-fade-in" style={{ animationDelay: `${i * 0.15}s` }}>
+          <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/50 mb-1">{event.time}</p>
+          <h3 className="font-display text-2xl text-foreground mb-2">{event.title}</h3>
+          <p className="font-body text-sm text-foreground/70 leading-relaxed">{event.desc}</p>
+        </div>
+      ))}
+    </div>
+  </section>
+);
+
 const Weekend = () => (
   <PageLayout>
-    <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20">
-      <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">The Plan</p>
-      <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">The Weekend</h1>
-
-      <div className="max-w-2xl w-full space-y-12">
-        {events.map((event, i) => (
-          <div key={event.title} className="border-l border-foreground/20 pl-8 animate-fade-in" style={{ animationDelay: `${i * 0.15}s` }}>
-            <p className="font-body text-xs tracking-[0.2em] uppercase text-foreground/50 mb-1">{event.time}</p>
-            <h3 className="font-display text-2xl text-foreground mb-2">{event.title}</h3>
-            <p className="font-body text-sm text-foreground/70 leading-relaxed">{event.desc}</p>
-          </div>
-        ))}
-      </div>
-    </section>
+    <WeekendSection />
   </PageLayout>
 );
 

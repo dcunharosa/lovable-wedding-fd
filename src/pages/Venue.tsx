@@ -1,9 +1,8 @@
 import PageLayout from "@/components/PageLayout";
 import { MapPin } from "lucide-react";
 
-const Venue = () => (
-  <PageLayout>
-    <section className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center">
+export const VenueSection = () => (
+  <section id="venue" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(195_45%_70%)]">
       <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Where It Happens</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8">The Venue</h1>
 
@@ -35,6 +34,11 @@ const Venue = () => (
         </div>
       </div>
     </section>
+);
+
+const Venue = () => (
+  <PageLayout>
+    <VenueSection />
   </PageLayout>
 );
 
