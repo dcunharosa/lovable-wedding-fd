@@ -22,9 +22,9 @@ export const WeekendSection = () => {
             </p>
           </div>
 
-          <div className="bg-primary rounded-lg p-6" style={{ textShadow: "none" }}>
-            <h4 className="font-display text-2xl text-primary-foreground mb-2">Dress Code</h4>
-            <p className="font-body text-base text-primary-foreground/70 leading-relaxed">
+          <div className="bg-card rounded-lg p-6 hover:bg-card/80 transition-colors duration-300">
+            <h4 className="font-display text-2xl text-foreground mb-2">Dress Code</h4>
+            <p className="font-body text-base text-foreground/70 leading-relaxed">
               Casual beach vibes. Think shorts, sundresses, and sandals.
             </p>
           </div>
@@ -62,9 +62,9 @@ export const WeekendSection = () => {
             </p>
           </div>
 
-          <div className="bg-primary rounded-lg p-6" style={{ textShadow: "none" }}>
-            <h4 className="font-display text-2xl text-primary-foreground mb-2">Dress Code</h4>
-            <p className="font-body text-base text-primary-foreground/70 leading-relaxed mb-6">
+          <div className="bg-card rounded-lg p-6 hover:bg-card/80 transition-colors duration-300">
+            <h4 className="font-display text-2xl text-foreground mb-2">Dress Code</h4>
+            <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
               Smart casual with a countryside twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -73,7 +73,7 @@ export const WeekendSection = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-primary-foreground/30 text-primary-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-primary-foreground/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
               >
                 <ExternalLink size={14} />
                 Inspiration for Him
@@ -82,7 +82,7 @@ export const WeekendSection = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-primary-foreground/30 text-primary-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-primary-foreground/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
               >
                 <ExternalLink size={14} />
                 Inspiration for Her
