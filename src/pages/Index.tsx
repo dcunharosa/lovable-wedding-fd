@@ -14,33 +14,33 @@ export const HomeSection = () => {
       <section className="relative min-h-[100vh] flex items-center justify-center text-center px-4 overflow-hidden bg-[hsl(220_55%_75%)]">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
 
-        {/* Decorative illustrations */}
+        {/* Decorative hand-drawn illustrations */}
         <div className="absolute top-20 left-4 md:left-12 lg:left-20 w-12 md:w-16 lg:w-20 opacity-50">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/big-ben.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/big-ben.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         <div className="absolute top-20 right-4 md:right-12 lg:right-20 w-16 md:w-20 lg:w-24 opacity-50">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/flower-vase.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/flower-vase.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         <div className="absolute top-12 md:top-16 left-1/2 -translate-x-1/2 w-20 md:w-28 lg:w-32 opacity-40 animate-float">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         <div className="absolute top-1/3 left-2 md:left-8 lg:left-16 w-12 md:w-16 lg:w-20 opacity-40">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         <div className="absolute top-1/3 right-2 md:right-8 lg:right-16 w-12 md:w-16 lg:w-20 opacity-50">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dancer.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dancer.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         <div className="absolute bottom-24 md:bottom-28 left-4 md:left-12 lg:left-20 w-14 md:w-18 lg:w-24 opacity-40">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/cristo-redentor.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/single-flower.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         <div className="absolute bottom-20 md:bottom-24 left-1/4 w-16 md:w-20 lg:w-24 opacity-35">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/amore.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/amore.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 w-full opacity-35">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dunes.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <div className="absolute bottom-16 md:bottom-20 right-4 md:right-12 lg:right-20 w-20 md:w-28 lg:w-32 opacity-35">
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dunes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         <div className="absolute bottom-36 md:bottom-40 right-8 md:right-16 lg:right-24 w-8 md:w-10 lg:w-12 opacity-35 animate-float" style={{ animationDelay: "1.5s" }}>
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/heart.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/heart.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
 
         <div className="relative z-10 max-w-4xl mx-auto" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.25)" }}>
