@@ -130,7 +130,7 @@ export const RsvpSection = () => {
                   value={form.guests}
                   onChange={(e) => setForm({ ...form, guests: e.target.value })}
                 >
-                  {[1, 2, 3, 4].map((n) => (
+                  {[1, 2].map((n) => (
                     <option key={n} value={n} className="bg-background text-foreground">
                       {n}
                     </option>
