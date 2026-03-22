@@ -1,7 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 
 export const WeekendSection = () => (
-  <section id="weekend" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(215_50%_82%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
+  <section id="weekend" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_55%_75%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
     <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">The Plan</p>
     <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">The Weekend</h1>
 

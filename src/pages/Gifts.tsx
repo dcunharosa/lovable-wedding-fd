@@ -6,7 +6,7 @@ export const GiftsSection = () => {
   const [showIban, setShowIban] = useState(false);
 
   return (
-    <section id="gifts" className="min-h-[60vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(215_50%_82%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
+    <section id="gifts" className="min-h-[60vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_55%_75%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Gifts</p>
       <h1 className="font-display text-4xl md:text-6xl font-light text-foreground mb-8">Your Presence Is Our Present</h1>
 
