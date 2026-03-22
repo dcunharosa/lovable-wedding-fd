@@ -1,6 +1,7 @@
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import { MapPin, ExternalLink, Download, X } from "lucide-react";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const venuePhotos = [
   { src: "/venue/venue-1.jpg", alt: "Monte da Várzea venue" },
@@ -9,6 +10,7 @@ const venuePhotos = [
 
 export const VenueSection = () => {
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
+  const cardsRef = useScrollReveal<HTMLDivElement>(".venue-card");
 
   return (
     <section id="venue" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
@@ -33,7 +35,7 @@ export const VenueSection = () => {
             key={photo.src}
             type="button"
             onClick={() => setLightboxSrc(photo.src)}
-            className="aspect-[4/3] rounded-md overflow-hidden bg-foreground/10 cursor-pointer"
+            className="aspect-[4/3] rounded-md overflow-hidden bg-foreground/10 cursor-pointer transition-transform duration-300 hover:scale-[1.03]"
           >
             <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
           </button>
@@ -63,8 +65,8 @@ export const VenueSection = () => {
         </div>
       )}
 
-      <div className="max-w-2xl space-y-8 mt-8">
-        <div className="bg-foreground/10 rounded-sm p-8">
+      <div ref={cardsRef} className="max-w-2xl space-y-8 mt-8">
+        <div className="venue-card scroll-scale-in bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-8 border border-foreground/10">
           <h3 className="font-display text-3xl text-foreground mb-4">Ceremony & Reception</h3>
           <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
             Ceremony and reception will both be held at Monte da Várzea venue. Bring comfortable shoes. Parking will be available.

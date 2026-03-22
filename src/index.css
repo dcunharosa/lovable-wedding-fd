@@ -80,11 +80,59 @@ html {
   }
 }
 
-/* Wave decoration */
-.wave-decoration {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  pointer-events: none;
+/* --- Scroll-reveal animations --- */
+@layer utilities {
+  .scroll-fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .scroll-fade-up.scroll-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-fade-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .scroll-fade-left.scroll-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-fade-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+  }
+  .scroll-fade-right.scroll-visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-scale-in {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .scroll-scale-in.scroll-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-fade-up,
+  .scroll-fade-left,
+  .scroll-fade-right,
+  .scroll-scale-in {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  .animate-float {
+    animation: none !important;
+  }
 }

@@ -19,7 +19,7 @@ export const GiftsSection = () => {
         </p>
 
         {showIban ? (
-          <div className="bg-foreground/10 rounded-sm p-6 space-y-3">
+          <div className="animate-scale-in bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-6 border border-foreground/10 space-y-3">
             <p className="font-body text-sm tracking-widest uppercase text-foreground/50">Bank Details</p>
             {/* TODO: Replace with actual IBAN */}
             <p className="font-body text-lg text-foreground tracking-wide">

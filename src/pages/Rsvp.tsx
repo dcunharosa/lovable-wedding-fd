@@ -49,7 +49,7 @@ export const RsvpSection = () => {
     return (
       <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_55%_75%)]">
         <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Thank You</p>
-        <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8">
+        <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8 animate-scale-in">
           {form.attending === "yes" ? "See You There!" : "We'll Miss You"}
         </h1>
         <p className="font-display text-xl text-foreground/70 italic max-w-md">

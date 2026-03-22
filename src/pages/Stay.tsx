@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const accommodations = [
   { name: "Sublime Comporta", desc: "Luxury hotel set among the rice fields and pine trees. Our top pick for a special stay.", price: "€€€" },
@@ -7,17 +8,24 @@ const accommodations = [
   { name: "Airbnb & Local Rentals", desc: "Plenty of charming local houses available for rent. Perfect for groups.", price: "€–€€" },
 ];
 
-export const StaySection = () => (
-  <section id="stay" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
+export const StaySection = () => {
+  const cardsRef = useScrollReveal<HTMLDivElement>(".stay-card");
+
+  return (
+    <section id="stay" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Where to Rest</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-6">Stay</h1>
       <p className="font-display text-xl text-foreground/70 italic max-w-lg mb-16">
         We recommend booking early — September is a popular time in Comporta.
       </p>
 
-      <div className="max-w-2xl w-full space-y-6 animate-fade-in">
-        {accommodations.map((acc) => (
-          <div key={acc.name} className="bg-foreground/10 rounded-sm p-8 text-left flex justify-between items-start gap-4">
+      <div ref={cardsRef} className="max-w-2xl w-full space-y-6">
+        {accommodations.map((acc, i) => (
+          <div
+            key={acc.name}
+            className="stay-card scroll-fade-up border border-foreground/15 rounded-md p-8 text-left flex justify-between items-start gap-4 hover:bg-foreground/5 hover:border-foreground/30 transition-all duration-300"
+            style={{ transitionDelay: `${(i + 1) * 0.1}s` }}
+          >
             <div>
               <h3 className="font-display text-3xl text-foreground mb-2">{acc.name}</h3>
               <p className="font-body text-base text-foreground/70 leading-relaxed">{acc.desc}</p>
@@ -27,7 +35,8 @@ export const StaySection = () => (
         ))}
       </div>
     </section>
-);
+  );
+};
 
 const Stay = () => (
   <PageLayout>

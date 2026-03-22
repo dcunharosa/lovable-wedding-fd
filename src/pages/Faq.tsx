@@ -1,5 +1,6 @@
 import PageLayout from "@/components/PageLayout";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const faqs = [
   { q: "Can I bring a plus one?", a: "Please refer to your invitation for details on your plus one. If you have questions, reach out to us directly." },
@@ -10,15 +11,18 @@ const faqs = [
   { q: "Can I take photos during the ceremony?", a: "We kindly ask for an unplugged ceremony. Our photographer will capture every moment. Feel free to snap away at the reception!" },
 ];
 
-export const FaqSection = () => (
-  <section id="faq" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
+export const FaqSection = () => {
+  const faqRef = useScrollReveal<HTMLDivElement>(".faq-item");
+
+  return (
+    <section id="faq" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Questions</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">FAQ</h1>
 
-      <div className="max-w-2xl w-full animate-fade-in">
+      <div ref={faqRef} className="max-w-2xl w-full">
         <Accordion type="single" collapsible className="space-y-2">
           {faqs.map((faq, i) => (
-            <AccordionItem key={i} value={`item-${i}`} className="border-foreground/10">
+            <AccordionItem key={i} value={`item-${i}`} className="faq-item scroll-fade-up border-foreground/10" style={{ transitionDelay: `${(i + 1) * 0.1}s` }}>
               <AccordionTrigger className="font-display text-xl text-foreground hover:no-underline py-4">
                 {faq.q}
               </AccordionTrigger>
@@ -30,7 +34,8 @@ export const FaqSection = () => (
         </Accordion>
       </div>
     </section>
-);
+  );
+};
 
 const Faq = () => (
   <PageLayout>
