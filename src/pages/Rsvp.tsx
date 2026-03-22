@@ -43,16 +43,16 @@ export const RsvpSection = () => {
   };
 
   const inputClass =
-    "w-full bg-transparent border border-foreground/20 rounded-sm px-4 py-3 font-body text-sm text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground/50 transition-colors";
+    "w-full bg-transparent border border-foreground/20 rounded-sm px-4 py-3 font-body text-base text-foreground placeholder:text-foreground/30 focus:outline-none focus:border-foreground/50 transition-colors";
 
   if (submitted) {
     return (
-      <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_55%_75%)]">
-        <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Thank You</p>
+      <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(215_50%_82%)]">
+        <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Thank You</p>
         <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8">
           {form.attending === "yes" ? "See You There!" : "We'll Miss You"}
         </h1>
-        <p className="font-display text-lg text-foreground/70 italic max-w-md">
+        <p className="font-display text-xl text-foreground/70 italic max-w-md">
           {form.attending === "yes"
             ? "We can't wait to celebrate with you in Comporta."
             : "Thank you for letting us know. We'll be thinking of you."}
@@ -62,14 +62,14 @@ export const RsvpSection = () => {
   }
 
   return (
-      <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_55%_75%)]">
-        <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">We'd Love to Know</p>
+      <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(215_50%_82%)]">
+        <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">We'd Love to Know</p>
         <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-4">RSVP</h1>
-        <p className="font-display text-lg text-foreground/70 italic mb-12">Please respond by July 1st, 2026</p>
+        <p className="font-display text-xl text-foreground/70 italic mb-12">Please respond by July 1st, 2026</p>
 
         <form onSubmit={handleSubmit} className="max-w-lg w-full space-y-6 animate-fade-in">
           <div>
-            <label htmlFor="name" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+            <label htmlFor="name" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
               Full Name *
             </label>
             <input
@@ -83,7 +83,7 @@ export const RsvpSection = () => {
           </div>
 
           <div>
-            <label htmlFor="email" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+            <label htmlFor="email" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
               Email *
             </label>
             <input
@@ -97,7 +97,7 @@ export const RsvpSection = () => {
           </div>
 
           <div>
-            <label className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+            <label className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
               Will you attend? *
             </label>
             <div className="flex gap-4" role="group" aria-label="Attendance">
@@ -106,7 +106,7 @@ export const RsvpSection = () => {
                   key={opt}
                   type="button"
                   onClick={() => setForm({ ...form, attending: opt })}
-                  className={`flex-1 py-3 rounded-sm border font-body text-sm tracking-widest uppercase transition-colors ${
+                  className={`flex-1 py-3 rounded-sm border font-body text-base tracking-widest uppercase transition-colors ${
                     form.attending === opt
                       ? "bg-primary text-primary-foreground border-primary"
                       : "border-foreground/20 text-foreground/70 hover:border-foreground/40"
@@ -121,7 +121,7 @@ export const RsvpSection = () => {
           {form.attending === "yes" && (
             <>
               <div>
-                <label htmlFor="guests" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+                <label htmlFor="guests" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
                   Number of Guests
                 </label>
                 <select
@@ -139,7 +139,7 @@ export const RsvpSection = () => {
               </div>
 
               <div>
-                <label htmlFor="dietary" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+                <label htmlFor="dietary" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
                   Dietary Requirements
                 </label>
                 <input
@@ -155,7 +155,7 @@ export const RsvpSection = () => {
           )}
 
           <div>
-            <label htmlFor="message" className="font-body text-xs tracking-widest uppercase text-foreground/50 mb-2 block">
+            <label htmlFor="message" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
               Message (optional)
             </label>
             <textarea
@@ -170,7 +170,7 @@ export const RsvpSection = () => {
           <button
             type="submit"
             disabled={loading}
-            className="w-full bg-primary text-primary-foreground py-3 rounded-sm font-body text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors disabled:opacity-60"
+            className="w-full bg-primary text-primary-foreground py-3 rounded-sm font-body text-base tracking-widest uppercase hover:bg-primary/90 transition-colors disabled:opacity-60"
           >
             {loading ? "Sending..." : "Send RSVP"}
           </button>

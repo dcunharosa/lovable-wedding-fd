@@ -83,10 +83,10 @@ export const HomeSection = () => (
 
     {/* Our Story */}
     <section className="py-20 px-4 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.2)" }}>
-      <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-6">
+      <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-6">
         Our Story
       </p>
-      <p className="font-display text-2xl md:text-3xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12">
+      <p className="font-display text-3xl md:text-4xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12">
         What started with a chance meeting has grown into a love we want to celebrate with all of you — by the sea, under the stars.
       </p>
 

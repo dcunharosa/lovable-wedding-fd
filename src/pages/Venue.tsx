@@ -11,17 +11,17 @@ export const VenueSection = () => {
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   return (
-    <section id="venue" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(195_45%_70%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
-      <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Where It Happens</p>
+    <section id="venue" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
+      <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Where It Happens</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8">The Venue</h1>
 
       <div className="max-w-2xl animate-fade-in">
         <div className="flex items-center justify-center gap-2 text-foreground/70">
           <MapPin size={18} />
-          <p className="font-body text-sm tracking-widest uppercase">Monte da Várzea — Comporta, Portugal</p>
+          <p className="font-body text-base tracking-widest uppercase">Comporta, Portugal</p>
         </div>
 
-        <p className="font-display text-xl text-foreground/80 italic leading-relaxed mt-8">
+        <p className="font-display text-2xl text-foreground/80 italic leading-relaxed mt-8">
           Nestled between golden rice paddies and the Atlantic Ocean, Comporta is one of Portugal's most beautiful and unspoiled coastal retreats.
         </p>
       </div>
@@ -65,8 +65,8 @@ export const VenueSection = () => {
 
       <div className="max-w-2xl space-y-8 mt-8">
         <div className="bg-foreground/10 rounded-sm p-8">
-          <h3 className="font-display text-2xl text-foreground mb-4">Ceremony & Reception</h3>
-          <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
+          <h3 className="font-display text-3xl text-foreground mb-4">Ceremony & Reception</h3>
+          <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
             Ceremony and reception will both be held at Monte da Várzea venue. Bring comfortable shoes. Parking will be available.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -75,7 +75,7 @@ export const VenueSection = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-xs tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
             >
               <ExternalLink size={14} />
               Google Maps
@@ -84,7 +84,7 @@ export const VenueSection = () => {
             <a
               href="/directions.pdf"
               download
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-xs tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
             >
               <Download size={14} />
               Directions PDF
@@ -93,8 +93,8 @@ export const VenueSection = () => {
         </div>
 
         <div className="bg-foreground/10 rounded-sm p-8">
-          <h3 className="font-display text-2xl text-foreground mb-4">Dress Code</h3>
-          <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6">
+          <h3 className="font-display text-3xl text-foreground mb-4">Dress Code</h3>
+          <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
             Smart casual with a beach twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -103,7 +103,7 @@ export const VenueSection = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-xs tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
             >
               <ExternalLink size={14} />
               Men's Inspiration
@@ -112,7 +112,7 @@ export const VenueSection = () => {
               href="#"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-xs tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
             >
               <ExternalLink size={14} />
               Women's Inspiration
