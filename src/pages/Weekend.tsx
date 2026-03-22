@@ -1,4 +1,5 @@
 import PageLayout from "@/components/PageLayout";
+import { ExternalLink } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export const WeekendSection = () => {
@@ -63,9 +64,30 @@ export const WeekendSection = () => {
 
           <div className="bg-white/8 backdrop-blur-sm border border-white/15 rounded-lg p-6 hover:bg-white/12 transition-colors duration-300">
             <h4 className="font-display text-2xl text-foreground mb-2">Dress Code</h4>
-            <p className="font-body text-base text-foreground/70 leading-relaxed">
-              Smart casual with a beach twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
+            <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
+              Smart casual with a countryside twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              {/* TODO: Replace # with actual inspiration links */}
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+              >
+                <ExternalLink size={14} />
+                Inspiration for Him
+              </a>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+              >
+                <ExternalLink size={14} />
+                Inspiration for Her
+              </a>
+            </div>
           </div>
         </div>
       </div>
