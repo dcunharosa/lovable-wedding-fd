@@ -24,7 +24,7 @@ export const HomeSection = () => {
         <div className="absolute top-12 md:top-16 left-1/2 -translate-x-1/2 w-20 md:w-28 lg:w-32 opacity-40 animate-float">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute top-1/3 left-2 md:left-8 lg:left-16 w-12 md:w-16 lg:w-20 opacity-40">
+        <div className="absolute top-[55%] left-2 md:left-8 lg:left-16 w-12 md:w-16 lg:w-20 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         <div className="absolute top-1/3 right-2 md:right-8 lg:right-16 w-12 md:w-16 lg:w-20 opacity-50">
@@ -39,7 +39,7 @@ export const HomeSection = () => {
         <div className="absolute bottom-16 md:bottom-20 right-4 md:right-12 lg:right-20 w-20 md:w-28 lg:w-32 opacity-35">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dunes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute bottom-36 md:bottom-40 right-8 md:right-16 lg:right-24 w-8 md:w-10 lg:w-12 opacity-35 animate-float" style={{ animationDelay: "1.5s" }}>
+        <div className="absolute top-[30%] right-[28%] md:right-[22%] w-8 md:w-10 lg:w-12 opacity-35 animate-float" style={{ animationDelay: "1.5s" }}>
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/heart.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
 
