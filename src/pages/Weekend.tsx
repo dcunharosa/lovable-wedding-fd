@@ -22,7 +22,7 @@ export const WeekendSection = () => {
             </p>
           </div>
 
-          <div className="border-t border-foreground/15 pt-6">
+          <div className="bg-white/8 rounded-lg p-6">
             <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-2">Dress Code</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
               Casual beach vibes. Think shorts, sundresses, and sandals.
@@ -62,7 +62,7 @@ export const WeekendSection = () => {
             </p>
           </div>
 
-          <div className="border-t border-foreground/15 pt-6">
+          <div className="bg-white/8 rounded-lg p-6">
             <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-2">Dress Code</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
               Smart casual with a countryside twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
