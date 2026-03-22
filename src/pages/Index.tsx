@@ -10,38 +10,38 @@ export const HomeSection = () => (
     <section className="relative min-h-[100vh] flex items-center justify-center text-center px-4 overflow-hidden bg-[hsl(220_55%_75%)]">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
 
-      {/* Decorative illustrations */}
+      {/* Decorative illustrations — swap src when Save the Date drawings are provided */}
       <div className="absolute top-20 left-4 md:left-12 lg:left-20 w-12 md:w-16 lg:w-20 opacity-50">
-        <img alt="" src="/illustrations/big-ben.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/big-ben.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
       <div className="absolute top-20 right-4 md:right-12 lg:right-20 w-16 md:w-20 lg:w-24 opacity-50">
-        <img alt="" src="/illustrations/flower-vase.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/flower-vase.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
       <div className="absolute top-12 md:top-16 left-1/2 -translate-x-1/2 w-20 md:w-28 lg:w-32 opacity-40">
-        <img alt="" src="/illustrations/seagulls.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
       <div className="absolute top-1/3 left-2 md:left-8 lg:left-16 w-12 md:w-16 lg:w-20 opacity-40">
-        <img alt="" src="/illustrations/music-notes.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
       <div className="absolute top-1/3 right-2 md:right-8 lg:right-16 w-12 md:w-16 lg:w-20 opacity-50">
-        <img alt="" src="/illustrations/dancer.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dancer.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
       <div className="absolute bottom-24 md:bottom-28 left-4 md:left-12 lg:left-20 w-14 md:w-18 lg:w-24 opacity-40">
-        <img alt="" src="/illustrations/cristo-redentor.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/cristo-redentor.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
       <div className="absolute bottom-20 md:bottom-24 left-1/4 w-16 md:w-20 lg:w-24 opacity-35">
-        <img alt="" src="/illustrations/amore.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/amore.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
       <div className="absolute bottom-0 left-0 right-0 w-full opacity-35">
-        <img alt="" src="/illustrations/dunes.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dunes.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
       <div className="absolute bottom-36 md:bottom-40 right-8 md:right-16 lg:right-24 w-8 md:w-10 lg:w-12 opacity-35">
-        <img alt="" src="/illustrations/heart.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+        <img alt="" aria-hidden="true" role="presentation" src="/illustrations/heart.svg" className="w-full h-auto" style={{ filter: illustrationFilter }} />
       </div>
 
-      <div className="relative z-10 max-w-4xl mx-auto" style={{ textShadow: "0 2px 4px rgba(0,0,0,0.08)" }}>
+      <div className="relative z-10 max-w-4xl mx-auto" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.25)" }}>
         <p className="font-body text-xs md:text-sm tracking-[0.35em] uppercase text-foreground/90 mb-6 md:mb-8 animate-fade-in">
-          Save the Date
+          Our Wedding
         </p>
         <h1 className="font-display font-light text-foreground text-4xl md:text-6xl lg:text-8xl tracking-wider mb-8 md:mb-10 leading-[1.1] uppercase animate-fade-in" style={{ animationDelay: "0.2s" }}>
           FILIPA & DUARTE
@@ -82,13 +82,33 @@ export const HomeSection = () => (
     </section>
 
     {/* Our Story */}
-    <section className="py-20 px-4 text-center bg-[hsl(220_50%_65%)]">
+    <section className="py-20 px-4 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.2)" }}>
       <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-6">
         Our Story
       </p>
-      <p className="font-display text-2xl md:text-3xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed">
+      <p className="font-display text-2xl md:text-3xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12">
         What started with a chance meeting has grown into a love we want to celebrate with all of you — by the sea, under the stars.
       </p>
+
+      {/* Couple photos — replace src with your own photos in public/photos/ */}
+      <div className="flex flex-col md:flex-row gap-6 justify-center items-center max-w-3xl mx-auto">
+        <div className="w-full md:w-1/2 aspect-[4/3] rounded-md overflow-hidden bg-foreground/10">
+          <img
+            src="/photos/couple-1.jpg"
+            alt="Filipa and Duarte"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+        <div className="w-full md:w-1/2 aspect-[4/3] rounded-md overflow-hidden bg-foreground/10">
+          <img
+            src="/photos/couple-2.jpg"
+            alt="Filipa and Duarte"
+            className="w-full h-full object-cover"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </section>
   </div>
 );

@@ -5,6 +5,7 @@ import { WeekendSection } from "./Weekend";
 import { VenueSection } from "./Venue";
 import { TravelSection } from "./Travel";
 import { StaySection } from "./Stay";
+import { GiftsSection } from "./Gifts";
 import { FaqSection } from "./Faq";
 import { RsvpSection } from "./Rsvp";
 
@@ -26,6 +27,7 @@ const SinglePage = () => {
       <VenueSection />
       <TravelSection />
       <StaySection />
+      <GiftsSection />
       <FaqSection />
       <RsvpSection />
     </PageLayout>

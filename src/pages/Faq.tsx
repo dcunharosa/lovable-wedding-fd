@@ -11,7 +11,7 @@ const faqs = [
 ];
 
 export const FaqSection = () => (
-  <section id="faq" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(205_40%_72%)]">
+  <section id="faq" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(205_40%_72%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
       <p className="font-body text-sm tracking-[0.3em] uppercase text-foreground/60 mb-4">Questions</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">FAQ</h1>
 

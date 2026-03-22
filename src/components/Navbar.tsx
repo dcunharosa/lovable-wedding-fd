@@ -9,6 +9,7 @@ const navItems = [
   { label: "Venue", path: "/venue", id: "venue" },
   { label: "Travel", path: "/travel", id: "travel" },
   { label: "Stay", path: "/stay", id: "stay" },
+  { label: "Gifts", path: "/gifts", id: "gifts" },
   { label: "FAQ", path: "/faq", id: "faq" },
 ];
 
