@@ -1,13 +1,11 @@
 import PageLayout from "@/components/PageLayout";
+import PhotoCarousel from "@/components/PhotoCarousel";
 import { ChevronDown } from "lucide-react";
-import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const illustrationFilter = "brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(200%) hue-rotate(20deg) brightness(103%) contrast(95%)";
 
 // Exported so SinglePage can embed it without an extra PageLayout wrapper.
 export const HomeSection = () => {
-  const photosRef = useScrollReveal<HTMLDivElement>(".story-photo");
-
   return (
     <div id="home">
       {/* Hero */}
@@ -86,33 +84,16 @@ export const HomeSection = () => {
       </section>
 
       {/* Our Story */}
-      <section className="py-20 px-4 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.2)" }}>
-        <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-6">
+      <section className="py-20 text-center bg-[hsl(220_50%_65%)] overflow-hidden" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.2)" }}>
+        <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-6 px-4">
           Our Story
         </p>
-        <p className="font-display text-3xl md:text-4xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12">
+        <p className="font-display text-3xl md:text-4xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12 px-4">
           What started with a chance meeting has grown into a love we want to celebrate with all of you — by the sea, under the stars.
         </p>
 
-        {/* Couple photos */}
-        <div ref={photosRef} className="flex flex-col md:flex-row gap-6 justify-center items-center max-w-3xl mx-auto">
-          <div className="story-photo scroll-fade-up w-full md:w-1/2 aspect-[4/3] rounded-md overflow-hidden bg-foreground/10" style={{ transitionDelay: "0.1s" }}>
-            <img
-              src="/photos/couple-1.jpg"
-              alt="Filipa and Duarte"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-          <div className="story-photo scroll-fade-up w-full md:w-1/2 aspect-[4/3] rounded-md overflow-hidden bg-foreground/10" style={{ transitionDelay: "0.25s" }}>
-            <img
-              src="/photos/couple-2.jpg"
-              alt="Filipa and Duarte"
-              className="w-full h-full object-cover"
-              loading="lazy"
-            />
-          </div>
-        </div>
+        {/* Couple photos carousel */}
+        <PhotoCarousel />
       </section>
     </div>
   );
