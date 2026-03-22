@@ -17,15 +17,12 @@ export const VenueSection = () => (
         </p>
 
         {/* Venue photos — replace src with your own photos in public/venue/ */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
           <div className="aspect-[4/3] rounded-md overflow-hidden bg-foreground/10">
             <img src="/venue/venue-1.jpg" alt="Monte da Várzea venue" className="w-full h-full object-cover" loading="lazy" />
           </div>
           <div className="aspect-[4/3] rounded-md overflow-hidden bg-foreground/10">
             <img src="/venue/venue-2.jpg" alt="Monte da Várzea venue" className="w-full h-full object-cover" loading="lazy" />
-          </div>
-          <div className="aspect-[4/3] rounded-md overflow-hidden bg-foreground/10">
-            <img src="/venue/venue-3.jpg" alt="Monte da Várzea venue" className="w-full h-full object-cover" loading="lazy" />
           </div>
         </div>
 
