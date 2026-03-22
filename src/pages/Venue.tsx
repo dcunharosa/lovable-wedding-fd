@@ -17,7 +17,7 @@ export const VenueSection = () => (
         </p>
 
         {/* Venue photos */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 w-screen max-w-5xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 w-screen max-w-[90vw]">
           <div className="aspect-[4/3] rounded-md overflow-hidden bg-foreground/10">
             <img src="/venue/venue-1.jpg" alt="Monte da Várzea venue" className="w-full h-full object-cover" loading="lazy" />
           </div>
