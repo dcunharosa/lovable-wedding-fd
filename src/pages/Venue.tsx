@@ -16,8 +16,8 @@ export const VenueSection = () => (
           Nestled between golden rice paddies and the Atlantic Ocean, Comporta is one of Portugal's most beautiful and unspoiled coastal retreats.
         </p>
 
-        {/* Venue photos — replace src with your own photos in public/venue/ */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+        {/* Venue photos */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8 w-screen max-w-5xl">
           <div className="aspect-[4/3] rounded-md overflow-hidden bg-foreground/10">
             <img src="/venue/venue-1.jpg" alt="Monte da Várzea venue" className="w-full h-full object-cover" loading="lazy" />
           </div>
