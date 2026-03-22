@@ -22,8 +22,8 @@ export const WeekendSection = () => {
             </p>
           </div>
 
-          <div className="bg-card rounded-lg p-6 hover:bg-card/80 transition-colors duration-300">
-            <h4 className="font-display text-2xl text-foreground mb-2">Dress Code</h4>
+          <div className="border-t border-foreground/15 pt-6">
+            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-2">Dress Code</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
               Casual beach vibes. Think shorts, sundresses, and sandals.
             </p>
@@ -62,12 +62,12 @@ export const WeekendSection = () => {
             </p>
           </div>
 
-          <div className="bg-card rounded-lg p-6 hover:bg-card/80 transition-colors duration-300">
-            <h4 className="font-display text-2xl text-foreground mb-2">Dress Code</h4>
+          <div className="border-t border-foreground/15 pt-6">
+            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-2">Dress Code</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
               Smart casual with a countryside twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4">
               {/* TODO: Replace # with actual inspiration links */}
               <a
                 href="#"
