@@ -91,34 +91,6 @@ export const VenueSection = () => {
             </a>
           </div>
         </div>
-
-        <div className="bg-foreground/10 rounded-sm p-8">
-          <h3 className="font-display text-3xl text-foreground mb-4">Dress Code</h3>
-          <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
-            Smart casual with a beach twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* TODO: Replace # with actual inspiration links */}
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
-            >
-              <ExternalLink size={14} />
-              Men's Inspiration
-            </a>
-            <a
-              href="#"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
-            >
-              <ExternalLink size={14} />
-              Women's Inspiration
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

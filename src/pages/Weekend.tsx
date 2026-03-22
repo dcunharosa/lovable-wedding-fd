@@ -7,13 +7,22 @@ export const WeekendSection = () => (
 
     <div className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 animate-fade-in">
       {/* Friday */}
-      <div className="border-l border-foreground/20 pl-8">
-        <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Friday</p>
-        <h3 className="font-display text-3xl text-foreground mb-2">Welcome Drinks</h3>
-        <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-4">From 6pm</p>
-        <p className="font-body text-base text-foreground/70 leading-relaxed">
-          A casual gathering at the beach with drinks & music to get the weekend started. For those with the energy for 2 nights in a row! :)
-        </p>
+      <div className="border-l border-foreground/20 pl-8 space-y-10">
+        <div>
+          <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Friday</p>
+          <h3 className="font-display text-3xl text-foreground mb-2">Welcome Drinks</h3>
+          <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-4">From 6pm</p>
+          <p className="font-body text-base text-foreground/70 leading-relaxed">
+            A casual gathering at the beach with drinks & music to get the weekend started. For those with the energy for 2 nights in a row! :)
+          </p>
+        </div>
+
+        <div className="bg-foreground/10 rounded-sm p-6">
+          <h4 className="font-display text-2xl text-foreground mb-2">Dress Code</h4>
+          <p className="font-body text-base text-foreground/70 leading-relaxed">
+            Casual beach vibes. Think shorts, sundresses, and sandals.
+          </p>
+        </div>
       </div>
 
       {/* Saturday */}
@@ -45,6 +54,13 @@ export const WeekendSection = () => (
           <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-2">3:30pm</p>
           <p className="font-body text-base text-foreground/70 leading-relaxed">
             Lunch served while you can keep on dancing until late.
+          </p>
+        </div>
+
+        <div className="bg-foreground/10 rounded-sm p-6">
+          <h4 className="font-display text-2xl text-foreground mb-2">Dress Code</h4>
+          <p className="font-body text-base text-foreground/70 leading-relaxed">
+            Smart casual with a beach twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
           </p>
         </div>
       </div>
