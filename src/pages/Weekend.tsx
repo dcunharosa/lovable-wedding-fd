@@ -1,6 +1,40 @@
 import PageLayout from "@/components/PageLayout";
-import { ExternalLink } from "lucide-react";
+import { CalendarPlus, ExternalLink } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+
+function makeIcs(title: string, start: string, end: string, location: string, description: string) {
+  const ics = [
+    "BEGIN:VCALENDAR",
+    "VERSION:2.0",
+    "PRODID:-//Wedding//EN",
+    "BEGIN:VEVENT",
+    `DTSTART;TZID=Europe/Lisbon:${start}`,
+    `DTEND;TZID=Europe/Lisbon:${end}`,
+    `SUMMARY:${title}`,
+    `LOCATION:${location}`,
+    `DESCRIPTION:${description}`,
+    "END:VEVENT",
+    "END:VCALENDAR",
+  ].join("\r\n");
+  return "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
+}
+
+const calendarEvents = {
+  welcomeDrinks: makeIcs(
+    "Filipa & Duarte — Welcome Drinks",
+    "20260911T180000",
+    "20260911T230000",
+    "Comporta, Portugal",
+    "Casual gathering at the beach with drinks & music.",
+  ),
+  ceremony: makeIcs(
+    "Filipa & Duarte — Wedding",
+    "20260912T123000",
+    "20260913T020000",
+    "Comporta, Portugal",
+    "Ceremony at 1pm, cocktail at 2pm, lunch & party from 3:30pm.",
+  ),
+};
 
 export const WeekendSection = () => {
   const gridRef = useScrollReveal<HTMLDivElement>(".weekend-col");
@@ -17,9 +51,17 @@ export const WeekendSection = () => {
             <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Friday</p>
             <h3 className="font-display text-3xl text-foreground mb-2">Welcome Drinks</h3>
             <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-4">From 6pm</p>
-            <p className="font-body text-base text-foreground/70 leading-relaxed">
+            <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
               A casual gathering at the beach with drinks & music to get the weekend started. For those with the energy for 2 nights in a row! :)
             </p>
+            <a
+              href={calendarEvents.welcomeDrinks}
+              download="welcome-drinks.ics"
+              className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
+            >
+              <CalendarPlus size={13} />
+              Add to calendar
+            </a>
           </div>
 
           <div className="border-l-2 border-white/40 pl-6">
@@ -40,10 +82,18 @@ export const WeekendSection = () => {
           <div>
             <h4 className="font-display text-2xl text-foreground mb-1">Ceremony</h4>
             <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-2">1pm</p>
-            <p className="font-body text-base text-foreground/70 leading-relaxed">
+            <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
               An intimate ceremony in the countryside.<br />
               Please arrive by 12:30.
             </p>
+            <a
+              href={calendarEvents.ceremony}
+              download="wedding-ceremony.ics"
+              className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
+            >
+              <CalendarPlus size={13} />
+              Add to calendar
+            </a>
           </div>
 
           <div>
