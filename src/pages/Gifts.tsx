@@ -1,6 +1,5 @@
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
-import { Heart } from "lucide-react";
 
 export const GiftsSection = () => {
   const [showIban, setShowIban] = useState(false);
@@ -11,9 +10,6 @@ export const GiftsSection = () => {
       <h1 className="font-display text-4xl md:text-6xl font-light text-foreground mb-8">Your Presence Is Our Present</h1>
 
       <div className="max-w-lg space-y-8 animate-fade-in">
-        <div className="flex justify-center">
-          <Heart size={28} className="text-foreground/40" />
-        </div>
         <p className="font-display text-2xl text-foreground/80 italic leading-relaxed">
           The best gift is to celebrate this day with the people we love most.
         </p>
