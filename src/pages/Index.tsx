@@ -9,69 +9,94 @@ export const HomeSection = () => {
   return (
     <div id="home">
       {/* Hero */}
-      <section className="relative min-h-[100vh] flex items-center justify-center text-center px-4 overflow-hidden bg-[hsl(220_55%_75%)]">
+      <section className="relative min-h-[100vh] flex items-center justify-center px-4 sm:px-8 lg:px-16 overflow-hidden bg-[hsl(220_55%_75%)]">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
 
         {/* Decorative hand-drawn illustrations */}
+        {/* Top-left: Big Ben */}
         <div className="absolute top-20 left-4 md:left-12 lg:left-20 w-12 md:w-16 lg:w-20 opacity-50">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/big-ben.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
+        {/* Top-right: Flower Vase */}
         <div className="absolute top-20 right-4 md:right-12 lg:right-20 w-16 md:w-20 lg:w-24 opacity-50">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/flower-vase.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
+        {/* Top-center: Seagulls (floating) */}
         <div className="absolute top-12 md:top-16 left-1/2 -translate-x-1/2 w-20 md:w-28 lg:w-32 opacity-40 animate-float">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute top-[55%] left-2 md:left-8 lg:left-16 w-12 md:w-16 lg:w-20 opacity-40">
+        {/* Left-mid: Music Notes */}
+        <div className="absolute top-[45%] left-2 md:left-4 lg:left-8 w-10 md:w-14 lg:w-16 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute top-1/3 right-2 md:right-8 lg:right-16 w-12 md:w-16 lg:w-20 opacity-50">
+        {/* Right-mid: Dancer — hidden on small screens to avoid photo overlap */}
+        <div className="absolute top-[35%] right-2 md:right-4 lg:right-8 w-10 md:w-14 lg:w-16 opacity-40 hidden md:block">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dancer.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute bottom-24 md:bottom-28 left-4 md:left-12 lg:left-20 w-14 md:w-18 lg:w-24 opacity-40">
+        {/* Bottom-left: Single Flower */}
+        <div className="absolute bottom-24 md:bottom-28 left-4 md:left-10 lg:left-16 w-12 md:w-16 lg:w-20 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/single-flower.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute bottom-20 md:bottom-24 left-1/4 w-16 md:w-20 lg:w-24 opacity-35">
+        {/* Bottom-center-left: Amore */}
+        <div className="absolute bottom-20 md:bottom-24 left-[15%] lg:left-[20%] w-14 md:w-18 lg:w-20 opacity-30">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/amore.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute bottom-16 md:bottom-20 right-4 md:right-12 lg:right-20 w-20 md:w-28 lg:w-32 opacity-35">
+        {/* Bottom-right: Dunes */}
+        <div className="absolute bottom-16 md:bottom-20 right-4 md:right-12 lg:right-16 w-16 md:w-24 lg:w-28 opacity-30">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dunes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        <div className="absolute top-[30%] right-[28%] md:right-[22%] w-8 md:w-10 lg:w-12 opacity-35 animate-float" style={{ animationDelay: "1.5s" }}>
+        {/* Center-gap: Heart (floating) */}
+        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 lg:left-[46%] w-8 md:w-10 lg:w-12 opacity-30 animate-float" style={{ animationDelay: "1.5s" }}>
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/heart.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
 
-        <div className="relative z-10 max-w-4xl mx-auto" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.25)" }}>
-          <p className="font-body text-xs md:text-sm tracking-[0.35em] uppercase text-foreground/90 mb-6 md:mb-8 animate-fade-in">
-            Our Wedding
-          </p>
-          <h1 className="font-display font-light text-foreground text-4xl md:text-6xl lg:text-8xl tracking-wider mb-8 md:mb-10 leading-[1.1] uppercase animate-fade-in" style={{ animationDelay: "0.2s" }}>
-            FILIPA & DUARTE
-          </h1>
-          <p className="text-foreground/85 text-base md:text-lg lg:text-xl max-w-lg mx-auto mb-12 md:mb-14 font-light leading-relaxed animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            A relaxed weekend by the beach — with plenty of music.
-          </p>
-          <div className="space-y-2 md:space-y-3 mb-12 md:mb-14 animate-fade-in" style={{ animationDelay: "0.6s" }}>
-            <p className="font-body text-base md:text-lg lg:text-xl tracking-widest font-light text-foreground/90">
-              Comporta, Portugal
+        {/* Split-layout content */}
+        <div className="relative z-10 w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center pt-24 pb-20 lg:pt-0 lg:pb-0">
+          {/* Left column: Text */}
+          <div className="text-center lg:text-left" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.25)" }}>
+            <p className="font-body text-xs md:text-sm tracking-[0.35em] uppercase text-foreground/90 mb-6 md:mb-8 animate-fade-in">
+              Our Wedding
             </p>
-            <p className="font-display text-xl md:text-2xl lg:text-3xl text-foreground tracking-wide">
-              12 de Setembro de 2026
+            <h1 className="font-display font-light text-foreground text-4xl md:text-6xl lg:text-7xl tracking-wider mb-8 md:mb-10 leading-[1.1] uppercase animate-fade-in" style={{ animationDelay: "0.2s" }}>
+              FILIPA & DUARTE
+            </h1>
+            <p className="text-foreground/85 text-base md:text-lg lg:text-xl max-w-lg mx-auto lg:mx-0 mb-12 md:mb-14 font-light leading-relaxed animate-fade-in" style={{ animationDelay: "0.4s" }}>
+              A relaxed weekend by the beach — with plenty of music.
             </p>
+            <div className="space-y-2 md:space-y-3 mb-12 md:mb-14 animate-fade-in" style={{ animationDelay: "0.6s" }}>
+              <p className="font-body text-base md:text-lg lg:text-xl tracking-widest font-light text-foreground/90">
+                Comporta, Portugal
+              </p>
+              <p className="font-display text-xl md:text-2xl lg:text-3xl text-foreground tracking-wide">
+                12 de Setembro de 2026
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.8s" }}>
+              <a
+                href="#rsvp"
+                className="inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 hover:shadow-md transition-all duration-300 text-sm md:text-base"
+              >
+                RSVP
+              </a>
+              <a
+                href="#weekend"
+                className="inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3.5 border-2 border-foreground/90 text-foreground font-medium rounded-md hover:bg-foreground/10 transition-all duration-300 text-sm md:text-base"
+              >
+                View Weekend
+              </a>
+            </div>
           </div>
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center animate-fade-in" style={{ animationDelay: "0.8s" }}>
-            <a
-              href="#rsvp"
-              className="inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 hover:shadow-md transition-all duration-300 text-sm md:text-base"
-            >
-              RSVP
-            </a>
-            <a
-              href="#weekend"
-              className="inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3.5 border-2 border-foreground/90 text-foreground font-medium rounded-md hover:bg-foreground/10 transition-all duration-300 text-sm md:text-base"
-            >
-              View Weekend
-            </a>
+
+          {/* Right column: Couple photo */}
+          <div className="flex justify-center lg:justify-end animate-fade-in" style={{ animationDelay: "0.3s" }}>
+            <div className="relative">
+              <div className="absolute -inset-3 rounded-2xl border-2 border-foreground/15 -rotate-2 hidden lg:block" />
+              <img
+                src="/hero-couple.jpg"
+                alt="Filipa and Duarte sharing a kiss"
+                className="relative rounded-xl shadow-2xl w-72 sm:w-80 md:w-96 lg:w-[420px] xl:w-[480px] h-auto object-cover rotate-1 lg:rotate-2 hover:rotate-0 transition-transform duration-500"
+              />
+            </div>
           </div>
         </div>
 
