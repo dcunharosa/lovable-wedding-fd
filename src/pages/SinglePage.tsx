@@ -28,8 +28,8 @@ const SinglePage = () => {
       <TravelSection />
       <StaySection />
       <GiftsSection />
-      <FaqSection />
       <RsvpSection />
+      <FaqSection />
     </PageLayout>
   );
 };
