@@ -2,32 +2,27 @@ import PageLayout from "@/components/PageLayout";
 import { CalendarPlus, ExternalLink } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-function makeIcs(title: string, start: string, end: string, location: string, description: string) {
-  const ics = [
-    "BEGIN:VCALENDAR",
-    "VERSION:2.0",
-    "PRODID:-//Wedding//EN",
-    "BEGIN:VEVENT",
-    `DTSTART;TZID=Europe/Lisbon:${start}`,
-    `DTEND;TZID=Europe/Lisbon:${end}`,
-    `SUMMARY:${title}`,
-    `LOCATION:${location}`,
-    `DESCRIPTION:${description}`,
-    "END:VEVENT",
-    "END:VCALENDAR",
-  ].join("\r\n");
-  return "data:text/calendar;charset=utf-8," + encodeURIComponent(ics);
+function googleCalUrl(title: string, start: string, end: string, location: string, details: string) {
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: title,
+    dates: `${start}/${end}`,
+    location,
+    details,
+    ctz: "Europe/Lisbon",
+  });
+  return `https://calendar.google.com/calendar/render?${params}`;
 }
 
 const calendarEvents = {
-  welcomeDrinks: makeIcs(
+  welcomeDrinks: googleCalUrl(
     "Filipa & Duarte — Welcome Drinks",
     "20260911T180000",
     "20260911T230000",
     "Comporta, Portugal",
     "Casual gathering at the beach with drinks & music.",
   ),
-  ceremony: makeIcs(
+  ceremony: googleCalUrl(
     "Filipa & Duarte — Wedding",
     "20260912T123000",
     "20260913T020000",
@@ -61,7 +56,8 @@ export const WeekendSection = () => {
             </p>
             <a
               href={calendarEvents.welcomeDrinks}
-              download="welcome-drinks.ics"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
             >
               <CalendarPlus size={13} />
@@ -95,7 +91,8 @@ export const WeekendSection = () => {
             </p>
             <a
               href={calendarEvents.ceremony}
-              download="wedding-ceremony.ics"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
             >
               <CalendarPlus size={13} />
