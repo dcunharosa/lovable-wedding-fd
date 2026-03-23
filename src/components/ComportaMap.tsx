@@ -1,5 +1,5 @@
-const blue = "hsl(220, 50%, 65%)";
-const ocean = "hsl(220, 55%, 75%)";
+const blue = "hsl(220, 50%, 55%)";
+const ocean = "hsl(220, 55%, 78%)";
 
 const ComportaMap = () => (
   <svg
@@ -9,16 +9,16 @@ const ComportaMap = () => (
     aria-label="Stylized map of the Comporta region showing the wedding venue and nearby areas"
   >
     <defs>
-      {/* Hand-drawn wobble filter for coastline */}
-      <filter id="sketch" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="4" seed="2" result="turbulence" />
-        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      {/* Gentle hand-drawn wobble for coastline */}
+      <filter id="sketch" x="-2%" y="-2%" width="104%" height="104%">
+        <feTurbulence type="turbulence" baseFrequency="0.015" numOctaves="3" seed="2" result="turbulence" />
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="2.5" xChannelSelector="R" yChannelSelector="G" />
       </filter>
 
-      {/* Softer wobble for text */}
-      <filter id="sketch-light" x="-5%" y="-5%" width="110%" height="110%">
-        <feTurbulence type="turbulence" baseFrequency="0.02" numOctaves="2" seed="5" result="turbulence" />
-        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="1.5" xChannelSelector="R" yChannelSelector="G" />
+      {/* Very subtle wobble for markers */}
+      <filter id="sketch-light" x="-2%" y="-2%" width="104%" height="104%">
+        <feTurbulence type="turbulence" baseFrequency="0.015" numOctaves="2" seed="5" result="turbulence" />
+        <feDisplacementMap in="SourceGraphic" in2="turbulence" scale="1" xChannelSelector="R" yChannelSelector="G" />
       </filter>
     </defs>
 
@@ -42,7 +42,7 @@ const ComportaMap = () => (
       filter="url(#sketch)"
     />
 
-    {/* Coastline */}
+    {/* Coastline stroke */}
     <path
       d="
         M 280 0
@@ -57,15 +57,15 @@ const ComportaMap = () => (
       "
       fill="none"
       stroke={blue}
-      strokeWidth="2"
+      strokeWidth="1.5"
       strokeLinecap="round"
-      opacity={0.4}
+      opacity={0.25}
       filter="url(#sketch)"
     />
 
     {/* Wave marks in ocean */}
     {[180, 300, 480, 700, 860].map((y, i) => (
-      <g key={y} opacity={0.25} filter="url(#sketch-light)">
+      <g key={y} opacity={0.3} filter="url(#sketch-light)">
         <path
           d={`M ${60 + i * 15} ${y} Q ${80 + i * 15} ${y - 8}, ${100 + i * 15} ${y} Q ${120 + i * 15} ${y + 8}, ${140 + i * 15} ${y}`}
           fill="none"
@@ -80,7 +80,7 @@ const ComportaMap = () => (
     <text
       x="80"
       y="550"
-      fill="rgba(255,255,255,0.4)"
+      fill="rgba(255,255,255,0.5)"
       fontSize="18"
       fontFamily="'Cormorant Garamond', serif"
       fontStyle="italic"
@@ -90,52 +90,50 @@ const ComportaMap = () => (
       OCEANO ATLÂNTICO
     </text>
 
-    {/* --- Town markers (blue dots on linen) --- */}
+    {/* Subtle dotted paths suggesting roads */}
+    {[
+      "M 310 270 Q 350 340, 410 400",
+      "M 420 420 Q 400 480, 385 525",
+      "M 420 420 Q 490 560, 555 700",
+      "M 300 270 Q 290 180, 290 100",
+      "M 380 530 Q 310 650, 245 755",
+      "M 420 400 Q 530 300, 635 185",
+    ].map((d) => (
+      <path
+        key={d}
+        d={d}
+        fill="none"
+        stroke={blue}
+        opacity={0.1}
+        strokeWidth="1.5"
+        strokeDasharray="6 8"
+        filter="url(#sketch-light)"
+      />
+    ))}
 
-    {/* Sol Tróia */}
-    <circle cx="290" cy="100" r="5" fill={blue} opacity={0.6} filter="url(#sketch-light)" />
-    <text x="310" y="106" fill={blue} opacity={0.8} fontSize="22" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
-      Sol Tróia
-    </text>
-
-    {/* Carvalhal */}
-    <circle cx="300" cy="270" r="5" fill={blue} opacity={0.6} filter="url(#sketch-light)" />
-    <text x="320" y="276" fill={blue} opacity={0.8} fontSize="22" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
-      Carvalhal
-    </text>
-
-    {/* Muda */}
-    <circle cx="380" cy="530" r="5" fill={blue} opacity={0.6} filter="url(#sketch-light)" />
-    <text x="400" y="536" fill={blue} opacity={0.8} fontSize="22" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
-      Muda
-    </text>
-
-    {/* Melides */}
-    <circle cx="240" cy="760" r="5" fill={blue} opacity={0.6} filter="url(#sketch-light)" />
-    <text x="260" y="766" fill={blue} opacity={0.8} fontSize="22" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
-      Melides
-    </text>
-
-    {/* Grândola */}
-    <circle cx="560" cy="710" r="5" fill={blue} opacity={0.6} filter="url(#sketch-light)" />
-    <text x="580" y="716" fill={blue} opacity={0.8} fontSize="22" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
-      Grândola
-    </text>
-
-    {/* Alcácer do Sal */}
-    <circle cx="640" cy="180" r="5" fill={blue} opacity={0.6} filter="url(#sketch-light)" />
-    <text x="660" y="186" fill={blue} opacity={0.8} fontSize="22" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
-      Alcácer do Sal
-    </text>
+    {/* --- Town markers --- */}
+    {[
+      { cx: 290, cy: 100, label: "Sol Tróia", tx: 310, ty: 106 },
+      { cx: 300, cy: 270, label: "Carvalhal", tx: 320, ty: 276 },
+      { cx: 380, cy: 530, label: "Muda", tx: 400, ty: 536 },
+      { cx: 240, cy: 760, label: "Melides", tx: 260, ty: 766 },
+      { cx: 560, cy: 710, label: "Grândola", tx: 580, ty: 716 },
+      { cx: 640, cy: 180, label: "Alcácer do Sal", tx: 660, ty: 186 },
+    ].map((t) => (
+      <g key={t.label}>
+        <circle cx={t.cx} cy={t.cy} r="5" fill={blue} opacity={0.5} filter="url(#sketch-light)" />
+        <text x={t.tx} y={t.ty} fill={blue} opacity={0.75} fontSize="22" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
+          {t.label}
+        </text>
+      </g>
+    ))}
 
     {/* --- Venue marker (Monte da Várzea) --- */}
     <g transform="translate(420, 410)">
       <path
         d="M0 -30 C-10 -30, -16 -22, -16 -14 C-16 -2, 0 14, 0 14 S16 -2, 16 -14 C16 -22, 10 -30, 0 -30 Z"
         fill={blue}
-        stroke={blue}
-        strokeWidth="0.5"
-        opacity={0.9}
+        opacity={0.85}
         filter="url(#sketch-light)"
       />
       <circle cx="0" cy="-16" r="5" fill="hsl(40, 30%, 95%)" />
@@ -155,69 +153,13 @@ const ComportaMap = () => (
       x="445"
       y="422"
       fill={blue}
-      opacity={0.5}
+      opacity={0.45}
       fontSize="14"
       fontFamily="'Josefin Sans', sans-serif"
       letterSpacing="3"
     >
       WEDDING VENUE
     </text>
-
-    {/* Subtle dotted paths suggesting roads */}
-    <path
-      d="M 310 270 Q 350 340, 410 400"
-      fill="none"
-      stroke={blue}
-      opacity={0.12}
-      strokeWidth="1.5"
-      strokeDasharray="6 8"
-      filter="url(#sketch-light)"
-    />
-    <path
-      d="M 420 420 Q 400 480, 385 525"
-      fill="none"
-      stroke={blue}
-      opacity={0.12}
-      strokeWidth="1.5"
-      strokeDasharray="6 8"
-      filter="url(#sketch-light)"
-    />
-    <path
-      d="M 420 420 Q 490 560, 555 700"
-      fill="none"
-      stroke={blue}
-      opacity={0.12}
-      strokeWidth="1.5"
-      strokeDasharray="6 8"
-      filter="url(#sketch-light)"
-    />
-    <path
-      d="M 300 270 Q 290 180, 290 100"
-      fill="none"
-      stroke={blue}
-      opacity={0.12}
-      strokeWidth="1.5"
-      strokeDasharray="6 8"
-      filter="url(#sketch-light)"
-    />
-    <path
-      d="M 380 530 Q 310 650, 245 755"
-      fill="none"
-      stroke={blue}
-      opacity={0.12}
-      strokeWidth="1.5"
-      strokeDasharray="6 8"
-      filter="url(#sketch-light)"
-    />
-    <path
-      d="M 420 400 Q 530 300, 635 185"
-      fill="none"
-      stroke={blue}
-      opacity={0.12}
-      strokeWidth="1.5"
-      strokeDasharray="6 8"
-      filter="url(#sketch-light)"
-    />
   </svg>
 );
 
