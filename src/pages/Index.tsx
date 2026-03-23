@@ -13,8 +13,8 @@ export const HomeSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
 
         {/* Decorative hand-drawn illustrations */}
-        {/* Top-left: Big Ben */}
-        <div className="absolute top-20 left-4 md:left-12 lg:left-20 w-12 md:w-16 lg:w-20 opacity-50">
+        {/* Big Ben: left of the photo */}
+        <div className="absolute top-[25%] left-4 md:left-12 lg:left-[44%] w-12 md:w-16 lg:w-20 opacity-50">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/big-ben.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Top-right: Flower Vase */}
@@ -25,8 +25,8 @@ export const HomeSection = () => {
         <div className="absolute top-12 md:top-16 left-1/2 -translate-x-1/2 w-20 md:w-28 lg:w-32 opacity-40 animate-float">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Left-mid: Music Notes */}
-        <div className="absolute top-[45%] left-2 md:left-4 lg:left-8 w-10 md:w-14 lg:w-16 opacity-40">
+        {/* Left: Music Notes */}
+        <div className="absolute top-[18%] left-2 md:left-4 lg:left-8 w-10 md:w-14 lg:w-16 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Right-mid: Dancer — hidden on small screens to avoid photo overlap */}
