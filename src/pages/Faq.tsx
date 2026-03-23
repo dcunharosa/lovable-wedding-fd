@@ -15,7 +15,7 @@ export const FaqSection = () => {
   const faqRef = useScrollReveal<HTMLDivElement>(".faq-item");
 
   return (
-    <section id="faq" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
+    <section id="faq" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_55%_75%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Questions</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">FAQ</h1>
 
