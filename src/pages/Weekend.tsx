@@ -46,11 +46,16 @@ export const WeekendSection = () => {
 
       <div ref={gridRef} className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {/* Friday */}
-        <div className="weekend-col scroll-fade-left border-l border-foreground/20 pl-8 space-y-10" style={{ transitionDelay: "0.1s" }}>
-          <div>
+        <div className="weekend-col scroll-fade-left border-l border-foreground/20 pl-8 space-y-6" style={{ transitionDelay: "0.1s" }}>
+          <div className="pb-2 mb-2 border-b border-foreground/10">
             <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Friday</p>
-            <h3 className="font-display text-3xl text-foreground mb-2">Welcome Drinks</h3>
-            <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-4">From 6pm</p>
+            <h3 className="font-display text-3xl text-foreground">Welcome Drinks</h3>
+          </div>
+
+          <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
+            <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
+              From 6pm
+            </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
               A casual gathering at the beach with drinks & music to get the weekend started. For those with the energy for 2 nights in a row! :)
             </p>
@@ -64,8 +69,8 @@ export const WeekendSection = () => {
             </a>
           </div>
 
-          <div className="border-l-2 border-white/40 pl-6">
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-2">Dress Code</p>
+          <div className="bg-[hsl(40_30%_95%_/_0.08)] rounded-lg p-6 border border-[hsl(40_30%_95%_/_0.15)]">
+            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">Dress Code</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
               Casual beach vibes. Think shorts, sundresses, and sandals.
             </p>
@@ -73,15 +78,17 @@ export const WeekendSection = () => {
         </div>
 
         {/* Saturday */}
-        <div className="weekend-col scroll-fade-right border-l border-foreground/20 pl-8 space-y-10" style={{ transitionDelay: "0.2s" }}>
-          <div>
+        <div className="weekend-col scroll-fade-right border-l border-foreground/20 pl-8 space-y-6" style={{ transitionDelay: "0.2s" }}>
+          <div className="pb-2 mb-2 border-b border-foreground/10">
             <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Saturday</p>
-            <h3 className="font-display text-3xl text-foreground mb-6">The Wedding Day</h3>
+            <h3 className="font-display text-3xl text-foreground">The Wedding Day</h3>
           </div>
 
-          <div>
+          <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
             <h4 className="font-display text-2xl text-foreground mb-1">Ceremony</h4>
-            <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-2">1pm</p>
+            <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
+              1pm
+            </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
               An intimate ceremony in the countryside.<br />
               Please arrive by 12:30.
@@ -96,24 +103,28 @@ export const WeekendSection = () => {
             </a>
           </div>
 
-          <div>
+          <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
             <h4 className="font-display text-2xl text-foreground mb-1">Cocktail</h4>
-            <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-2">2pm</p>
+            <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
+              2pm
+            </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
               Drinks, music and canapés served by the pool.
             </p>
           </div>
 
-          <div>
+          <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
             <h4 className="font-display text-2xl text-foreground mb-1">Late Lunch & Party</h4>
-            <p className="font-body text-base tracking-widest uppercase text-foreground/60 mb-2">3:30pm</p>
+            <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
+              3:30pm
+            </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
               Lunch served while you can keep on dancing until late.
             </p>
           </div>
 
-          <div className="border-l-2 border-white/40 pl-6">
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-2">Dress Code</p>
+          <div className="bg-[hsl(40_30%_95%_/_0.08)] rounded-lg p-6 border border-[hsl(40_30%_95%_/_0.15)]">
+            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">Dress Code</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
               Smart casual with a countryside twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
             </p>
