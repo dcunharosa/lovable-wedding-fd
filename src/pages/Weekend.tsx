@@ -65,9 +65,9 @@ export const WeekendSection = () => {
             </a>
           </div>
 
-          <div className="bg-[hsl(40_30%_95%_/_0.08)] rounded-lg p-6 border border-[hsl(40_30%_95%_/_0.15)]">
-            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">Dress Code</p>
-            <p className="font-body text-base text-foreground/70 leading-relaxed">
+          <div className="bg-[hsl(40_30%_93%)] rounded-lg p-6 border border-[hsl(40_30%_88%)]" style={{ textShadow: "none" }}>
+            <p className="font-body text-xs tracking-[0.25em] uppercase text-[hsl(220_50%_55%_/_0.6)] mb-2">Dress Code</p>
+            <p className="font-body text-base text-[hsl(220_50%_45%)] leading-relaxed">
               Casual beach vibes. Think shorts, sundresses, and sandals.
             </p>
           </div>
@@ -120,9 +120,9 @@ export const WeekendSection = () => {
             </p>
           </div>
 
-          <div className="bg-[hsl(40_30%_95%_/_0.08)] rounded-lg p-6 border border-[hsl(40_30%_95%_/_0.15)]">
-            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">Dress Code</p>
-            <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
+          <div className="bg-[hsl(40_30%_93%)] rounded-lg p-6 border border-[hsl(40_30%_88%)]" style={{ textShadow: "none" }}>
+            <p className="font-body text-xs tracking-[0.25em] uppercase text-[hsl(220_50%_55%_/_0.6)] mb-2">Dress Code</p>
+            <p className="font-body text-base text-[hsl(220_50%_45%)] leading-relaxed mb-6">
               Smart casual with a countryside twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -131,7 +131,7 @@ export const WeekendSection = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-[hsl(220_50%_55%_/_0.35)] text-[hsl(220_50%_45%)] font-body text-sm tracking-widest uppercase rounded-sm hover:bg-[hsl(220_50%_55%_/_0.08)] transition-colors"
               >
                 <ExternalLink size={14} />
                 Inspiration for Him
@@ -140,7 +140,7 @@ export const WeekendSection = () => {
                 href="#"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-[hsl(220_50%_55%_/_0.35)] text-[hsl(220_50%_45%)] font-body text-sm tracking-widest uppercase rounded-sm hover:bg-[hsl(220_50%_55%_/_0.08)] transition-colors"
               >
                 <ExternalLink size={14} />
                 Inspiration for Her
