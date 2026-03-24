@@ -16,7 +16,7 @@ function googleCalUrl(title: string, start: string, end: string, location: strin
 
 const calendarEvents = {
   welcomeDrinks: googleCalUrl(
-    "Filipa & Duarte — Welcome Drinks",
+    "Filipa & Duarte — Pre-Wedding Sunset Drinks",
     "20260911T180000",
     "20260911T230000",
     "Comporta, Portugal",
@@ -43,8 +43,8 @@ export const WeekendSection = () => {
         {/* Friday */}
         <div className="weekend-col scroll-fade-left border-l border-foreground/20 pl-8 space-y-6" style={{ transitionDelay: "0.1s" }}>
           <div className="pb-2 mb-2 border-b border-foreground/10">
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Friday</p>
-            <h3 className="font-display text-3xl text-foreground">Welcome Drinks</h3>
+            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Friday, 11th of September</p>
+            <h3 className="font-display text-3xl text-foreground">Pre-Wedding Sunset Drinks</h3>
           </div>
 
           <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
@@ -53,6 +53,9 @@ export const WeekendSection = () => {
             </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
               A casual gathering at the beach with drinks & music to get the weekend started. For those with the energy for 2 nights in a row! :)
+            </p>
+            <p className="font-body text-sm text-foreground/60 italic mb-3">
+              Location TBC
             </p>
             <a
               href={calendarEvents.welcomeDrinks}
@@ -68,7 +71,7 @@ export const WeekendSection = () => {
           <div className="pt-2">
             <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">Dress Code</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
-              Casual beach vibes. Think shorts, sundresses, and sandals.
+              Casual beach vibes. Think shorts, sundresses, and sandals. Beware that it gets very chilly at night!
             </p>
           </div>
         </div>
