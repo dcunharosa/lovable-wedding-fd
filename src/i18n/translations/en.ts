@@ -16,7 +16,7 @@ export const en = {
   home: {
     ourWedding: "Our Wedding",
     names: "FILIPA & DUARTE",
-    tagline: "A relaxed weekend by the beach — with plenty of music.",
+    tagline: "A weekend of celebration, music and a lot of dancing!",
     location: "Comporta, Portugal",
     date: "September 12, 2026",
     rsvpButton: "RSVP",

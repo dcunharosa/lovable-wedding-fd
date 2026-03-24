@@ -18,7 +18,7 @@ export const pt: Translations = {
   home: {
     ourWedding: "O Nosso Casamento",
     names: "FILIPA & DUARTE",
-    tagline: "Um fim de semana descontraído na praia — com muita música.",
+    tagline: "Um fim de semana de celebração, música e muita dança!",
     location: "Comporta, Portugal",
     date: "12 de Setembro de 2026",
     rsvpButton: "RSVP",
