@@ -39,7 +39,7 @@ export const pt: Translations = {
     fridayTitle: "Drinks ao Pôr do Sol",
     fridayTime: "A partir das 18h",
     fridayDesc:
-      "Um encontro informal na praia com bebidas e música para dar início ao fim de semana. Para quem tiver energia para 2 noites seguidas! :)",
+      "Um encontro informal na praia com bebidas e música para dar início ao fim de semana. Para os mais jovens, aqueles com energia para 2 noites seguidas! :)",
     fridayLocation: "Local a confirmar",
     addToCalendar: "Adicionar ao calendário",
     dressCode: "Dress Code",

@@ -37,7 +37,7 @@ export const en = {
     fridayTitle: "Pre-Wedding Sunset Drinks",
     fridayTime: "From 6pm",
     fridayDesc:
-      "A casual gathering at the beach with drinks & music to get the weekend started. For those with the energy for 2 nights in a row! :)",
+      "A casual gathering at the beach with drinks & music to get the weekend started. For the younger crowd, those with the energy for 2 nights in a row! :)",
     fridayLocation: "Location TBC",
     addToCalendar: "Add to calendar",
     dressCode: "Dress Code",
