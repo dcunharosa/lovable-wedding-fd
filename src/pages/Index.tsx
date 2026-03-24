@@ -13,16 +13,16 @@ export const HomeSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
 
         {/* Decorative hand-drawn illustrations */}
-        {/* Big Ben: left of the photo */}
-        <div className="absolute top-[25%] left-4 md:left-12 lg:left-[44%] w-12 md:w-16 lg:w-20 opacity-50">
+        {/* Big Ben: left of the photo, bottom-aligned with photo */}
+        <div className="absolute bottom-[8%] left-4 md:left-12 lg:left-[44%] w-12 md:w-16 lg:w-20 opacity-50">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/big-ben.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Top-right: Flower Vase */}
-        <div className="absolute top-20 right-4 md:right-12 lg:right-20 w-16 md:w-20 lg:w-24 opacity-50">
+        {/* Top: Flower Vase (moved left) */}
+        <div className="absolute top-[6%] left-[38%] lg:left-[40%] w-16 md:w-20 lg:w-24 opacity-50">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/flower-vase.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Top-center: Seagulls (floating) */}
-        <div className="absolute top-12 md:top-16 left-1/2 -translate-x-1/2 w-20 md:w-28 lg:w-32 opacity-40 animate-float">
+        {/* Top: Seagulls (floating, moved left) */}
+        <div className="absolute top-12 md:top-16 left-[24%] lg:left-[26%] w-20 md:w-28 lg:w-32 opacity-40 animate-float">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Top-left zone: Music Notes */}
@@ -37,8 +37,8 @@ export const HomeSection = () => {
         <div className="absolute top-[8%] left-[60%] lg:left-[62%] w-12 md:w-16 lg:w-20 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/single-flower.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Bottom-center zone: Amore (below buttons, between columns) */}
-        <div className="absolute bottom-[12%] left-[30%] lg:left-[36%] w-14 md:w-18 lg:w-20 opacity-35">
+        {/* Amore: on top of the photo, larger */}
+        <div className="absolute top-[10%] right-[8%] lg:right-[12%] w-20 md:w-28 lg:w-32 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/amore.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Bottom-right: Dunes */}
