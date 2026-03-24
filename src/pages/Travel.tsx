@@ -1,40 +1,42 @@
 import PageLayout from "@/components/PageLayout";
 import { Plane, Car } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useTranslation } from "@/i18n";
 
 export const TravelSection = () => {
+  const { t } = useTranslation();
   const cardsRef = useScrollReveal<HTMLDivElement>(".travel-card");
 
   return (
     <section id="travel" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_55%_75%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
-      <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Getting There</p>
-      <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">Travel</h1>
+      <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.travel.gettingThere}</p>
+      <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">{t.travel.travel}</h1>
 
       <div ref={cardsRef} className="max-w-2xl w-full space-y-10">
         <div className="travel-card scroll-fade-up border-l-2 border-foreground/30 pl-8 py-6 text-left hover:border-foreground/60 transition-colors duration-300" style={{ transitionDelay: "0.1s" }}>
           <div className="flex items-center gap-3 mb-4">
             <Plane size={20} className="text-foreground/60" />
-            <h3 className="font-display text-3xl text-foreground">By Air</h3>
+            <h3 className="font-display text-3xl text-foreground">{t.travel.byAir}</h3>
           </div>
           <p className="font-body text-base text-foreground/70 leading-relaxed">
-            Fly into Lisbon Humberto Delgado Airport (LIS). From there, Comporta is about a 1.5-hour drive south. We recommend renting a car or arranging a transfer.
+            {t.travel.byAirDesc}
           </p>
         </div>
 
         <div className="travel-card scroll-fade-up border-l-2 border-foreground/30 pl-8 py-6 text-left hover:border-foreground/60 transition-colors duration-300" style={{ transitionDelay: "0.2s" }}>
           <div className="flex items-center gap-3 mb-4">
             <Car size={20} className="text-foreground/60" />
-            <h3 className="font-display text-3xl text-foreground">By Car</h3>
+            <h3 className="font-display text-3xl text-foreground">{t.travel.byCar}</h3>
           </div>
           <p className="font-body text-base text-foreground/70 leading-relaxed">
-            From Lisbon, take the A2 motorway south and cross the Vasco da Gama bridge. Follow signs toward Alcácer do Sal and then Comporta. Parking will be available at the venue.
+            {t.travel.byCarDesc}
           </p>
         </div>
 
         <div className="travel-card scroll-fade-up border-l-2 border-foreground/30 pl-8 py-6 text-left hover:border-foreground/60 transition-colors duration-300" style={{ transitionDelay: "0.3s" }}>
-          <h3 className="font-display text-3xl text-foreground mb-4">Transfers</h3>
+          <h3 className="font-display text-3xl text-foreground mb-4">{t.travel.transfers}</h3>
           <p className="font-body text-base text-foreground/70 leading-relaxed">
-            We'll be arranging group transfers from Lisbon on Friday afternoon and back on Sunday. More details to follow.
+            {t.travel.transfersDesc}
           </p>
         </div>
       </div>

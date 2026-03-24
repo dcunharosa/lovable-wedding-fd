@@ -1,18 +1,17 @@
 import { useCallback, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
-const photos = Array.from({ length: 12 }, (_, i) => ({
-  src: `/photos/couple/couple-${i + 1}.jpg`,
-  alt: "Filipa and Duarte",
-}));
+const photoSrcs = Array.from({ length: 12 }, (_, i) => `/photos/couple/couple-${i + 1}.jpg`);
 
 // Duplicate the list so the strip can loop seamlessly.
-const loopedPhotos = [...photos, ...photos];
+const loopedSrcs = [...photoSrcs, ...photoSrcs];
 
 const AUTO_SPEED = 0.8; // px per frame (~48 px/s at 60 fps)
 const NUDGE_PX = 320; // how far an arrow click jumps
 
 export default function PhotoCarousel() {
+  const { t } = useTranslation();
   const trackRef = useRef<HTMLDivElement>(null);
   const offsetRef = useRef(0);
   const pausedRef = useRef(false);
@@ -72,7 +71,7 @@ export default function PhotoCarousel() {
       {/* Arrow buttons — visible on hover */}
       <button
         type="button"
-        aria-label="Previous photos"
+        aria-label={t.home.previousPhotos}
         onClick={() => nudge(-1)}
         className="absolute left-2 top-1/2 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
       >
@@ -80,7 +79,7 @@ export default function PhotoCarousel() {
       </button>
       <button
         type="button"
-        aria-label="Next photos"
+        aria-label={t.home.nextPhotos}
         onClick={() => nudge(1)}
         className="absolute right-2 top-1/2 -translate-y-1/2 z-10 bg-black/30 hover:bg-black/50 text-white rounded-full p-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
       >
@@ -89,14 +88,14 @@ export default function PhotoCarousel() {
 
       <div className="overflow-hidden">
         <div ref={trackRef} className="flex gap-5 will-change-transform">
-          {loopedPhotos.map((photo, i) => (
+          {loopedSrcs.map((src, i) => (
             <div
               key={i}
               className="flex-shrink-0 h-64 md:h-80 rounded-lg overflow-hidden"
             >
               <img
-                src={photo.src}
-                alt={photo.alt}
+                src={src}
+                alt={t.home.photoAlt}
                 className="h-full w-auto object-cover"
                 loading={i < 12 ? "eager" : "lazy"}
                 draggable={false}

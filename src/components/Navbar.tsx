@@ -2,19 +2,22 @@ import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import { useTranslation } from "@/i18n";
+import LanguageSwitcher from "./LanguageSwitcher";
 
-const navItems = [
-  { label: "Home", path: "/", id: "home" },
-  { label: "Weekend", path: "/weekend", id: "weekend" },
-  { label: "Venue", path: "/venue", id: "venue" },
-  { label: "Travel", path: "/travel", id: "travel" },
-  { label: "Stay", path: "/stay", id: "stay" },
-  { label: "Gifts", path: "/gifts", id: "gifts" },
+const navKeys = [
+  { key: "home" as const, path: "/", id: "home" },
+  { key: "weekend" as const, path: "/weekend", id: "weekend" },
+  { key: "venue" as const, path: "/venue", id: "venue" },
+  { key: "travel" as const, path: "/travel", id: "travel" },
+  { key: "stay" as const, path: "/stay", id: "stay" },
+  { key: "gifts" as const, path: "/gifts", id: "gifts" },
 ];
 
-const sectionIds = [...navItems.map((i) => i.id), "rsvp"];
+const sectionIds = [...navKeys.map((i) => i.id), "rsvp"];
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
   const isRoot = location.pathname === "/";
@@ -46,14 +49,15 @@ const Navbar = () => {
 
       {/* Desktop nav */}
       <div className="hidden md:flex items-center gap-8">
-        {navItems.map((item) =>
+        <LanguageSwitcher />
+        {navKeys.map((item) =>
           isRoot ? (
             <a key={item.id} href={`#${item.id}`} className={itemCls(isItemActive(item))}>
-              {item.label}
+              {t.nav[item.key]}
             </a>
           ) : (
             <Link key={item.id} to={item.path} className={itemCls(isItemActive(item))}>
-              {item.label}
+              {t.nav[item.key]}
             </Link>
           )
         )}
@@ -72,7 +76,7 @@ const Navbar = () => {
       <button
         className="md:hidden text-foreground"
         onClick={() => setMobileOpen(!mobileOpen)}
-        aria-label={mobileOpen ? "Close menu" : "Open menu"}
+        aria-label={mobileOpen ? t.nav.closeMenu : t.nav.openMenu}
         aria-expanded={mobileOpen}
       >
         {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -81,7 +85,8 @@ const Navbar = () => {
       {/* Mobile menu */}
       {mobileOpen && (
         <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-sm flex flex-col items-center gap-4 py-6 md:hidden">
-          {navItems.map((item) =>
+          <LanguageSwitcher />
+          {navKeys.map((item) =>
             isRoot ? (
               <a
                 key={item.id}
@@ -89,7 +94,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className={mobileLinkCls}
               >
-                {item.label}
+                {t.nav[item.key]}
               </a>
             ) : (
               <Link
@@ -98,7 +103,7 @@ const Navbar = () => {
                 onClick={() => setMobileOpen(false)}
                 className={mobileLinkCls}
               >
-                {item.label}
+                {t.nav[item.key]}
               </Link>
             )
           )}

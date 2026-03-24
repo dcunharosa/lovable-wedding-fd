@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
 import { CalendarPlus, ExternalLink } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
+import { useTranslation } from "@/i18n";
 
 function googleCalUrl(title: string, start: string, end: string, location: string, details: string) {
   const params = new URLSearchParams({
@@ -14,48 +15,49 @@ function googleCalUrl(title: string, start: string, end: string, location: strin
   return `https://calendar.google.com/calendar/render?${params}`;
 }
 
-const calendarEvents = {
-  welcomeDrinks: googleCalUrl(
-    "Filipa & Duarte — Pre-Wedding Sunset Drinks",
-    "20260911T180000",
-    "20260911T230000",
-    "Comporta, Portugal",
-    "Casual gathering at the beach with drinks & music.",
-  ),
-  ceremony: googleCalUrl(
-    "Filipa & Duarte — Wedding",
-    "20260912T123000",
-    "20260913T020000",
-    "Comporta, Portugal",
-    "Ceremony at 1pm, cocktail at 2pm, lunch & party from 3:30pm.",
-  ),
-};
-
 export const WeekendSection = () => {
+  const { t } = useTranslation();
   const gridRef = useScrollReveal<HTMLDivElement>(".weekend-col");
+
+  const calendarEvents = {
+    welcomeDrinks: googleCalUrl(
+      t.calendar.welcomeDrinksTitle,
+      "20260911T180000",
+      "20260911T230000",
+      t.home.location,
+      t.calendar.welcomeDrinksDetails,
+    ),
+    ceremony: googleCalUrl(
+      t.calendar.weddingTitle,
+      "20260912T123000",
+      "20260913T020000",
+      t.home.location,
+      t.calendar.weddingDetails,
+    ),
+  };
 
   return (
     <section id="weekend" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_55%_75%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
-      <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">The Plan</p>
-      <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">The Weekend</h1>
+      <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.weekend.thePlan}</p>
+      <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">{t.weekend.theWeekend}</h1>
 
       <div ref={gridRef} className="max-w-4xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16">
         {/* Friday */}
         <div className="weekend-col scroll-fade-left border-l border-foreground/20 pl-8 space-y-6" style={{ transitionDelay: "0.1s" }}>
           <div className="pb-2 mb-2 border-b border-foreground/10">
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Friday, 11th of September</p>
-            <h3 className="font-display text-3xl text-foreground">Pre-Wedding Sunset Drinks</h3>
+            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">{t.weekend.fridayDate}</p>
+            <h3 className="font-display text-3xl text-foreground">{t.weekend.fridayTitle}</h3>
           </div>
 
           <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
             <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
-              From 6pm
+              {t.weekend.fridayTime}
             </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
-              A casual gathering at the beach with drinks & music to get the weekend started. For those with the energy for 2 nights in a row! :)
+              {t.weekend.fridayDesc}
             </p>
             <p className="font-body text-sm text-foreground/60 italic mb-3">
-              Location TBC
+              {t.weekend.fridayLocation}
             </p>
             <a
               href={calendarEvents.welcomeDrinks}
@@ -64,14 +66,14 @@ export const WeekendSection = () => {
               className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
             >
               <CalendarPlus size={13} />
-              Add to calendar
+              {t.weekend.addToCalendar}
             </a>
           </div>
 
           <div className="pt-2">
-            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">Dress Code</p>
+            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">{t.weekend.dressCode}</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
-              Casual beach vibes. Think shorts, sundresses, and sandals. Beware that it gets very chilly at night!
+              {t.weekend.fridayDressCode}
             </p>
           </div>
         </div>
@@ -79,18 +81,22 @@ export const WeekendSection = () => {
         {/* Saturday */}
         <div className="weekend-col scroll-fade-right border-l border-foreground/20 pl-8 space-y-6" style={{ transitionDelay: "0.2s" }}>
           <div className="pb-2 mb-2 border-b border-foreground/10">
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Saturday, 12th of September</p>
-            <h3 className="font-display text-3xl text-foreground">The Wedding Day</h3>
+            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">{t.weekend.saturdayDate}</p>
+            <h3 className="font-display text-3xl text-foreground">{t.weekend.saturdayTitle}</h3>
           </div>
 
           <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
-            <h4 className="font-display text-2xl text-foreground mb-1">Ceremony</h4>
+            <h4 className="font-display text-2xl text-foreground mb-1">{t.weekend.ceremony}</h4>
             <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
-              1pm
+              {t.weekend.ceremonyTime}
             </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
-              An intimate ceremony in the countryside.<br />
-              Please arrive by 12:30, you know Duarte is very punctual.
+              {t.weekend.ceremonyDesc.split("\n").map((line, i) => (
+                <span key={i}>
+                  {i > 0 && <br />}
+                  {line}
+                </span>
+              ))}
             </p>
             <a
               href={calendarEvents.ceremony}
@@ -99,24 +105,24 @@ export const WeekendSection = () => {
               className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
             >
               <CalendarPlus size={13} />
-              Add to calendar
+              {t.weekend.addToCalendar}
             </a>
           </div>
 
           <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
-            <h4 className="font-display text-2xl text-foreground mb-1">Party Time</h4>
+            <h4 className="font-display text-2xl text-foreground mb-1">{t.weekend.partyTime}</h4>
             <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
-              2pm – our feet allow us
+              {t.weekend.partyTimeSpan}
             </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
-              After the ceremony we'll have a cocktail, late lunch and even a cheeky dinner. Music will never stop and neither will the drinks and our good spirits. Be ready for a different wedding where sitting down for a long time is overrated!
+              {t.weekend.partyDesc}
             </p>
           </div>
 
           <div className="pt-2">
-            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">Dress Code</p>
+            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">{t.weekend.dressCode}</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
-              Beach Chic. What does that mean? Think linen suits, light fabrics, and "no socks". Sneakers are a no no though. Leave the stilettos at home!
+              {t.weekend.saturdayDressCode}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               {/* TODO: Replace # with actual inspiration links */}
@@ -127,7 +133,7 @@ export const WeekendSection = () => {
                 className="inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-foreground/30 text-foreground/80 font-body text-xs tracking-wider uppercase rounded-sm hover:bg-foreground/10 transition-colors"
               >
                 <ExternalLink size={12} />
-                Inspiration for Him
+                {t.weekend.inspirationHim}
               </a>
               <a
                 href="#"
@@ -136,7 +142,7 @@ export const WeekendSection = () => {
                 className="inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-foreground/30 text-foreground/80 font-body text-xs tracking-wider uppercase rounded-sm hover:bg-foreground/10 transition-colors"
               >
                 <ExternalLink size={12} />
-                Inspiration for Her
+                {t.weekend.inspirationHer}
               </a>
             </div>
           </div>

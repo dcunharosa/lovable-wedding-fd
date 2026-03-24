@@ -1,0 +1,172 @@
+import type { Translations } from "./en";
+
+export const pt: Translations = {
+  nav: {
+    home: "Início",
+    weekend: "Fim de Semana",
+    venue: "Local",
+    travel: "Como Chegar",
+    stay: "Onde Ficar",
+    gifts: "Presentes",
+    rsvp: "RSVP",
+    openMenu: "Abrir menu",
+    closeMenu: "Fechar menu",
+  },
+  footer: {
+    text: "Filipa & Duarte — 12 de Setembro de 2026",
+  },
+  home: {
+    ourWedding: "O Nosso Casamento",
+    names: "FILIPA & DUARTE",
+    tagline: "Um fim de semana descontraído na praia — com muita música.",
+    location: "Comporta, Portugal",
+    date: "12 de Setembro de 2026",
+    rsvpButton: "RSVP",
+    viewWeekend: "Ver Programa",
+    scroll: "Scroll",
+    heroAlt: "Filipa e Duarte a dar um beijo",
+    ourStory: "A Nossa História",
+    ourStoryText:
+      "Um domingo à noite qualquer em Dezembro de 2022 levou-nos a Londres, de volta a Portugal, pelo Brasil umas quantas vezes, por toda a Espanha para ir buscar o Mico e finalmente até este dia especial, onde vão testemunhar um momento inesquecível das nossas vidas, e espera-se que dancem muito!",
+    photoAlt: "Filipa e Duarte",
+    previousPhotos: "Fotos anteriores",
+    nextPhotos: "Próximas fotos",
+  },
+  weekend: {
+    thePlan: "O Programa",
+    theWeekend: "O Fim de Semana",
+    fridayDate: "Sexta-feira, 11 de Setembro",
+    fridayTitle: "Drinks ao Pôr do Sol",
+    fridayTime: "A partir das 18h",
+    fridayDesc:
+      "Um encontro informal na praia com bebidas e música para dar início ao fim de semana. Para quem tiver energia para 2 noites seguidas! :)",
+    fridayLocation: "Local a confirmar",
+    addToCalendar: "Adicionar ao calendário",
+    dressCode: "Dress Code",
+    fridayDressCode:
+      "Estilo casual de praia. Pensem em calções, vestidos leves e sandálias. Atenção que à noite refresca bastante!",
+    saturdayDate: "Sábado, 12 de Setembro",
+    saturdayTitle: "O Dia do Casamento",
+    ceremony: "Cerimónia",
+    ceremonyTime: "13h",
+    ceremonyDesc:
+      "Uma cerimónia íntima no campo.\nCheguem por volta das 12:30, vocês sabem que o Duarte é muito pontual.",
+    partyTime: "Hora da Festa",
+    partyTimeSpan: "14h – até os pés aguentarem",
+    partyDesc:
+      "Depois da cerimónia teremos um cocktail, almoço tardio e até um jantarinho. A música nunca vai parar e as bebidas e boa disposição também não. Preparem-se para um casamento diferente onde estar sentado muito tempo é sobrevalorizado!",
+    saturdayDressCode:
+      "Beach Chic. O que é que isso quer dizer? Pensem em fatos de linho, tecidos leves e \"sem meias\". Ténis é que não. Deixem os saltos altos em casa!",
+    inspirationHim: "Inspiração para Ele",
+    inspirationHer: "Inspiração para Ela",
+  },
+  venue: {
+    whereItHappens: "Onde Acontece",
+    theVenue: "O Local",
+    locationLabel: "Comporta, Portugal",
+    venueIntro:
+      "Aninhada entre arrozais dourados e o Oceano Atlântico, a Comporta é um dos refúgios costeiros mais bonitos e intocados de Portugal.",
+    ceremonyReception: "Cerimónia & Receção",
+    venueDesc:
+      "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
+    googleMaps: "Google Maps",
+    directionsPdf: "PDF com Direções",
+    closeLightbox: "Fechar imagem",
+    venuePhotoAlt: "Foto do local",
+    venueImgAlt: "Monte da Várzea",
+  },
+  travel: {
+    gettingThere: "Como Chegar",
+    travel: "Viagem",
+    byAir: "De Avião",
+    byAirDesc:
+      "Voem até ao Aeroporto Humberto Delgado de Lisboa (LIS). A partir daí, a Comporta fica a cerca de 1h30 de carro para sul. Recomendamos alugar um carro ou organizar um transfer.",
+    byCar: "De Carro",
+    byCarDesc:
+      "A partir de Lisboa, sigam pela autoestrada A2 para sul e atravessem a ponte Vasco da Gama. Sigam as indicações para Alcácer do Sal e depois para a Comporta. Haverá estacionamento no local.",
+    transfers: "Transfers",
+    transfersDesc:
+      "Estamos a organizar transfers de grupo a partir de Lisboa na sexta-feira à tarde e regresso no domingo. Mais detalhes em breve.",
+  },
+  stay: {
+    whereWellBe: "Onde Vamos Estar",
+    stay: "Alojamento",
+    stayIntro:
+      "O casamento será no Monte da Várzea, entre a costa e o campo. Aqui ficam algumas zonas próximas para procurar alojamento.",
+    weddingVenue: "LOCAL DO CASAMENTO",
+    mapAria:
+      "Mapa estilizado da região da Comporta mostrando o local do casamento e áreas próximas",
+  },
+  gifts: {
+    gifts: "Presentes",
+    title: "A Vossa Presença É o Nosso Presente",
+    subtitle:
+      "O melhor presente é celebrar este dia com as pessoas que mais amamos.",
+    showBankDetails: "Ver Dados Bancários",
+    bankDetails: "Dados Bancários",
+    bankHolder: "Filipa & Duarte",
+  },
+  faq: {
+    questions: "Perguntas",
+    faq: "FAQ",
+    q1: "Posso levar acompanhante?",
+    a1: "Por favor consultem o vosso convite para detalhes sobre o acompanhante. Se tiverem dúvidas, falem connosco diretamente.",
+    q2: "As crianças são bem-vindas?",
+    a2: "Adoramos os vossos pequeninos! No entanto, esta será uma celebração apenas para adultos. Esperamos que compreendam.",
+    q3: "O que devo vestir?",
+    a3: "Smart casual com um toque de praia. Pensem em linho e tecidos leves. Sapatos confortáveis são essenciais para o terreno arenoso.",
+    q4: "Há estacionamento no local?",
+    a4: "Sim, haverá estacionamento disponível. Partilharemos direções detalhadas mais perto da data.",
+    q5: "Até quando devo confirmar presença?",
+    a5: "Por favor confirmem até 1 de Julho de 2026 para podermos finalizar todos os preparativos.",
+    q6: "Posso tirar fotos durante a cerimónia?",
+    a6: "Pedimos uma cerimónia sem telemóveis. O nosso fotógrafo vai captar cada momento. Fiquem à vontade para tirar fotos na receção!",
+  },
+  rsvp: {
+    weLoveToKnow: "Gostaríamos de Saber",
+    rsvp: "RSVP",
+    deadline: "Por favor respondam até 1 de Julho de 2026",
+    fullName: "Nome Completo *",
+    namePlaceholder: "O vosso nome",
+    email: "Email *",
+    emailPlaceholder: "your@email.com",
+    willAttend: "Vão estar presentes? *",
+    attendanceAria: "Presença",
+    joyfullyAccept: "Aceito com Alegria",
+    regretfullyDecline: "Infelizmente Não Posso",
+    numberOfGuests: "Número de Convidados",
+    dietaryRequirements: "Restrições Alimentares",
+    dietaryPlaceholder: "Alergias ou preferências",
+    messageLabel: "Mensagem (opcional)",
+    messagePlaceholder: "Uma nota para os noivos...",
+    sending: "A enviar...",
+    sendRsvp: "Enviar RSVP",
+    thankYou: "Obrigado",
+    seeYouThere: "Até Lá!",
+    wellMissYou: "Vamos Ter Saudades",
+    cantWait: "Mal podemos esperar para celebrar convosco na Comporta.",
+    thinkingOfYou:
+      "Obrigado por nos avisarem. Vamos pensar em vocês.",
+    toastSuccess: "Obrigado pela vossa confirmação!",
+    toastErrorRequired: "Por favor preencham todos os campos obrigatórios.",
+    toastErrorGeneric: "Algo correu mal. Por favor tentem novamente.",
+  },
+  notFound: {
+    title: "404",
+    message: "Oops! Página não encontrada",
+    returnHome: "Voltar ao Início",
+  },
+  calendar: {
+    welcomeDrinksTitle: "Filipa & Duarte — Drinks ao Pôr do Sol",
+    welcomeDrinksDetails:
+      "Encontro informal na praia com bebidas e música.",
+    weddingTitle: "Filipa & Duarte — Casamento",
+    weddingDetails:
+      "Cerimónia às 13h, cocktail às 14h, almoço e festa a partir das 15:30.",
+  },
+  meta: {
+    title: "Filipa & Duarte — 12 de Setembro de 2026",
+    description:
+      "Juntem-se a nós para celebrar o casamento da Filipa e do Duarte na Comporta, Portugal, a 12 de Setembro de 2026.",
+  },
+};

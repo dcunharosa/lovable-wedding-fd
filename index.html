@@ -20,6 +20,12 @@
   </head>
 
   <body>
+    <script>
+      (function() {
+        var lang = localStorage.getItem('wedding-lang');
+        if (lang === 'pt') document.documentElement.lang = 'pt-PT';
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

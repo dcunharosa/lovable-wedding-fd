@@ -1,11 +1,14 @@
 import PageLayout from "@/components/PageLayout";
 import PhotoCarousel from "@/components/PhotoCarousel";
 import { ChevronDown } from "lucide-react";
+import { useTranslation } from "@/i18n";
 
 const illustrationFilter = "brightness(0) saturate(100%) invert(95%) sepia(5%) saturate(200%) hue-rotate(20deg) brightness(103%) contrast(95%)";
 
 // Exported so SinglePage can embed it without an extra PageLayout wrapper.
 export const HomeSection = () => {
+  const { t } = useTranslation();
+
   return (
     <div id="home">
       {/* Hero */}
@@ -55,20 +58,20 @@ export const HomeSection = () => {
           {/* Left column: Text */}
           <div className="text-center lg:text-left" style={{ textShadow: "0 2px 8px rgba(0,0,0,0.25)" }}>
             <p className="font-body text-xs md:text-sm tracking-[0.35em] uppercase text-foreground/90 mb-6 md:mb-8 animate-fade-in">
-              Our Wedding
+              {t.home.ourWedding}
             </p>
             <h1 className="font-display font-light text-foreground text-4xl md:text-6xl lg:text-7xl tracking-wider mb-8 md:mb-10 leading-[1.1] uppercase animate-fade-in" style={{ animationDelay: "0.2s" }}>
-              FILIPA & DUARTE
+              {t.home.names}
             </h1>
             <p className="text-foreground/85 text-base md:text-lg lg:text-xl max-w-lg mx-auto lg:mx-0 mb-12 md:mb-14 font-light leading-relaxed animate-fade-in" style={{ animationDelay: "0.4s" }}>
-              A relaxed weekend by the beach — with plenty of music.
+              {t.home.tagline}
             </p>
             <div className="space-y-2 md:space-y-3 mb-12 md:mb-14 animate-fade-in" style={{ animationDelay: "0.6s" }}>
               <p className="font-body text-base md:text-lg lg:text-xl tracking-widest font-light text-foreground/90">
-                Comporta, Portugal
+                {t.home.location}
               </p>
               <p className="font-display text-xl md:text-2xl lg:text-3xl text-foreground tracking-wide">
-                12 de Setembro de 2026
+                {t.home.date}
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 md:gap-5 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: "0.8s" }}>
@@ -76,13 +79,13 @@ export const HomeSection = () => {
                 href="#rsvp"
                 className="inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3.5 bg-primary text-primary-foreground font-medium rounded-md hover:bg-primary/90 hover:shadow-md transition-all duration-300 text-sm md:text-base"
               >
-                RSVP
+                {t.home.rsvpButton}
               </a>
               <a
                 href="#weekend"
                 className="inline-flex items-center justify-center px-8 md:px-10 py-3 md:py-3.5 border-2 border-foreground/90 text-foreground font-medium rounded-md hover:bg-foreground/10 transition-all duration-300 text-sm md:text-base"
               >
-                View Weekend
+                {t.home.viewWeekend}
               </a>
             </div>
           </div>
@@ -93,7 +96,7 @@ export const HomeSection = () => {
               <div className="absolute -inset-3 rounded-2xl border-2 border-foreground/15 -rotate-2 hidden lg:block" />
               <img
                 src="/hero-couple.jpg"
-                alt="Filipa and Duarte sharing a kiss"
+                alt={t.home.heroAlt}
                 className="relative rounded-xl shadow-2xl w-72 sm:w-80 md:w-96 lg:w-[420px] xl:w-[480px] h-auto object-cover rotate-1 lg:rotate-2 hover:rotate-0 transition-transform duration-500"
               />
             </div>
@@ -102,7 +105,7 @@ export const HomeSection = () => {
 
         <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 opacity-60 animate-fade-in" style={{ animationDelay: "1s" }}>
           <div className="flex flex-col items-center gap-2 text-foreground/70">
-            <span className="text-xs uppercase tracking-[0.2em] font-body">Scroll</span>
+            <span className="text-xs uppercase tracking-[0.2em] font-body">{t.home.scroll}</span>
             <ChevronDown className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
           </div>
         </div>
@@ -111,10 +114,10 @@ export const HomeSection = () => {
       {/* Our Story */}
       <section className="py-20 text-center bg-[hsl(220_50%_65%)] overflow-hidden" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.2)" }}>
         <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-6 px-4">
-          Our Story
+          {t.home.ourStory}
         </p>
         <p className="font-display text-3xl md:text-4xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12 px-4">
-          A random sunday night out in December 2022 took us to London, back to Portugal, around Brazil a few times, all the way across Spain to fetch Mico and finally to this special day, where you'll bear witness to an unforgettable moment in our lives, and hopefully dance a lot!
+          {t.home.ourStoryText}
         </p>
 
         {/* Couple photos carousel */}

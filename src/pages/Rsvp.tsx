@@ -1,12 +1,14 @@
 import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import { toast } from "sonner";
+import { useTranslation } from "@/i18n";
 
 const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT as string;
 
 // Exported so SinglePage can embed it without an extra PageLayout wrapper.
 // All state is self-contained, so it works correctly in both contexts.
 export const RsvpSection = () => {
+  const { t } = useTranslation();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -21,7 +23,7 @@ export const RsvpSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!form.name || !form.email || !form.attending) {
-      toast.error("Please fill in all required fields.");
+      toast.error(t.rsvp.toastErrorRequired);
       return;
     }
 
@@ -34,9 +36,9 @@ export const RsvpSection = () => {
       });
       if (!res.ok) throw new Error("Submission failed");
       setSubmitted(true);
-      toast.success("Thank you for your RSVP!");
+      toast.success(t.rsvp.toastSuccess);
     } catch {
-      toast.error("Something went wrong. Please try again.");
+      toast.error(t.rsvp.toastErrorGeneric);
     } finally {
       setLoading(false);
     }
@@ -48,14 +50,12 @@ export const RsvpSection = () => {
   if (submitted) {
     return (
       <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
-        <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">Thank You</p>
+        <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.rsvp.thankYou}</p>
         <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8 animate-scale-in">
-          {form.attending === "yes" ? "See You There!" : "We'll Miss You"}
+          {form.attending === "yes" ? t.rsvp.seeYouThere : t.rsvp.wellMissYou}
         </h1>
         <p className="font-display text-xl text-foreground/70 italic max-w-md">
-          {form.attending === "yes"
-            ? "We can't wait to celebrate with you in Comporta."
-            : "Thank you for letting us know. We'll be thinking of you."}
+          {form.attending === "yes" ? t.rsvp.cantWait : t.rsvp.thinkingOfYou}
         </p>
       </section>
     );
@@ -63,20 +63,20 @@ export const RsvpSection = () => {
 
   return (
       <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
-        <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">We'd Love to Know</p>
-        <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-4">RSVP</h1>
-        <p className="font-display text-xl text-foreground/70 italic mb-12">Please respond by July 1st, 2026</p>
+        <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.rsvp.weLoveToKnow}</p>
+        <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-4">{t.rsvp.rsvp}</h1>
+        <p className="font-display text-xl text-foreground/70 italic mb-12">{t.rsvp.deadline}</p>
 
         <form onSubmit={handleSubmit} className="max-w-lg w-full space-y-6 animate-fade-in">
           <div>
             <label htmlFor="name" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
-              Full Name *
+              {t.rsvp.fullName}
             </label>
             <input
               id="name"
               type="text"
               className={inputClass}
-              placeholder="Your name"
+              placeholder={t.rsvp.namePlaceholder}
               value={form.name}
               onChange={(e) => setForm({ ...form, name: e.target.value })}
             />
@@ -84,13 +84,13 @@ export const RsvpSection = () => {
 
           <div>
             <label htmlFor="email" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
-              Email *
+              {t.rsvp.email}
             </label>
             <input
               id="email"
               type="email"
               className={inputClass}
-              placeholder="your@email.com"
+              placeholder={t.rsvp.emailPlaceholder}
               value={form.email}
               onChange={(e) => setForm({ ...form, email: e.target.value })}
             />
@@ -98,9 +98,9 @@ export const RsvpSection = () => {
 
           <div>
             <label className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
-              Will you attend? *
+              {t.rsvp.willAttend}
             </label>
-            <div className="flex gap-4" role="group" aria-label="Attendance">
+            <div className="flex gap-4" role="group" aria-label={t.rsvp.attendanceAria}>
               {["yes", "no"].map((opt) => (
                 <button
                   key={opt}
@@ -112,7 +112,7 @@ export const RsvpSection = () => {
                       : "border-foreground/30 text-foreground/70 hover:border-foreground/50"
                   }`}
                 >
-                  {opt === "yes" ? "Joyfully Accept" : "Regretfully Decline"}
+                  {opt === "yes" ? t.rsvp.joyfullyAccept : t.rsvp.regretfullyDecline}
                 </button>
               ))}
             </div>
@@ -122,7 +122,7 @@ export const RsvpSection = () => {
             <>
               <div>
                 <label htmlFor="guests" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
-                  Number of Guests
+                  {t.rsvp.numberOfGuests}
                 </label>
                 <select
                   id="guests"
@@ -140,13 +140,13 @@ export const RsvpSection = () => {
 
               <div>
                 <label htmlFor="dietary" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
-                  Dietary Requirements
+                  {t.rsvp.dietaryRequirements}
                 </label>
                 <input
                   id="dietary"
                   type="text"
                   className={inputClass}
-                  placeholder="Any allergies or preferences"
+                  placeholder={t.rsvp.dietaryPlaceholder}
                   value={form.dietary}
                   onChange={(e) => setForm({ ...form, dietary: e.target.value })}
                 />
@@ -156,12 +156,12 @@ export const RsvpSection = () => {
 
           <div>
             <label htmlFor="message" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
-              Message (optional)
+              {t.rsvp.messageLabel}
             </label>
             <textarea
               id="message"
               className={`${inputClass} min-h-[100px] resize-none`}
-              placeholder="A note for the couple..."
+              placeholder={t.rsvp.messagePlaceholder}
               value={form.message}
               onChange={(e) => setForm({ ...form, message: e.target.value })}
             />
@@ -172,7 +172,7 @@ export const RsvpSection = () => {
             disabled={loading}
             className="w-full bg-primary text-primary-foreground py-3 rounded-sm font-body text-base tracking-widest uppercase hover:bg-primary/90 transition-colors disabled:opacity-60"
           >
-            {loading ? "Sending..." : "Send RSVP"}
+            {loading ? t.rsvp.sending : t.rsvp.sendRsvp}
           </button>
         </form>
       </section>
