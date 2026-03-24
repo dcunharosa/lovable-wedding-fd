@@ -16,9 +16,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       action: "deleteGuest",
       secret: process.env.APPS_SCRIPT_SECRET,
     }),
-    redirect: "follow",
+    redirect: "manual",
   });
 
-  const data = await response.json();
-  return res.status(200).json(data);
+  // Apps Script POSTs execute before returning a 302 redirect.
+  // The redirect target returns HTML, not JSON, so we treat 302 as success.
+  if (response.status === 302 || response.status === 200) {
+    return res.status(200).json({ result: "success" });
+  }
+  return res.status(502).json({ error: "Apps Script request failed" });
 }

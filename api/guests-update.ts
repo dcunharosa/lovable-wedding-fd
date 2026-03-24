@@ -16,9 +16,11 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       action: "updateGuest",
       secret: process.env.APPS_SCRIPT_SECRET,
     }),
-    redirect: "follow",
+    redirect: "manual",
   });
 
-  const data = await response.json();
-  return res.status(200).json(data);
+  if (response.status === 302 || response.status === 200) {
+    return res.status(200).json({ result: "success" });
+  }
+  return res.status(502).json({ error: "Apps Script request failed" });
 }

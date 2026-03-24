@@ -53,6 +53,9 @@ async function apiFetch<T>(path: string, opts?: RequestInit): Promise<T> {
     window.location.reload();
     throw new Error("Unauthorized");
   }
+  if (!res.ok) {
+    throw new Error(`Request failed (${res.status})`);
+  }
   return res.json();
 }
 
