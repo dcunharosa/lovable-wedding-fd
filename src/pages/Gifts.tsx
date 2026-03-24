@@ -34,6 +34,45 @@ export const GiftsSection = () => {
           </button>
         )}
       </div>
+
+      {/* Honeymoon & Home photos */}
+      <div className="mt-16 max-w-4xl w-full">
+        <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-6">
+          {t.gifts.photoCaption}
+        </p>
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+          <img
+            src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=600&q=80&auto=format&fit=crop"
+            alt="New Zealand — Milford Sound"
+            className="w-full h-48 object-cover rounded-lg opacity-80"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1508193638397-1c4234db14d7?w=600&q=80&auto=format&fit=crop"
+            alt="New Zealand — mountains and lake"
+            className="w-full h-48 object-cover rounded-lg opacity-80"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&q=80&auto=format&fit=crop"
+            alt="Australia — Sydney Opera House"
+            className="w-full h-48 object-cover rounded-lg opacity-80"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80&auto=format&fit=crop"
+            alt="Australia — coastline"
+            className="w-full h-48 object-cover rounded-lg opacity-80"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format&fit=crop"
+            alt="Modern furniture — sofa"
+            className="w-full h-48 object-cover rounded-lg opacity-80"
+          />
+          <img
+            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80&auto=format&fit=crop"
+            alt="Minimalist interior design"
+            className="w-full h-48 object-cover rounded-lg opacity-80"
+          />
+        </div>
+      </div>
     </section>
   );
 };

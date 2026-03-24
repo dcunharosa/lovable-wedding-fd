@@ -105,6 +105,7 @@ export const pt: Translations = {
     showBankDetails: "Veja onde pode enviar o seu presente",
     bankDetails: "Dados Bancários",
     bankHolder: "Filipa & Duarte",
+    photoCaption: "Para onde vai o vosso presente: uma lua de mel inesquecível & uma casa para construir",
   },
   faq: {
     questions: "Perguntas",
