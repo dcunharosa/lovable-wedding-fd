@@ -14,7 +14,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { Users, UserCheck, UserX, Send, Pencil, ArrowUpDown } from "lucide-react";
+import { Users, UserCheck, UserX, Send, Pencil, Trash2, Download, ArrowUpDown } from "lucide-react";
 
 // ---------------------------------------------------------------------------
 // Types
@@ -306,9 +306,11 @@ function EmailComposer({ guests }: { guests: Guest[] }) {
 function GuestTable({
   guests,
   onEdit,
+  onDelete,
 }: {
   guests: Guest[];
   onEdit: (g: Guest) => void;
+  onDelete: (g: Guest) => void;
 }) {
   const [filter, setFilter] = useState<"all" | "yes" | "no">("all");
   const [search, setSearch] = useState("");
@@ -416,13 +418,22 @@ function GuestTable({
                   : "—"}
               </TableCell>
               <TableCell>
-                <button
-                  onClick={() => onEdit(g)}
-                  className="p-1.5 rounded hover:bg-[hsl(220,30%,92%)] transition-colors"
-                  title="Edit guest"
-                >
-                  <Pencil size={14} className="text-[hsl(220,30%,45%)]" />
-                </button>
+                <div className="flex items-center gap-1">
+                  <button
+                    onClick={() => onEdit(g)}
+                    className="p-1.5 rounded hover:bg-[hsl(220,30%,92%)] transition-colors"
+                    title="Edit guest"
+                  >
+                    <Pencil size={14} className="text-[hsl(220,30%,45%)]" />
+                  </button>
+                  <button
+                    onClick={() => onDelete(g)}
+                    className="p-1.5 rounded hover:bg-red-100 transition-colors"
+                    title="Delete guest"
+                  >
+                    <Trash2 size={14} className="text-red-400 hover:text-red-600" />
+                  </button>
+                </div>
               </TableCell>
             </TableRow>
           ))}
@@ -469,6 +480,43 @@ const Admin = () => {
     setAuthed(true);
   };
 
+  const handleDelete = async (g: Guest) => {
+    if (!window.confirm(`Delete ${g.name}?`)) return;
+    try {
+      await apiFetch("/api/guests-delete", {
+        method: "POST",
+        body: JSON.stringify({ row: g._row }),
+      });
+      toast.success("Guest deleted.");
+      loadGuests();
+    } catch {
+      toast.error("Failed to delete guest.");
+    }
+  };
+
+  const exportCsv = () => {
+    const headers = ["Name", "Email", "Attending", "Guests", "Dietary", "Message", "Date"];
+    const rows = guests.map((g) => [
+      g.name,
+      g.email,
+      g.attending,
+      String(g.guests || ""),
+      g.dietary,
+      g.message,
+      g.timestamp ? new Date(g.timestamp).toLocaleDateString() : "",
+    ]);
+    const csv = [headers, ...rows]
+      .map((r) => r.map((c) => `"${String(c).replace(/"/g, '""')}"`).join(","))
+      .join("\n");
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `rsvp-guests-${new Date().toISOString().slice(0, 10)}.csv`;
+    a.click();
+    URL.revokeObjectURL(url);
+  };
+
   const handleSave = async (g: Guest) => {
     try {
       await apiFetch("/api/guests-update", {
@@ -499,15 +547,26 @@ const Admin = () => {
         <h1 className="font-display text-2xl text-[hsl(220,30%,20%)]">
           Guest Management
         </h1>
-        <button
-          onClick={() => {
-            sessionStorage.removeItem("admin_pw");
-            setAuthed(false);
-          }}
-          className="font-body text-xs uppercase tracking-widest text-[hsl(220,20%,55%)] hover:text-[hsl(220,30%,30%)] transition-colors"
-        >
-          Log out
-        </button>
+        <div className="flex items-center gap-4">
+          {guests.length > 0 && (
+            <button
+              onClick={exportCsv}
+              className="inline-flex items-center gap-1.5 font-body text-xs uppercase tracking-widest text-[hsl(220,20%,55%)] hover:text-[hsl(220,30%,30%)] transition-colors"
+            >
+              <Download size={14} />
+              Export CSV
+            </button>
+          )}
+          <button
+            onClick={() => {
+              sessionStorage.removeItem("admin_pw");
+              setAuthed(false);
+            }}
+            className="font-body text-xs uppercase tracking-widest text-[hsl(220,20%,55%)] hover:text-[hsl(220,30%,30%)] transition-colors"
+          >
+            Log out
+          </button>
+        </div>
       </header>
 
       <main className="max-w-6xl mx-auto px-4 py-8">
@@ -518,7 +577,7 @@ const Admin = () => {
         ) : (
           <>
             <StatsCards guests={guests} />
-            <GuestTable guests={guests} onEdit={setEditing} />
+            <GuestTable guests={guests} onEdit={setEditing} onDelete={handleDelete} />
             <EmailComposer guests={guests} />
           </>
         )}

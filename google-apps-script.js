@@ -38,6 +38,9 @@ function doPost(e) {
     if (data.action === "sendEmail") {
       return _sendEmail(data);
     }
+    if (data.action === "deleteGuest") {
+      return _deleteGuest(data);
+    }
     return _json({ error: "Unknown action" });
   }
 
@@ -104,6 +107,18 @@ function _updateGuest(data) {
   sheet.getRange(row, 6).setValue(data.dietary || "");
   sheet.getRange(row, 7).setValue(data.message || "");
 
+  return _json({ result: "success" });
+}
+
+function _deleteGuest(data) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var row = data.row; // 1-indexed sheet row
+
+  if (!row || row < 2) {
+    return _json({ error: "Invalid row" });
+  }
+
+  sheet.deleteRow(row);
   return _json({ result: "success" });
 }
 
