@@ -26,7 +26,7 @@ export const HomeSection = () => {
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Top-left zone: Music Notes */}
-        <div className="absolute top-[8%] left-[18%] lg:left-[22%] w-10 md:w-14 lg:w-16 opacity-40">
+        <div className="absolute top-[8%] left-[10%] lg:left-[14%] w-10 md:w-14 lg:w-16 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Right-mid: Dancer — hidden on small screens to avoid photo overlap */}
