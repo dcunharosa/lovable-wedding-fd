@@ -101,8 +101,8 @@ export const pt: Translations = {
     gifts: "Presentes",
     title: "A Vossa Presença É o Nosso Presente",
     subtitle:
-      "O melhor presente é celebrar este dia com as pessoas que mais amamos.",
-    showBankDetails: "Ver Dados Bancários",
+      "O que mais nos importa é que se juntem a nós neste fim de semana especial. Mas se também quiserem contribuir para este novo capítulo das nossas vidas, ficamos muito agradecidos!",
+    showBankDetails: "Veja onde pode enviar o seu presente",
     bankDetails: "Dados Bancários",
     bankHolder: "Filipa & Duarte",
   },

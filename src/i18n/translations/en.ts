@@ -99,8 +99,8 @@ export const en = {
     gifts: "Gifts",
     title: "Your Presence Is Our Present",
     subtitle:
-      "The best gift is to celebrate this day with the people we love most.",
-    showBankDetails: "Show Bank Details",
+      "All we care about is that you join us for this special weekend. But if you'd also like to contribute to this brand new chapter of our lives, we'd truly appreciate it!",
+    showBankDetails: "See where you can send your gift",
     bankDetails: "Bank Details",
     bankHolder: "Filipa & Duarte",
   },
