@@ -11,6 +11,7 @@ import Gifts from "./pages/Gifts";
 import Faq from "./pages/Faq";
 import Rsvp from "./pages/Rsvp";
 import NotFound from "./pages/NotFound";
+import Admin from "./pages/Admin";
 
 const App = () => (
   <LanguageProvider>
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/gifts" element={<Gifts />} />
           <Route path="/faq" element={<Faq />} />
           <Route path="/rsvp" element={<Rsvp />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

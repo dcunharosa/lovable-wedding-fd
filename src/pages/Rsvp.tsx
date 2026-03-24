@@ -2,8 +2,21 @@ import { useState } from "react";
 import PageLayout from "@/components/PageLayout";
 import { toast } from "sonner";
 import { useTranslation } from "@/i18n";
+import { CalendarPlus } from "lucide-react";
 
-const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT as string;
+const RSVP_ENDPOINT = import.meta.env.VITE_RSVP_ENDPOINT as string;
+
+function googleCalUrl(title: string, start: string, end: string, location: string, details: string) {
+  const params = new URLSearchParams({
+    action: "TEMPLATE",
+    text: title,
+    dates: `${start}/${end}`,
+    location,
+    details,
+    ctz: "Europe/Lisbon",
+  });
+  return `https://calendar.google.com/calendar/render?${params}`;
+}
 
 // Exported so SinglePage can embed it without an extra PageLayout wrapper.
 // All state is self-contained, so it works correctly in both contexts.
@@ -29,12 +42,12 @@ export const RsvpSection = () => {
 
     setLoading(true);
     try {
-      const res = await fetch(FORMSPREE_ENDPOINT, {
+      await fetch(RSVP_ENDPOINT, {
         method: "POST",
-        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        mode: "no-cors",
+        headers: { "Content-Type": "text/plain" },
         body: JSON.stringify(form),
       });
-      if (!res.ok) throw new Error("Submission failed");
       setSubmitted(true);
       toast.success(t.rsvp.toastSuccess);
     } catch {
@@ -48,6 +61,16 @@ export const RsvpSection = () => {
     "w-full bg-transparent border border-foreground/30 rounded-sm px-4 py-3 font-body text-base text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-foreground/60 transition-colors";
 
   if (submitted) {
+    const calendarUrl = form.attending === "yes"
+      ? googleCalUrl(
+          t.calendar.weddingTitle,
+          "20260912T123000",
+          "20260913T020000",
+          "Monte da Varzea, Comporta, Portugal",
+          t.calendar.weddingDetails,
+        )
+      : null;
+
     return (
       <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
         <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.rsvp.thankYou}</p>
@@ -57,6 +80,17 @@ export const RsvpSection = () => {
         <p className="font-display text-xl text-foreground/70 italic max-w-md">
           {form.attending === "yes" ? t.rsvp.cantWait : t.rsvp.thinkingOfYou}
         </p>
+        {calendarUrl && (
+          <a
+            href={calendarUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 mt-10 px-8 py-3 bg-primary text-primary-foreground font-body text-sm tracking-widest uppercase rounded-sm hover:bg-primary/90 transition-colors"
+          >
+            <CalendarPlus size={16} />
+            {t.rsvp.addToGoogleCalendar}
+          </a>
+        )}
       </section>
     );
   }

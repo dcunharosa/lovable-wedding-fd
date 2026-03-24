@@ -146,6 +146,7 @@ export const en = {
     cantWait: "We can't wait to celebrate with you in Comporta.",
     thinkingOfYou:
       "Thank you for letting us know. We'll be thinking of you.",
+    addToGoogleCalendar: "Add to Google Calendar",
     toastSuccess: "Thank you for your RSVP!",
     toastErrorRequired: "Please fill in all required fields.",
     toastErrorGeneric: "Something went wrong. Please try again.",

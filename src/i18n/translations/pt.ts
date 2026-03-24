@@ -148,6 +148,7 @@ export const pt: Translations = {
     cantWait: "Mal podemos esperar para celebrar convosco na Comporta.",
     thinkingOfYou:
       "Obrigado por nos avisarem. Vamos pensar em vocês.",
+    addToGoogleCalendar: "Adicionar ao Google Calendar",
     toastSuccess: "Obrigado pela vossa confirmação!",
     toastErrorRequired: "Por favor preencham todos os campos obrigatórios.",
     toastErrorGeneric: "Algo correu mal. Por favor tentem novamente.",
