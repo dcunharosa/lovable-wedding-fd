@@ -49,7 +49,7 @@ export const en = {
     ceremonyTime: "1pm",
     ceremonyDesc:
       "An intimate ceremony in the countryside.\nPlease arrive by 12:30, you know Duarte is very punctual.",
-    partyTime: "Party Time",
+    partyTime: "Celebration",
     partyTimeSpan: "2pm – our feet allow us",
     partyDesc:
       "After the ceremony we'll have a cocktail, late lunch and even a cheeky dinner. Music will never stop and neither will the drinks and our good spirits. Be ready for a different wedding where sitting down for a long time is overrated!",

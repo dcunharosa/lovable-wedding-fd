@@ -51,7 +51,7 @@ export const pt: Translations = {
     ceremonyTime: "13h",
     ceremonyDesc:
       "Uma cerimónia íntima no campo.\nCheguem por volta das 12:30, vocês sabem que o Duarte é muito pontual.",
-    partyTime: "Hora da Festa",
+    partyTime: "Celebração",
     partyTimeSpan: "14h – até os pés aguentarem",
     partyDesc:
       "Depois da cerimónia teremos um cocktail, almoço tardio e até um jantarinho. A música nunca vai parar e as bebidas e boa disposição também não. Preparem-se para um casamento diferente onde estar sentado muito tempo é sobrevalorizado!",
