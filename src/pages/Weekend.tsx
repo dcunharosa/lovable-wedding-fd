@@ -79,7 +79,7 @@ export const WeekendSection = () => {
         {/* Saturday */}
         <div className="weekend-col scroll-fade-right border-l border-foreground/20 pl-8 space-y-6" style={{ transitionDelay: "0.2s" }}>
           <div className="pb-2 mb-2 border-b border-foreground/10">
-            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Saturday</p>
+            <p className="font-body text-sm tracking-[0.2em] uppercase text-foreground/50 mb-1">Saturday, 12th of September</p>
             <h3 className="font-display text-3xl text-foreground">The Wedding Day</h3>
           </div>
 
@@ -90,7 +90,7 @@ export const WeekendSection = () => {
             </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
               An intimate ceremony in the countryside.<br />
-              Please arrive by 12:30.
+              Please arrive by 12:30, you know Duarte is very punctual.
             </p>
             <a
               href={calendarEvents.ceremony}
@@ -104,22 +104,12 @@ export const WeekendSection = () => {
           </div>
 
           <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
-            <h4 className="font-display text-2xl text-foreground mb-1">Cocktail</h4>
+            <h4 className="font-display text-2xl text-foreground mb-1">Party Time</h4>
             <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
-              2pm
+              2pm – our feet allow us
             </span>
             <p className="font-body text-base text-foreground/70 leading-relaxed">
-              Drinks, music and canapés served by the pool.
-            </p>
-          </div>
-
-          <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
-            <h4 className="font-display text-2xl text-foreground mb-1">Late Lunch & Party</h4>
-            <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
-              3:30pm
-            </span>
-            <p className="font-body text-base text-foreground/70 leading-relaxed">
-              Lunch served while you can keep on dancing until late.
+              After the ceremony we'll have a cocktail, late lunch and even a cheeky dinner. Music will never stop and neither will the drinks and our good spirits. Be ready for a different wedding where sitting down for a long time is overrated!
             </p>
           </div>
 
