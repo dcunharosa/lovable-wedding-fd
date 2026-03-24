@@ -92,7 +92,7 @@ export const pt: Translations = {
     whereWellBe: "Onde Vamos Estar",
     stay: "Alojamento",
     stayIntro:
-      "O casamento será no Monte da Várzea, entre a costa e o campo. Aqui ficam algumas zonas próximas para procurar alojamento. Não se preocupem se ficar a 10–20 minutos do local, Uber está disponível e também vamos organizar motoristas que podem levar o vosso carro de volta depois da festa (mais detalhes abaixo).",
+      "O casamento será no Monte da Várzea, entre a costa e o campo. Aqui ficam algumas zonas próximas para procurar alojamento. Não se preocupem se ficar a 10-20 minutos do local, Uber está disponível e também vamos organizar motoristas que podem levar o vosso carro de volta depois da festa (mais detalhes em Viagem).",
     weddingVenue: "LOCAL DO CASAMENTO",
     mapAria:
       "Mapa estilizado da região da Comporta mostrando o local do casamento e áreas próximas",
