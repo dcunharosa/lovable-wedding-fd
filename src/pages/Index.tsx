@@ -114,7 +114,7 @@ export const HomeSection = () => {
           Our Story
         </p>
         <p className="font-display text-3xl md:text-4xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12 px-4">
-          A random sunday night out in December 2022 took us to London, back to Portugal, around Brazil a few times, all the way across Spain to fetch Mico and finally to this special day, where you'll bear witness to an unforgettable new moment in our lives.
+          A random sunday night out in December 2022 took us to London, back to Portugal, around Brazil a few times, all the way across Spain to fetch Mico and finally to this special day, where you'll bear witness to an unforgettable moment in our lives, and hopefully dance a lot!
         </p>
 
         {/* Couple photos carousel */}
