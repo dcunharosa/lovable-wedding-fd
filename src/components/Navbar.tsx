@@ -12,11 +12,7 @@ const navItems = [
   { label: "Gifts", path: "/gifts", id: "gifts" },
 ];
 
-const trailingItems = [
-  { label: "FAQ", path: "/faq", id: "faq" },
-];
-
-const sectionIds = [...navItems.map((i) => i.id), "rsvp", ...trailingItems.map((i) => i.id)];
+const sectionIds = [...navItems.map((i) => i.id), "rsvp"];
 
 const Navbar = () => {
   const location = useLocation();
@@ -70,17 +66,6 @@ const Navbar = () => {
             RSVP
           </Link>
         )}
-        {trailingItems.map((item) =>
-          isRoot ? (
-            <a key={item.id} href={`#${item.id}`} className={itemCls(isItemActive(item))}>
-              {item.label}
-            </a>
-          ) : (
-            <Link key={item.id} to={item.path} className={itemCls(isItemActive(item))}>
-              {item.label}
-            </Link>
-          )
-        )}
       </div>
 
       {/* Mobile toggle */}
@@ -125,27 +110,6 @@ const Navbar = () => {
             <Link to="/rsvp" onClick={() => setMobileOpen(false)} className={rsvpCls}>
               RSVP
             </Link>
-          )}
-          {trailingItems.map((item) =>
-            isRoot ? (
-              <a
-                key={item.id}
-                href={`#${item.id}`}
-                onClick={() => setMobileOpen(false)}
-                className={mobileLinkCls}
-              >
-                {item.label}
-              </a>
-            ) : (
-              <Link
-                key={item.id}
-                to={item.path}
-                onClick={() => setMobileOpen(false)}
-                className={mobileLinkCls}
-              >
-                {item.label}
-              </Link>
-            )
           )}
         </div>
       )}
