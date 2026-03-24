@@ -22,7 +22,7 @@ function googleCalUrl(title: string, start: string, end: string, location: strin
 // Exported so SinglePage can embed it without an extra PageLayout wrapper.
 // All state is self-contained, so it works correctly in both contexts.
 export const RsvpSection = () => {
-  const { t } = useTranslation();
+  const { t, language } = useTranslation();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -47,7 +47,7 @@ export const RsvpSection = () => {
         method: "POST",
         mode: "no-cors",
         headers: { "Content-Type": "text/plain" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, lang: language }),
       });
       setSubmitted(true);
       toast.success(t.rsvp.toastSuccess);
@@ -94,9 +94,9 @@ export const RsvpSection = () => {
   }, []);
 
   useEffect(() => {
-    if (submitted && form.attending === "yes") {
-      fireConfetti();
-    }
+    if (!submitted) return;
+    document.getElementById("rsvp")?.scrollIntoView({ behavior: "smooth" });
+    if (form.attending === "yes") fireConfetti();
   }, [submitted, form.attending, fireConfetti]);
 
   if (submitted) {
