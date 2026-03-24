@@ -42,33 +42,33 @@ export const GiftsSection = () => {
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           <img
-            src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad?w=600&q=80&auto=format&fit=crop"
-            alt="New Zealand — Milford Sound"
+            src="/images/gifts/nz-lake.jpg"
+            alt="New Zealand — lake and mountains"
             className="w-full h-48 object-cover rounded-lg opacity-80"
           />
           <img
-            src="https://images.unsplash.com/photo-1508193638397-1c4234db14d7?w=600&q=80&auto=format&fit=crop"
-            alt="New Zealand — mountains and lake"
+            src="/images/gifts/nz-hobbiton.jpg"
+            alt="New Zealand — Hobbiton"
             className="w-full h-48 object-cover rounded-lg opacity-80"
           />
           <img
-            src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=600&q=80&auto=format&fit=crop"
-            alt="Australia — Sydney Opera House"
+            src="/images/gifts/australia-beach.jpg"
+            alt="Australia — Bondi Beach"
             className="w-full h-48 object-cover rounded-lg opacity-80"
           />
           <img
-            src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be?w=600&q=80&auto=format&fit=crop"
-            alt="Australia — coastline"
+            src="/images/gifts/furniture-table.jpg"
+            alt="Wooden table and chair"
             className="w-full h-48 object-cover rounded-lg opacity-80"
           />
           <img
-            src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80&auto=format&fit=crop"
-            alt="Modern furniture — sofa"
+            src="/images/gifts/furniture-living.jpg"
+            alt="Minimalist living room"
             className="w-full h-48 object-cover rounded-lg opacity-80"
           />
           <img
-            src="https://images.unsplash.com/photo-1524758631624-e2822e304c36?w=600&q=80&auto=format&fit=crop"
-            alt="Minimalist interior design"
+            src="/images/gifts/furniture-chair.avif"
+            alt="Designer chair"
             className="w-full h-48 object-cover rounded-lg opacity-80"
           />
         </div>
