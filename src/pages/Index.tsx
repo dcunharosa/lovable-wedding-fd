@@ -14,11 +14,11 @@ export const HomeSection = () => {
 
         {/* Decorative hand-drawn illustrations */}
         {/* Big Ben: left of the photo */}
-        <div className="absolute bottom-[14%] left-4 md:left-12 lg:left-[47%] w-12 md:w-16 lg:w-20 opacity-50">
+        <div className="absolute bottom-[20%] left-4 md:left-12 lg:left-[47%] w-12 md:w-16 lg:w-20 opacity-50">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/big-ben.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Top: Single Flower */}
-        <div className="absolute top-[6%] left-[38%] lg:left-[40%] w-16 md:w-20 lg:w-24 opacity-50">
+        <div className="absolute top-[6%] left-[40%] lg:left-[42%] w-12 md:w-16 lg:w-20 opacity-50">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/single-flower.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Top: Seagulls (floating, moved left) */}
@@ -34,7 +34,7 @@ export const HomeSection = () => {
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dancer.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Top-right zone: Flower Vase (above photo) */}
-        <div className="absolute top-[8%] left-[60%] lg:left-[62%] w-12 md:w-16 lg:w-20 opacity-40">
+        <div className="absolute top-[5%] left-[60%] lg:left-[62%] w-12 md:w-16 lg:w-20 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/flower-vase.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Amore: on top of the photo, larger */}
