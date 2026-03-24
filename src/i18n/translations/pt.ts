@@ -52,7 +52,7 @@ export const pt: Translations = {
     ceremonyDesc:
       "Uma cerimónia íntima no campo.\nCheguem por volta das 12:30, vocês sabem que o Duarte é muito pontual.",
     partyTime: "Celebração",
-    partyTimeSpan: "14h – até os pés aguentarem",
+    partyTimeSpan: "14h – até os pés cansarem",
     partyDesc:
       "Depois da cerimónia teremos um cocktail, almoço tardio e até um jantarinho. A música nunca vai parar e as bebidas e boa disposição também não. Preparem-se para um casamento diferente onde estar sentado muito tempo é sobrevalorizado!",
     saturdayDressCode:

@@ -50,7 +50,7 @@ export const en = {
     ceremonyDesc:
       "An intimate ceremony in the countryside.\nPlease arrive by 12:30, you know Duarte is very punctual.",
     partyTime: "Celebration",
-    partyTimeSpan: "2pm – our feet allow us",
+    partyTimeSpan: "2pm – our feet get tired",
     partyDesc:
       "After the ceremony we'll have a cocktail, late lunch and even a cheeky dinner. Music will never stop and neither will the drinks and our good spirits. Be ready for a different wedding where sitting down for a long time is overrated!",
     saturdayDressCode:
