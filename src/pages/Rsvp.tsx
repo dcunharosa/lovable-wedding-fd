@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+import confetti from "canvas-confetti";
 import PageLayout from "@/components/PageLayout";
 import { toast } from "sonner";
 import { useTranslation } from "@/i18n";
@@ -60,6 +61,44 @@ export const RsvpSection = () => {
   const inputClass =
     "w-full bg-transparent border border-foreground/30 rounded-sm px-4 py-3 font-body text-base text-foreground placeholder:text-foreground/40 focus:outline-none focus:border-foreground/60 transition-colors";
 
+  const fireConfetti = useCallback(() => {
+    const end = Date.now() + 2500;
+    const colors = ["#ffffff", "#f0f0f0", "#e8e8e8"];
+
+    const frame = () => {
+      confetti({
+        particleCount: 3,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0, y: 0.6 },
+        colors,
+        ticks: 200,
+        gravity: 0.8,
+        scalar: 1.2,
+        drift: 0.5,
+      });
+      confetti({
+        particleCount: 3,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1, y: 0.6 },
+        colors,
+        ticks: 200,
+        gravity: 0.8,
+        scalar: 1.2,
+        drift: -0.5,
+      });
+      if (Date.now() < end) requestAnimationFrame(frame);
+    };
+    frame();
+  }, []);
+
+  useEffect(() => {
+    if (submitted && form.attending === "yes") {
+      fireConfetti();
+    }
+  }, [submitted, form.attending, fireConfetti]);
+
   if (submitted) {
     const calendarUrl = form.attending === "yes"
       ? googleCalUrl(
@@ -72,7 +111,7 @@ export const RsvpSection = () => {
       : null;
 
     return (
-      <section id="rsvp" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
+      <section id="rsvp" className="min-h-screen flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
         <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.rsvp.thankYou}</p>
         <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8 animate-scale-in">
           {form.attending === "yes" ? t.rsvp.seeYouThere : t.rsvp.wellMissYou}
