@@ -114,7 +114,7 @@ export const HomeSection = () => {
           Our Story
         </p>
         <p className="font-display text-3xl md:text-4xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12 px-4">
-          What started with a chance meeting has grown into a love we want to celebrate with all of you — by the sea, under the stars.
+          A random sunday night out in December 2022 took us to London, back to Portugal, around Brazil a few times, all the way across Spain to fetch Mico and finally to this special day, where you'll bear witness to an unforgettable new moment in our lives.
         </p>
 
         {/* Couple photos carousel */}
