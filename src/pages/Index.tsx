@@ -25,28 +25,28 @@ export const HomeSection = () => {
         <div className="absolute top-12 md:top-16 left-1/2 -translate-x-1/2 w-20 md:w-28 lg:w-32 opacity-40 animate-float">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Left: Music Notes */}
-        <div className="absolute top-[18%] left-2 md:left-4 lg:left-8 w-10 md:w-14 lg:w-16 opacity-40">
+        {/* Top-left zone: Music Notes */}
+        <div className="absolute top-[8%] left-[15%] lg:left-[18%] w-10 md:w-14 lg:w-16 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Right-mid: Dancer — hidden on small screens to avoid photo overlap */}
         <div className="absolute top-[35%] right-2 md:right-4 lg:right-8 w-10 md:w-14 lg:w-16 opacity-40 hidden md:block">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dancer.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Bottom-left: Single Flower */}
-        <div className="absolute bottom-24 md:bottom-28 left-4 md:left-10 lg:left-16 w-12 md:w-16 lg:w-20 opacity-40">
+        {/* Top-right zone: Single Flower (above photo) */}
+        <div className="absolute top-[8%] left-[60%] lg:left-[62%] w-12 md:w-16 lg:w-20 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/single-flower.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Bottom-center-left: Amore */}
-        <div className="absolute bottom-20 md:bottom-24 left-[15%] lg:left-[20%] w-14 md:w-18 lg:w-20 opacity-30">
+        {/* Bottom-center zone: Amore (below buttons, between columns) */}
+        <div className="absolute bottom-[12%] left-[30%] lg:left-[36%] w-14 md:w-18 lg:w-20 opacity-35">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/amore.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Bottom-right: Dunes */}
         <div className="absolute bottom-16 md:bottom-20 right-4 md:right-12 lg:right-16 w-16 md:w-24 lg:w-28 opacity-30">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dunes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Center-gap: Heart (floating) */}
-        <div className="absolute top-[30%] left-1/2 -translate-x-1/2 lg:left-[46%] w-8 md:w-10 lg:w-12 opacity-30 animate-float" style={{ animationDelay: "1.5s" }}>
+        {/* Center zone: Heart (between title and photo) */}
+        <div className="absolute top-[35%] left-[30%] lg:left-[34%] w-8 md:w-10 lg:w-12 opacity-35 animate-float" style={{ animationDelay: "1.5s" }}>
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/heart.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
 
