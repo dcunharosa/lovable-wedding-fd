@@ -13,32 +13,32 @@ export const HomeSection = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/10 pointer-events-none" />
 
         {/* Decorative hand-drawn illustrations */}
-        {/* Big Ben: left of the photo, bottom-aligned with photo */}
-        <div className="absolute bottom-[8%] left-4 md:left-12 lg:left-[44%] w-12 md:w-16 lg:w-20 opacity-50">
+        {/* Big Ben: left of the photo */}
+        <div className="absolute bottom-[14%] left-4 md:left-12 lg:left-[47%] w-12 md:w-16 lg:w-20 opacity-50">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/big-ben.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Top: Flower Vase (moved left) */}
+        {/* Top: Single Flower */}
         <div className="absolute top-[6%] left-[38%] lg:left-[40%] w-16 md:w-20 lg:w-24 opacity-50">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/flower-vase.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/single-flower.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Top: Seagulls (floating, moved left) */}
         <div className="absolute top-12 md:top-16 left-[24%] lg:left-[26%] w-20 md:w-28 lg:w-32 opacity-40 animate-float">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/seagulls.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Top-left zone: Music Notes */}
-        <div className="absolute top-[8%] left-[15%] lg:left-[18%] w-10 md:w-14 lg:w-16 opacity-40">
+        <div className="absolute top-[8%] left-[18%] lg:left-[22%] w-10 md:w-14 lg:w-16 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/music-notes.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Right-mid: Dancer — hidden on small screens to avoid photo overlap */}
         <div className="absolute top-[35%] right-2 md:right-4 lg:right-8 w-10 md:w-14 lg:w-16 opacity-40 hidden md:block">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/dancer.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
-        {/* Top-right zone: Single Flower (above photo) */}
+        {/* Top-right zone: Flower Vase (above photo) */}
         <div className="absolute top-[8%] left-[60%] lg:left-[62%] w-12 md:w-16 lg:w-20 opacity-40">
-          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/single-flower.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
+          <img alt="" aria-hidden="true" role="presentation" src="/illustrations/flower-vase.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Amore: on top of the photo, larger */}
-        <div className="absolute top-[10%] right-[8%] lg:right-[12%] w-20 md:w-28 lg:w-32 opacity-40">
+        <div className="absolute top-[5%] right-[8%] lg:right-[12%] w-20 md:w-28 lg:w-32 opacity-40">
           <img alt="" aria-hidden="true" role="presentation" src="/illustrations/amore.png" className="w-full h-auto" style={{ filter: illustrationFilter }} />
         </div>
         {/* Bottom-right: Dunes */}
