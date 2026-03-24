@@ -45,6 +45,7 @@ export const RsvpSection = () => {
       await fetch(RSVP_ENDPOINT, {
         method: "POST",
         mode: "no-cors",
+        redirect: "manual",
         headers: { "Content-Type": "text/plain" },
         body: JSON.stringify(form),
       });
