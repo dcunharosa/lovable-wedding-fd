@@ -116,7 +116,7 @@ export const WeekendSection = () => {
           <div className="pt-2">
             <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">Dress Code</p>
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
-              Smart casual with a countryside twist. Think linen, light fabrics, and comfortable shoes for sandy paths. Leave the stilettos at home!
+              Beach Chic. What does that mean? Think linen suits, light fabrics, and "no socks". Sneakers are a no no though. Leave the stilettos at home!
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               {/* TODO: Replace # with actual inspiration links */}
