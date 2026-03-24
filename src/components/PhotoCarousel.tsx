@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useTranslation } from "@/i18n";
 
-const photoSrcs = Array.from({ length: 12 }, (_, i) => `/photos/couple/couple-${i + 1}.jpg`);
+const photoSrcs = Array.from({ length: 15 }, (_, i) => `/photos/couple/couple-${i + 1}.jpg`);
 
 // Duplicate the list so the strip can loop seamlessly.
 const loopedSrcs = [...photoSrcs, ...photoSrcs];
@@ -97,7 +97,7 @@ export default function PhotoCarousel() {
                 src={src}
                 alt={t.home.photoAlt}
                 className="h-full w-auto object-cover"
-                loading={i < 12 ? "eager" : "lazy"}
+                loading={i < 15 ? "eager" : "lazy"}
                 draggable={false}
               />
             </div>
