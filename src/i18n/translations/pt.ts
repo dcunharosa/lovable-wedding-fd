@@ -27,7 +27,7 @@ export const pt: Translations = {
     heroAlt: "Filipa e Duarte a dar um beijo",
     ourStory: "A Nossa História",
     ourStoryText:
-      "Um domingo à noite qualquer em Dezembro de 2022 levou-nos a Londres, de volta a Portugal, pelo Brasil umas quantas vezes, por toda a Espanha para ir buscar o Mico e finalmente até este dia especial, onde vão testemunhar um momento inesquecível das nossas vidas, e espera-se que dancem muito!",
+      "Um domingo à noite qualquer em Dezembro de 2022 levou-nos a um date em Londres, de volta a Portugal, pelo Brasil umas quantas vezes, por toda a Espanha para ir buscar o Mico e finalmente até este dia especial, onde vão testemunhar um momento inesquecível das nossas vidas e dançar até não conseguirem mais!",
     photoAlt: "Filipa e Duarte",
     previousPhotos: "Fotos anteriores",
     nextPhotos: "Próximas fotos",
