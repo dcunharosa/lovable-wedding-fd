@@ -342,7 +342,7 @@ function _attendingEmailHtml(t, name, guests) {
   var card = ''
     // Photo
     + '<tr><td style="background-color:#ffffff;padding:0;text-align:center;">'
-    + '<img src="' + COUPLE_PHOTO_URL + '" alt="Filipa &amp; Duarte" width="600" style="display:block;width:100%;max-width:600px;height:280px;object-fit:cover;object-position:center 25%;" />'
+    + '<img src="' + COUPLE_PHOTO_URL + '" alt="Filipa &amp; Duarte" width="600" style="display:block;width:100%;max-width:600px;height:auto;" />'
     + '</td></tr>'
     // Body
     + '<tr><td style="background-color:#ffffff;padding:36px 40px 0;">'
