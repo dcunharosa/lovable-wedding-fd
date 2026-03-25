@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import { Plane, Car } from "lucide-react";
+import { Plane, Car, UserCheck } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
 
@@ -34,7 +34,10 @@ export const TravelSection = () => {
         </div>
 
         <div className="travel-card scroll-fade-up border-l-2 border-foreground/30 pl-8 py-6 text-left hover:border-foreground/60 transition-colors duration-300" style={{ transitionDelay: "0.3s" }}>
-          <h3 className="font-display text-3xl text-foreground mb-4">{t.travel.transfers}</h3>
+          <div className="flex items-center gap-3 mb-4">
+            <UserCheck size={20} className="text-foreground/60" />
+            <h3 className="font-display text-3xl text-foreground">{t.travel.transfers}</h3>
+          </div>
           <div className="font-body text-base text-foreground/70 leading-relaxed space-y-3">
             {t.travel.transfersDesc.split("\n").map((paragraph, i, arr) => (
               <p key={i} className={i === arr.length - 1 ? "italic" : undefined}>{paragraph}</p>
