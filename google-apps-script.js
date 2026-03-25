@@ -19,9 +19,9 @@
 
 var ADMIN_SECRET = "CHANGE_ME_TO_A_RANDOM_STRING";
 var RESEND_API_KEY = "CHANGE_ME_TO_YOUR_RESEND_API_KEY";
-var EMAIL_FROM = "Filipa & Duarte <hello@yourdomain.com>"; // Update with your verified Resend domain
-var COUPLE_PHOTO_URL = "https://filipaeduarte2026.pt/email-hero.jpg"; // Host a ~600px wide couple photo
-var WEBSITE_URL = "https://filipaeduarte2026.pt";
+var EMAIL_FROM = "Filipa & Duarte <hello@filipaeduarte.pt>"; // Update after verifying domain in Resend
+var COUPLE_PHOTO_URL = "https://filipaeduarte.pt/email-hero.jpg"; // Host a ~600px wide couple photo
+var WEBSITE_URL = "https://filipaeduarte.pt";
 var GOOGLE_MAPS_URL = "https://www.google.com/maps/search/?api=1&query=Monte+da+V%C3%A1rzea+Comporta+Portugal";
 var GOOGLE_CALENDAR_URL = "https://calendar.google.com/calendar/render?action=TEMPLATE&text=Filipa+%26+Duarte+%E2%80%94+Wedding&dates=20260912T123000%2F20260913T020000&location=Monte+da+Varzea%2C+Comporta%2C+Portugal&details=Ceremony+at+1pm%2C+cocktail+at+2pm%2C+lunch+%26+party+from+3%3A30pm.&ctz=Europe%2FLisbon";
 
