@@ -65,7 +65,7 @@ export const pt: Translations = {
     theVenue: "O Local",
     locationLabel: "Comporta, Portugal",
     venueIntro:
-      "Um recanto escondido da costa portuguesa, a Comporta é feita de pinhais, céu aberto e areal dourado sem fim. Não há lugar igual.",
+      "Um recanto escondido da costa portuguesa, a Comporta é feita de pinhais, céu aberto e areal dourado sem fim. Mal podemos esperar que a conheçam.",
     ceremonyReception: "Direções para o Local",
     venueDesc:
       "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
@@ -120,8 +120,6 @@ export const pt: Translations = {
     a4: "Sim, haverá estacionamento disponível. Partilharemos direções detalhadas mais perto da data.",
     q5: "Até quando devo confirmar presença?",
     a5: "Por favor confirmem até 1 de Julho de 2026 para podermos finalizar todos os preparativos.",
-    q6: "Posso tirar fotos durante a cerimónia?",
-    a6: "Pedimos uma cerimónia sem telemóveis. O nosso fotógrafo vai captar cada momento. Fiquem à vontade para tirar fotos na receção!",
   },
   rsvp: {
     weLoveToKnow: "Gostaríamos de Saber",

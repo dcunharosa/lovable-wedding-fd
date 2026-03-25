@@ -2,9 +2,12 @@
 
 ## Branching Workflow
 
-**Before any commit**, run `git branch --show-current` to verify the current branch.
-If you are on `main`, create and switch to a new feature branch first (`git checkout -b feature/<name>`).
 Never commit directly to `main` — always use a feature branch.
+**Verify the branch and commit atomically in a single chained command** to prevent the IDE from switching branches between steps:
+```
+git branch --show-current && git add <files> && git commit -m "..."
+```
+If the branch is `main`, create and switch to a feature branch first (`git checkout -b feature/<name>`).
 Commit and push the branch to the remote so changes can be previewed on Vercel.
 Only merge into `main` when explicitly told to by the user.
 Always push after committing or merging — never leave commits local-only.

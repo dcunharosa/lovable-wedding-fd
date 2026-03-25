@@ -63,7 +63,7 @@ export const en = {
     theVenue: "The Venue",
     locationLabel: "Comporta, Portugal",
     venueIntro:
-      "A hidden stretch of Portugal's coast, Comporta is all pine forests, open skies, and endless golden shore. There's nowhere quite like it.",
+      "A hidden stretch of Portugal's coast, Comporta is all pine forests, open skies, and endless golden shore. We can't wait for you to see it.",
     ceremonyReception: "Directions to the Venue",
     venueDesc:
       "Ceremony and reception will both be held at Monte da Várzea venue. Bring comfortable shoes. Parking will be available.",
@@ -118,8 +118,6 @@ export const en = {
     a4: "Yes, there will be parking available. We'll share detailed directions closer to the date.",
     q5: "When should I RSVP by?",
     a5: "Please RSVP by July 1st, 2026 so we can finalize all the arrangements.",
-    q6: "Can I take photos during the ceremony?",
-    a6: "We kindly ask for an unplugged ceremony. Our photographer will capture every moment. Feel free to snap away at the reception!",
   },
   rsvp: {
     weLoveToKnow: "We'd Love to Know",
