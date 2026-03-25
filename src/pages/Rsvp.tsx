@@ -119,7 +119,7 @@ export const RsvpSection = () => {
         <p className="font-display text-xl text-foreground/70 italic max-w-md">
           {form.attending === "yes" ? t.rsvp.cantWait : t.rsvp.thinkingOfYou}
         </p>
-        <p className="font-body text-sm text-foreground/50 max-w-md mt-6">
+        <p className="font-body text-base text-foreground/60 max-w-md mt-6">
           {t.rsvp.checkSpam}
         </p>
         {calendarUrl && (
