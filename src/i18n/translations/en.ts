@@ -90,7 +90,7 @@ export const en = {
     whereWellBe: "Where We'll Be",
     stay: "Stay",
     stayIntro:
-      "The wedding will be at Monte da Várzea, nestled between the coast and the countryside. Here are some nearby areas to look for accommodation. Don't worry if it's a 10-20 mins away from the venue, Uber is available and we'll also organize drivers that can drive your car back after the party (more details in Travel).",
+      "The wedding will be at Monte da Várzea, nestled between the coast and the countryside. Here are some nearby areas to look for accommodation. Don't worry if it's 10-20 mins away from the venue, Uber is available and we'll also organize drivers that can drive your car back after the party (more details in Travel).",
     weddingVenue: "WEDDING VENUE",
     mapAria:
       "Stylized map of the Comporta region showing the wedding venue and nearby areas",
