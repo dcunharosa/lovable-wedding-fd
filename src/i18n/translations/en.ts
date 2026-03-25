@@ -150,6 +150,8 @@ export const en = {
     toastSuccess: "Thank you for your RSVP!",
     toastErrorRequired: "Please fill in all required fields.",
     toastErrorGeneric: "Something went wrong. Please try again.",
+    checkSpam:
+      "A confirmation email is on its way! If you don't see it, please check your spam folder.",
   },
   notFound: {
     title: "404",

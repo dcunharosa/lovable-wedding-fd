@@ -152,6 +152,8 @@ export const pt: Translations = {
     toastSuccess: "Obrigado pela vossa confirmação!",
     toastErrorRequired: "Por favor preencham todos os campos obrigatórios.",
     toastErrorGeneric: "Algo correu mal. Por favor tentem novamente.",
+    checkSpam:
+      "Um email de confirmação está a caminho! Se não o encontrares, verifica a pasta de spam.",
   },
   notFound: {
     title: "404",
