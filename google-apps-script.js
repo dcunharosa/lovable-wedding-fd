@@ -234,6 +234,9 @@ function _sendConfirmationEmail(data) {
   var html = attending
     ? _attendingEmailHtml(t, firstName, data.guests || "1")
     : _decliningEmailHtml(t, firstName);
+  var text = attending
+    ? _attendingEmailText(t, firstName, data.guests || "1")
+    : _decliningEmailText(t, firstName);
 
   UrlFetchApp.fetch("https://api.resend.com/emails", {
     method: "post",
@@ -242,10 +245,48 @@ function _sendConfirmationEmail(data) {
     payload: JSON.stringify({
       from: EMAIL_FROM,
       to: [data.email],
+      reply_to: "filipaeduarte2026@gmail.com",
       subject: subject,
       html: html,
+      text: text,
     }),
   });
+}
+
+// ---------------------------------------------------------------------------
+// Plain text email versions (spam-filter friendly fallback)
+// ---------------------------------------------------------------------------
+function _attendingEmailText(t, name, guests) {
+  var bodyText = guests === "2" ? t.bodyYesPlusOne : t.bodyYes;
+  return t.confirmed + "\n" + t.headerYes + "\n\n"
+    + t.dear + " " + name + ",\n\n"
+    + bodyText + "\n\n"
+    + "---\n\n"
+    + t.theWedding + "\n"
+    + t.weddingDate + "\n\n"
+    + t.ceremony + "\n"
+    + t.ceremonyTime + "\n\n"
+    + t.venue + "\n"
+    + t.venueName + "\n\n"
+    + t.dressCode + "\n"
+    + t.dressCodeDesc + "\n\n"
+    + "---\n\n"
+    + t.moreDetails + "\n\n"
+    + t.visitWebsite + ": " + WEBSITE_URL + "\n"
+    + t.seeOnMaps + ": " + GOOGLE_MAPS_URL + "\n"
+    + t.addToCalendar + ": " + GOOGLE_CALENDAR_URL + "\n\n"
+    + t.withLove + "\nFilipa & Duarte\n\n"
+    + t.footer;
+}
+
+function _decliningEmailText(t, name) {
+  return t.received + "\n" + t.headerNo + "\n\n"
+    + t.dear + " " + name + ",\n\n"
+    + t.bodyNo + "\n\n"
+    + t.bodyNo2 + "\n\n"
+    + t.visitWebsite + ": " + WEBSITE_URL + "\n\n"
+    + t.withLove + "\nFilipa & Duarte\n\n"
+    + t.footer;
 }
 
 // ---------------------------------------------------------------------------
