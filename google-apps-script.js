@@ -173,7 +173,7 @@ var _copy = {
     subjectYes: "We can\u2019t wait to see you! \uD83C\uDF89",
     subjectNo: "Thank you for letting us know \uD83D\uDC9B",
     confirmed: "RSVP Confirmed",
-    headerYes: "See You in Comporta!",
+    headerYes: "We Can\u2019t Wait to Celebrate With You!",
     headerNo: "We\u2019ll Miss You",
     received: "RSVP Received",
     dear: "Dear",
@@ -200,7 +200,7 @@ var _copy = {
     subjectYes: "Mal podemos esperar por te ver! \uD83C\uDF89",
     subjectNo: "Obrigado por nos avisares \uD83D\uDC9B",
     confirmed: "RSVP Confirmado",
-    headerYes: "Vemo-nos na Comporta!",
+    headerYes: "Mal Podemos Esperar por Celebrar Contigo!",
     headerNo: "Vamos Ter Saudades",
     received: "RSVP Recebido",
     dear: "Querido/a",
@@ -342,7 +342,7 @@ function _attendingEmailHtml(t, name, guests) {
   var card = ''
     // Photo
     + '<tr><td style="background-color:#ffffff;padding:0;text-align:center;">'
-    + '<img src="' + COUPLE_PHOTO_URL + '" alt="Filipa &amp; Duarte" width="600" style="display:block;width:100%;max-width:600px;height:auto;" />'
+    + '<img src="' + COUPLE_PHOTO_URL + '" alt="Filipa &amp; Duarte" width="600" style="display:block;width:100%;max-width:600px;height:280px;object-fit:cover;object-position:center 25%;" />'
     + '</td></tr>'
     // Body
     + '<tr><td style="background-color:#ffffff;padding:36px 40px 0;">'
