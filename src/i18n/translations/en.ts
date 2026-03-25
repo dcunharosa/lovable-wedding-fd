@@ -84,7 +84,7 @@ export const en = {
       "From Lisbon, take the A2 motorway south and cross the Vasco da Gama bridge. Follow signs toward Alcácer do Sal and then Comporta. Parking will be available at the venue.",
     transfers: "Designated Drivers",
     transfersDesc:
-      "Want to make the most of the celebration without a care in the world? We've arranged a designated driver service so you can arrive in your own car and leave it to them to get it — and you — home safely at the end of the night.\nA driver will be assigned to your car and waiting at the venue at your requested departure time, ready to drive you to your chosen drop-off address. No taxis, no logistics, no worries.\nMore details and booking information to follow.",
+      "We've arranged a designated driver service so you can arrive in your own car and leave it to them to get it — and you — home safely at the end of the night.\nMore details and booking information to follow.",
   },
   stay: {
     whereWellBe: "Where We'll Be",

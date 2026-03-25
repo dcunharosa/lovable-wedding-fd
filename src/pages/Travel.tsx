@@ -36,8 +36,8 @@ export const TravelSection = () => {
         <div className="travel-card scroll-fade-up border-l-2 border-foreground/30 pl-8 py-6 text-left hover:border-foreground/60 transition-colors duration-300" style={{ transitionDelay: "0.3s" }}>
           <h3 className="font-display text-3xl text-foreground mb-4">{t.travel.transfers}</h3>
           <div className="font-body text-base text-foreground/70 leading-relaxed space-y-3">
-            {t.travel.transfersDesc.split("\n").map((paragraph, i) => (
-              <p key={i}>{paragraph}</p>
+            {t.travel.transfersDesc.split("\n").map((paragraph, i, arr) => (
+              <p key={i} className={i === arr.length - 1 ? "italic" : undefined}>{paragraph}</p>
             ))}
           </div>
         </div>

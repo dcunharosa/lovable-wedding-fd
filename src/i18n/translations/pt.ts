@@ -86,7 +86,7 @@ export const pt: Translations = {
       "A partir de Lisboa, sigam pela autoestrada A2 para sul e atravessem a ponte Vasco da Gama. Sigam as indicações para Alcácer do Sal e depois para a Comporta. Haverá estacionamento no local.",
     transfers: "Motoristas Designados",
     transfersDesc:
-      "Querem aproveitar a celebração ao máximo sem preocupações? Organizámos um serviço de motorista designado para que possam chegar no vosso próprio carro e deixar que eles o levem — a ele e a vocês — para casa em segurança no final da noite.\nUm motorista será atribuído ao vosso carro e estará à espera no local à hora de partida que escolherem, pronto para vos levar ao endereço de destino. Sem táxis, sem logística, sem preocupações.\nMais detalhes e informações de reserva em breve.",
+      "Organizámos um serviço de motorista designado para que possam chegar no vosso próprio carro e deixar que eles o levem — a ele e a vocês — para casa em segurança no final da noite.\nMais detalhes e informações de reserva em breve.",
   },
   stay: {
     whereWellBe: "Onde Vamos Estar",
