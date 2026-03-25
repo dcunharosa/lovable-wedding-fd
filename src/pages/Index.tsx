@@ -103,7 +103,7 @@ export const HomeSection = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 opacity-60 animate-fade-in" style={{ animationDelay: "1s" }}>
+        <div className="absolute bottom-16 md:bottom-20 left-1/2 -translate-x-1/2 opacity-60 animate-fade-in" style={{ animationDelay: "1s" }}>
           <div className="flex flex-col items-center gap-2 text-foreground/70">
             <span className="text-xs uppercase tracking-[0.2em] font-body">{t.home.scroll}</span>
             <ChevronDown className="w-4 h-4 md:w-5 md:h-5 animate-bounce" />
