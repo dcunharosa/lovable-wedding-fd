@@ -64,7 +64,7 @@ export const en = {
     locationLabel: "Comporta, Portugal",
     venueIntro:
       "A hidden stretch of Portugal's coast, Comporta is all pine forests, open skies, and endless golden shore. There's nowhere quite like it.",
-    ceremonyReception: "Ceremony & Reception",
+    ceremonyReception: "Directions to the Venue",
     venueDesc:
       "Ceremony and reception will both be held at Monte da Várzea venue. Bring comfortable shoes. Parking will be available.",
     googleMaps: "Google Maps",

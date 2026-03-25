@@ -66,7 +66,7 @@ export const pt: Translations = {
     locationLabel: "Comporta, Portugal",
     venueIntro:
       "Um recanto escondido da costa portuguesa, a Comporta é feita de pinhais, céu aberto e areal dourado sem fim. Não há lugar igual.",
-    ceremonyReception: "Cerimónia & Receção",
+    ceremonyReception: "Direções para o Local",
     venueDesc:
       "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
     googleMaps: "Google Maps",
