@@ -65,7 +65,7 @@ export const pt: Translations = {
     theVenue: "O Local",
     locationLabel: "Comporta, Portugal",
     venueIntro:
-      "Aninhada entre arrozais dourados e o Oceano Atlântico, a Comporta é um dos refúgios costeiros mais bonitos e intocados de Portugal.",
+      "Um recanto escondido da costa portuguesa, a Comporta é feita de pinhais, céu aberto e areal dourado sem fim. Não há lugar igual.",
     ceremonyReception: "Cerimónia & Receção",
     venueDesc:
       "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
@@ -145,7 +145,7 @@ export const pt: Translations = {
     thankYou: "Obrigado",
     seeYouThere: "Até Lá!",
     wellMissYou: "Vamos Ter Saudades",
-    cantWait: "Mal podemos esperar para celebrar convosco na Comporta.",
+    cantWait: "Mal podemos esperar para celebrar convosco.",
     thinkingOfYou:
       "Obrigado por nos avisarem. Vamos pensar em vocês.",
     addToGoogleCalendar: "Adicionar ao Google Calendar",

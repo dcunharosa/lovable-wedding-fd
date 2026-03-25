@@ -63,7 +63,7 @@ export const en = {
     theVenue: "The Venue",
     locationLabel: "Comporta, Portugal",
     venueIntro:
-      "Nestled between golden rice paddies and the Atlantic Ocean, Comporta is one of Portugal's most beautiful and unspoiled coastal retreats.",
+      "A hidden stretch of Portugal's coast, Comporta is all pine forests, open skies, and endless golden shore. There's nowhere quite like it.",
     ceremonyReception: "Ceremony & Reception",
     venueDesc:
       "Ceremony and reception will both be held at Monte da Várzea venue. Bring comfortable shoes. Parking will be available.",
@@ -143,7 +143,7 @@ export const en = {
     thankYou: "Thank You",
     seeYouThere: "See You There!",
     wellMissYou: "We'll Miss You",
-    cantWait: "We can't wait to celebrate with you in Comporta.",
+    cantWait: "We can't wait to celebrate with you.",
     thinkingOfYou:
       "Thank you for letting us know. We'll be thinking of you.",
     addToGoogleCalendar: "Add to Google Calendar",
