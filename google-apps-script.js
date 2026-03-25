@@ -245,7 +245,7 @@ function _sendConfirmationEmail(data) {
     payload: JSON.stringify({
       from: EMAIL_FROM,
       to: [data.email],
-      reply_to: "filipaeduarte2026@gmail.com",
+      reply_to: "duarte.cunharosa@gmail.com",
       subject: subject,
       html: html,
       text: text,
