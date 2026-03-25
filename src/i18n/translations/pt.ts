@@ -66,7 +66,7 @@ export const pt: Translations = {
     locationLabel: "Comporta, Portugal",
     venueIntro:
       "Um recanto escondido da costa portuguesa, a Comporta é feita de pinhais, céu aberto e areal dourado sem fim. Mal podemos esperar que a conheçam.",
-    ceremonyReception: "Direções para o Local",
+    ceremonyReception: "Direções",
     venueDesc:
       "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
     googleMaps: "Google Maps",
@@ -84,9 +84,9 @@ export const pt: Translations = {
     byCar: "De Carro",
     byCarDesc:
       "A partir de Lisboa, sigam pela autoestrada A2 para sul e atravessem a ponte Vasco da Gama. Sigam as indicações para Alcácer do Sal e depois para a Comporta. Haverá estacionamento no local.",
-    transfers: "Transfers",
+    transfers: "Motoristas Designados",
     transfersDesc:
-      "Estamos a organizar transfers de grupo a partir de Lisboa na sexta-feira à tarde e regresso no domingo. Mais detalhes em breve.",
+      "Querem aproveitar a celebração ao máximo sem preocupações? Organizámos um serviço de motorista designado para que possam chegar no vosso próprio carro e deixar que eles o levem — a ele e a vocês — para casa em segurança no final da noite.\nUm motorista será atribuído ao vosso carro e estará à espera no local à hora de partida que escolherem, pronto para vos levar ao endereço de destino. Sem táxis, sem logística, sem preocupações.\nMais detalhes e informações de reserva em breve.",
   },
   stay: {
     whereWellBe: "Onde Vamos Estar",

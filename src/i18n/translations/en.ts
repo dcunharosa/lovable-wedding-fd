@@ -64,7 +64,7 @@ export const en = {
     locationLabel: "Comporta, Portugal",
     venueIntro:
       "A hidden stretch of Portugal's coast, Comporta is all pine forests, open skies, and endless golden shore. We can't wait for you to see it.",
-    ceremonyReception: "Directions to the Venue",
+    ceremonyReception: "Directions",
     venueDesc:
       "Ceremony and reception will both be held at Monte da Várzea venue. Bring comfortable shoes. Parking will be available.",
     googleMaps: "Google Maps",
@@ -82,9 +82,9 @@ export const en = {
     byCar: "By Car",
     byCarDesc:
       "From Lisbon, take the A2 motorway south and cross the Vasco da Gama bridge. Follow signs toward Alcácer do Sal and then Comporta. Parking will be available at the venue.",
-    transfers: "Transfers",
+    transfers: "Designated Drivers",
     transfersDesc:
-      "We'll be arranging group transfers from Lisbon on Friday afternoon and back on Sunday. More details to follow.",
+      "Want to make the most of the celebration without a care in the world? We've arranged a designated driver service so you can arrive in your own car and leave it to them to get it — and you — home safely at the end of the night.\nA driver will be assigned to your car and waiting at the venue at your requested departure time, ready to drive you to your chosen drop-off address. No taxis, no logistics, no worries.\nMore details and booking information to follow.",
   },
   stay: {
     whereWellBe: "Where We'll Be",
