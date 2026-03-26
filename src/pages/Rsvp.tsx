@@ -5,8 +5,6 @@ import { toast } from "sonner";
 import { useTranslation } from "@/i18n";
 import { CalendarPlus } from "lucide-react";
 
-const RSVP_ENDPOINT = import.meta.env.VITE_RSVP_ENDPOINT as string;
-
 function googleCalUrl(title: string, start: string, end: string, location: string, details: string) {
   const params = new URLSearchParams({
     action: "TEMPLATE",
@@ -43,12 +41,12 @@ export const RsvpSection = () => {
 
     setLoading(true);
     try {
-      await fetch(RSVP_ENDPOINT, {
+      const res = await fetch("/api/rsvp", {
         method: "POST",
-        mode: "no-cors",
-        headers: { "Content-Type": "text/plain" },
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, lang: language }),
       });
+      if (!res.ok) throw new Error("RSVP submission failed");
       setSubmitted(true);
       toast.success(t.rsvp.toastSuccess);
     } catch {
