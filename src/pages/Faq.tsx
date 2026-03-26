@@ -20,7 +20,7 @@ export const FaqSection = () => {
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.faq.questions}</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">{t.faq.faq}</h1>
 
-      <div ref={faqRef} className="max-w-2xl w-full">
+      <div ref={faqRef} className="max-w-4xl w-full">
         <Accordion type="single" collapsible className="space-y-2">
           {faqs.map((faq, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="faq-item scroll-fade-up border-foreground/10" style={{ transitionDelay: `${(i + 1) * 0.1}s` }}>

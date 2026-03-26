@@ -116,7 +116,7 @@ export const HomeSection = () => {
         <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-6 px-4">
           {t.home.ourStory}
         </p>
-        <p className="font-display text-3xl md:text-4xl text-foreground/90 max-w-2xl mx-auto italic leading-relaxed mb-12 px-4">
+        <p className="font-display text-3xl md:text-4xl text-foreground/90 max-w-4xl mx-auto italic leading-relaxed mb-12 px-4">
           {t.home.ourStoryText}
         </p>
 

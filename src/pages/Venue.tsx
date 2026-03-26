@@ -19,7 +19,7 @@ export const VenueSection = () => {
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.venue.whereItHappens}</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8">{t.venue.theVenue}</h1>
 
-      <div className="max-w-2xl animate-fade-in">
+      <div className="max-w-4xl animate-fade-in">
         <div className="flex items-center justify-center gap-2 text-foreground/70">
           <MapPin size={18} />
           <p className="font-body text-base tracking-widest uppercase">{t.venue.locationLabel}</p>
@@ -67,7 +67,7 @@ export const VenueSection = () => {
         </div>
       )}
 
-      <div ref={cardsRef} className="max-w-2xl space-y-8 mt-8">
+      <div ref={cardsRef} className="max-w-4xl space-y-8 mt-8">
         <div className="venue-card scroll-scale-in bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-8 border border-foreground/10">
           <h3 className="font-display text-3xl text-foreground mb-4">{t.venue.ceremonyReception}</h3>
           <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
