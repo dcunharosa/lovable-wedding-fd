@@ -98,8 +98,8 @@ export const pt: Translations = {
       "Mapa estilizado da região da Comporta mostrando o local do casamento e áreas próximas",
   },
   gifts: {
-    gifts: "Presentes de Casamento",
-    title: "A Vossa Presença É o Nosso Presente",
+    gifts: "Se Quiserem",
+    title: "Presentes de Casamento",
     subtitle:
       "O que mais nos importa é que se juntem a nós neste fim de semana especial. Mas se também quiserem contribuir para este novo capítulo das nossas vidas, ficamos muito agradecidos!",
     showBankDetails: "Veja onde pode enviar o seu presente",
