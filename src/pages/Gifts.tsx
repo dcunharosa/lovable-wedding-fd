@@ -62,14 +62,14 @@ export const GiftsSection = () => {
             className="w-full h-48 object-cover object-center rounded-lg opacity-80"
           />
           <img
-            src="/images/gifts/furniture-chair.avif"
+            src="/images/gifts/furniture-living.jpg"
             alt="Minimalist living room with woven chair"
             className="w-full h-48 object-cover object-bottom rounded-lg opacity-80"
           />
           <img
-            src="/images/gifts/furniture-living.jpg"
+            src="/images/gifts/furniture-sofa.jpg"
             alt="Modern living room with wooden coffee table"
-            className="w-full h-48 object-cover object-center rounded-lg opacity-80"
+            className="w-full h-48 object-cover object-bottom rounded-lg opacity-80"
           />
         </div>
       </div>
