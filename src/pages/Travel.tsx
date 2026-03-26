@@ -12,7 +12,7 @@ export const TravelSection = () => {
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.travel.gettingThere}</p>
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-16">{t.travel.travel}</h1>
 
-      <div ref={cardsRef} className="max-w-2xl w-full space-y-10">
+      <div ref={cardsRef} className="max-w-4xl w-full space-y-10">
         <div className="travel-card scroll-fade-up border-l-2 border-foreground/30 pl-8 py-6 text-left hover:border-foreground/60 transition-colors duration-300" style={{ transitionDelay: "0.1s" }}>
           <div className="flex items-center gap-3 mb-4">
             <Plane size={20} className="text-foreground/60" />
