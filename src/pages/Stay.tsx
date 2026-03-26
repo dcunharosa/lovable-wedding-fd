@@ -15,7 +15,7 @@ export const StaySection = () => {
         {t.stay.stayIntro}
       </p>
 
-      <div ref={mapRef} className="scroll-fade-up w-full max-w-4xl">
+      <div ref={mapRef} className="scroll-fade-up w-full max-w-xl">
         <ComportaMap />
       </div>
     </section>
