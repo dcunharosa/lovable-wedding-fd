@@ -62,8 +62,8 @@ export const GiftsSection = () => {
             className="w-full h-48 object-cover rounded-lg opacity-80"
           />
           <img
-            src="/images/gifts/furniture-living.avif"
-            alt="Minimalist desk and chair"
+            src="/images/gifts/furniture-living.jpg"
+            alt="Minimalist living room"
             className="w-full h-48 object-cover rounded-lg opacity-80"
           />
           <img
