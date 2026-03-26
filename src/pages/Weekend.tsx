@@ -125,9 +125,8 @@ export const WeekendSection = () => {
               {t.weekend.saturdayDressCode}
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
-              {/* TODO: Replace # with actual inspiration links */}
               <a
-                href="#"
+                href="https://pin.it/2tUm1nliO"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-foreground/30 text-foreground/80 font-body text-xs tracking-wider uppercase rounded-sm hover:bg-foreground/10 transition-colors"
