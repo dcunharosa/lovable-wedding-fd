@@ -101,7 +101,7 @@ export const pt: Translations = {
     gifts: "Se Quiserem",
     title: "Presentes de Casamento",
     subtitle:
-      "O que mais nos importa é que se juntem a nós neste fim de semana especial. Mas se também quiserem contribuir para este novo capítulo das nossas vidas, ficamos muito agradecidos!",
+      "O que mais nos importa é que se juntem a nós neste fim de semana especial. Mas se também quiserem contribuir para este novo capítulo das nossas vidas, ficamos muito agradecidos.",
     showBankDetails: "Vejam onde podem enviar o vosso presente",
     bankDetails: "Dados Bancários",
     bankHolder: "Filipa & Duarte",

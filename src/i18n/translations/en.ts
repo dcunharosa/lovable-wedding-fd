@@ -99,7 +99,7 @@ export const en = {
     gifts: "If You'd Like",
     title: "Wedding Gifts",
     subtitle:
-      "All we care about is that you join us for this special weekend. But if you'd also like to contribute to this brand new chapter of our lives, we'd truly appreciate it!",
+      "All we care about is that you join us for this special weekend. But if you'd also like to contribute to this brand new chapter of our lives, we'd truly appreciate it.",
     showBankDetails: "See where you can send your gift",
     bankDetails: "Bank Details",
     bankHolder: "Filipa & Duarte",
