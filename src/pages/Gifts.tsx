@@ -59,17 +59,17 @@ export const GiftsSection = () => {
           <img
             src="/images/gifts/furniture-table.jpg"
             alt="Wooden table and chair"
-            className="w-full h-48 object-cover rounded-lg opacity-80"
-          />
-          <img
-            src="/images/gifts/furniture-living.jpg"
-            alt="Minimalist living room"
-            className="w-full h-48 object-cover rounded-lg opacity-80"
+            className="w-full h-48 object-cover object-center rounded-lg opacity-80"
           />
           <img
             src="/images/gifts/furniture-chair.avif"
-            alt="Designer chair"
-            className="w-full h-48 object-cover rounded-lg opacity-80"
+            alt="Minimalist living room with woven chair"
+            className="w-full h-48 object-cover object-bottom rounded-lg opacity-80"
+          />
+          <img
+            src="/images/gifts/furniture-living.jpg"
+            alt="Modern living room with wooden coffee table"
+            className="w-full h-48 object-cover object-center rounded-lg opacity-80"
           />
         </div>
       </div>
