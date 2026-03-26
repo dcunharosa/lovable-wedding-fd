@@ -1,5 +1,5 @@
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Menu, X } from "lucide-react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 import { useTranslation } from "@/i18n";
@@ -20,8 +20,21 @@ const Navbar = () => {
   const { t } = useTranslation();
   const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const navRef = useRef<HTMLElement>(null);
   const isRoot = location.pathname === "/";
   const activeSection = useActiveSection(sectionIds, isRoot);
+
+  // Close mobile menu on outside click
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const handleClick = (e: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
+        setMobileOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClick);
+    return () => document.removeEventListener("mousedown", handleClick);
+  }, [mobileOpen]);
 
   const isItemActive = (item: { path: string; id: string }) =>
     isRoot ? activeSection === item.id : location.pathname === item.path;
@@ -36,7 +49,7 @@ const Navbar = () => {
     "font-body text-sm tracking-widest uppercase text-foreground/90 hover:text-foreground";
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between bg-background/80 backdrop-blur-sm">
+    <nav ref={navRef} className="fixed top-0 left-0 right-0 z-50 px-6 py-4 flex items-center justify-between bg-background/80 backdrop-blur-sm">
       {isRoot ? (
         <a href="#home" className="font-display text-xl italic text-foreground">
           Filipa &amp; Duarte

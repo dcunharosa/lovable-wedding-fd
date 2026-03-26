@@ -45,31 +45,37 @@ export const GiftsSection = () => {
             src="/images/gifts/nz-lake.jpg"
             alt="New Zealand — lake and mountains"
             className="w-full h-48 object-cover rounded-lg opacity-80"
+            loading="lazy"
           />
           <img
             src="/images/gifts/nz-hobbiton.jpg"
             alt="New Zealand — Hobbiton"
             className="w-full h-48 object-cover rounded-lg opacity-80"
+            loading="lazy"
           />
           <img
             src="/images/gifts/australia-beach.jpg"
             alt="Australia — Bondi Beach"
             className="w-full h-48 object-cover rounded-lg opacity-80"
+            loading="lazy"
           />
           <img
             src="/images/gifts/furniture-table.jpg"
             alt="Wooden table and chair"
             className="w-full h-48 object-cover object-center rounded-lg opacity-80"
+            loading="lazy"
           />
           <img
             src="/images/gifts/furniture-living.jpg"
             alt="Minimalist living room with woven chair"
             className="w-full h-48 object-cover object-bottom rounded-lg opacity-80"
+            loading="lazy"
           />
           <img
             src="/images/gifts/furniture-sofa.jpg"
             alt="Modern living room with wooden coffee table"
             className="w-full h-48 object-cover object-bottom rounded-lg opacity-80"
+            loading="lazy"
           />
         </div>
       </div>

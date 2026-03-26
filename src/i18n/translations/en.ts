@@ -25,7 +25,7 @@ export const en = {
     heroAlt: "Filipa and Duarte sharing a kiss",
     ourStory: "Our Story",
     ourStoryText:
-      "A random sunday night out in December 2022 took us to a date in London, back to Portugal, around Brazil a few times, all the way across Spain to fetch Mico and finally to this special day, where you'll bear witness to an unforgettable moment in our lives and dance until we can't anymore!",
+      "A random Sunday night out in December 2022 took us to a date in London, back to Portugal, around Brazil a few times, all the way across Spain to fetch Mico and finally to this special day, where you'll bear witness to an unforgettable moment in our lives and dance until we can't anymore!",
     photoAlt: "Filipa and Duarte",
     previousPhotos: "Previous photos",
     nextPhotos: "Next photos",

@@ -102,7 +102,7 @@ export const pt: Translations = {
     title: "Presentes de Casamento",
     subtitle:
       "O que mais nos importa é que se juntem a nós neste fim de semana especial. Mas se também quiserem contribuir para este novo capítulo das nossas vidas, ficamos muito agradecidos!",
-    showBankDetails: "Veja onde pode enviar o seu presente",
+    showBankDetails: "Vejam onde podem enviar o vosso presente",
     bankDetails: "Dados Bancários",
     bankHolder: "Filipa & Duarte",
     photoCaption: "Para onde vai o vosso presente: uma lua de mel inesquecível & uma casa para construir",
@@ -152,7 +152,7 @@ export const pt: Translations = {
     toastErrorRequired: "Por favor preencham todos os campos obrigatórios.",
     toastErrorGeneric: "Algo correu mal. Por favor tentem novamente.",
     checkSpam:
-      "Um email de confirmação está a caminho! Se não o encontrares, verifica a pasta de spam.",
+      "Um email de confirmação está a caminho! Se não o encontrarem, verifiquem a pasta de spam.",
   },
   notFound: {
     title: "404",

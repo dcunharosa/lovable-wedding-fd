@@ -4,18 +4,7 @@ import PageLayout from "@/components/PageLayout";
 import { toast } from "sonner";
 import { useTranslation } from "@/i18n";
 import { CalendarPlus } from "lucide-react";
-
-function googleCalUrl(title: string, start: string, end: string, location: string, details: string) {
-  const params = new URLSearchParams({
-    action: "TEMPLATE",
-    text: title,
-    dates: `${start}/${end}`,
-    location,
-    details,
-    ctz: "Europe/Lisbon",
-  });
-  return `https://calendar.google.com/calendar/render?${params}`;
-}
+import { googleCalUrl, VENUE_LOCATION } from "@/lib/googleCalUrl";
 
 // Exported so SinglePage can embed it without an extra PageLayout wrapper.
 // All state is self-contained, so it works correctly in both contexts.
@@ -103,7 +92,7 @@ export const RsvpSection = () => {
           t.calendar.weddingTitle,
           "20260912T123000",
           "20260913T020000",
-          "Monte da Varzea, Comporta, Portugal",
+          VENUE_LOCATION,
           t.calendar.weddingDetails,
         )
       : null;
@@ -174,11 +163,13 @@ export const RsvpSection = () => {
             <label className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
               {t.rsvp.willAttend}
             </label>
-            <div className="flex gap-4" role="group" aria-label={t.rsvp.attendanceAria}>
+            <div className="flex gap-4" role="radiogroup" aria-label={t.rsvp.attendanceAria}>
               {["yes", "no"].map((opt) => (
                 <button
                   key={opt}
                   type="button"
+                  role="radio"
+                  aria-checked={form.attending === opt}
                   onClick={() => setForm({ ...form, attending: opt })}
                   className={`flex-1 py-3 rounded-sm border font-body text-base tracking-widest uppercase transition-colors ${
                     form.attending === opt

@@ -2,18 +2,7 @@ import PageLayout from "@/components/PageLayout";
 import { CalendarPlus, ExternalLink } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
-
-function googleCalUrl(title: string, start: string, end: string, location: string, details: string) {
-  const params = new URLSearchParams({
-    action: "TEMPLATE",
-    text: title,
-    dates: `${start}/${end}`,
-    location,
-    details,
-    ctz: "Europe/Lisbon",
-  });
-  return `https://calendar.google.com/calendar/render?${params}`;
-}
+import { googleCalUrl, VENUE_LOCATION } from "@/lib/googleCalUrl";
 
 export const WeekendSection = () => {
   const { t } = useTranslation();
@@ -24,14 +13,14 @@ export const WeekendSection = () => {
       t.calendar.welcomeDrinksTitle,
       "20260911T180000",
       "20260911T230000",
-      t.home.location,
+      VENUE_LOCATION,
       t.calendar.welcomeDrinksDetails,
     ),
     ceremony: googleCalUrl(
       t.calendar.weddingTitle,
       "20260912T123000",
       "20260913T020000",
-      t.home.location,
+      VENUE_LOCATION,
       t.calendar.weddingDetails,
     ),
   };

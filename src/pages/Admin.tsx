@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useCallback } from "react";
 import { toast } from "sonner";
 import {
   Dialog,
@@ -77,7 +77,9 @@ function LoginScreen({ onLogin }: { onLogin: (pw: string) => void }) {
         <h1 className="font-display text-3xl text-[hsl(220,30%,30%)] text-center">
           Admin
         </h1>
+        <label htmlFor="admin-pw" className="sr-only">Password</label>
         <input
+          id="admin-pw"
           type="password"
           value={pw}
           onChange={(e) => setPw(e.target.value)}
@@ -175,31 +177,31 @@ function EditModal({
           className="space-y-4 mt-2"
         >
           <div>
-            <label className={labelClass}>Name</label>
-            <input className={fieldClass} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
+            <label htmlFor="edit-name" className={labelClass}>Name</label>
+            <input id="edit-name" className={fieldClass} value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} />
           </div>
           <div>
-            <label className={labelClass}>Email</label>
-            <input className={fieldClass} type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
+            <label htmlFor="edit-email" className={labelClass}>Email</label>
+            <input id="edit-email" className={fieldClass} type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} />
           </div>
           <div>
-            <label className={labelClass}>Attending</label>
-            <select className={fieldClass} value={form.attending} onChange={(e) => setForm({ ...form, attending: e.target.value })}>
+            <label htmlFor="edit-attending" className={labelClass}>Attending</label>
+            <select id="edit-attending" className={fieldClass} value={form.attending} onChange={(e) => setForm({ ...form, attending: e.target.value })}>
               <option value="yes">Yes</option>
               <option value="no">No</option>
             </select>
           </div>
           <div>
-            <label className={labelClass}>Guests</label>
-            <input className={fieldClass} type="number" min={1} max={10} value={form.guests} onChange={(e) => setForm({ ...form, guests: e.target.value })} />
+            <label htmlFor="edit-guests" className={labelClass}>Guests</label>
+            <input id="edit-guests" className={fieldClass} type="number" min={1} max={10} value={form.guests} onChange={(e) => setForm({ ...form, guests: e.target.value })} />
           </div>
           <div>
-            <label className={labelClass}>Dietary</label>
-            <input className={fieldClass} value={form.dietary} onChange={(e) => setForm({ ...form, dietary: e.target.value })} />
+            <label htmlFor="edit-dietary" className={labelClass}>Dietary</label>
+            <input id="edit-dietary" className={fieldClass} value={form.dietary} onChange={(e) => setForm({ ...form, dietary: e.target.value })} />
           </div>
           <div>
-            <label className={labelClass}>Message</label>
-            <textarea className={`${fieldClass} min-h-[60px] resize-none`} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
+            <label htmlFor="edit-message" className={labelClass}>Message</label>
+            <textarea id="edit-message" className={`${fieldClass} min-h-[60px] resize-none`} value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} />
           </div>
           <button
             type="submit"
@@ -269,22 +271,23 @@ function EmailComposer({ guests }: { guests: Guest[] }) {
       </h2>
       <div className="space-y-4">
         <div>
-          <label className={labelClass}>
+          <label htmlFor="email-audience" className={labelClass}>
             To ({recipients.length} recipient{recipients.length !== 1 ? "s" : ""})
           </label>
-          <select className={fieldClass} value={audience} onChange={(e) => setAudience(e.target.value as typeof audience)}>
+          <select id="email-audience" className={fieldClass} value={audience} onChange={(e) => setAudience(e.target.value as typeof audience)}>
             <option value="confirmed">All Confirmed</option>
             <option value="declined">All Declined</option>
             <option value="all">Everyone</option>
           </select>
         </div>
         <div>
-          <label className={labelClass}>Subject</label>
-          <input className={fieldClass} value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="e.g. RSVP Reminder" />
+          <label htmlFor="email-subject" className={labelClass}>Subject</label>
+          <input id="email-subject" className={fieldClass} value={subject} onChange={(e) => setSubject(e.target.value)} placeholder="e.g. RSVP Reminder" />
         </div>
         <div>
-          <label className={labelClass}>Body</label>
+          <label htmlFor="email-body" className={labelClass}>Body</label>
           <textarea
+            id="email-body"
             className={`${fieldClass} min-h-[120px]`}
             value={body}
             onChange={(e) => setBody(e.target.value)}
@@ -425,14 +428,14 @@ function GuestTable({
                   <button
                     onClick={() => onEdit(g)}
                     className="p-1.5 rounded hover:bg-[hsl(220,30%,92%)] transition-colors"
-                    title="Edit guest"
+                    aria-label={`Edit ${g.name}`}
                   >
                     <Pencil size={14} className="text-[hsl(220,30%,45%)]" />
                   </button>
                   <button
                     onClick={() => onDelete(g)}
                     className="p-1.5 rounded hover:bg-red-100 transition-colors"
-                    title="Delete guest"
+                    aria-label={`Delete ${g.name}`}
                   >
                     <Trash2 size={14} className="text-red-400 hover:text-red-600" />
                   </button>
@@ -462,7 +465,7 @@ const Admin = () => {
   const [loading, setLoading] = useState(false);
   const [editing, setEditing] = useState<Guest | null>(null);
 
-  const loadGuests = async () => {
+  const loadGuests = useCallback(async () => {
     setLoading(true);
     try {
       const data = await apiFetch<{ guests: Guest[] }>("/api/guests");
@@ -472,11 +475,11 @@ const Admin = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, []);
 
   useEffect(() => {
     if (authed) loadGuests();
-  }, [authed]);
+  }, [authed, loadGuests]);
 
   const handleLogin = (pw: string) => {
     sessionStorage.setItem("admin_pw", pw);

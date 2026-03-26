@@ -1,8 +1,66 @@
-import { useState } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import PageLayout from "@/components/PageLayout";
 import { MapPin, ExternalLink, Download, X } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
+
+function Lightbox({
+  src,
+  alt,
+  closeLabel,
+  onClose,
+}: {
+  src: string;
+  alt: string;
+  closeLabel: string;
+  onClose: () => void;
+}) {
+  const closeRef = useRef<HTMLButtonElement>(null);
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    },
+    [onClose],
+  );
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    // Save the element that opened the lightbox so we can restore focus later.
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    closeRef.current?.focus();
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+      previouslyFocused?.focus();
+    };
+  }, [handleKeyDown]);
+
+  return (
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label={alt}
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
+      onClick={onClose}
+    >
+      <button
+        ref={closeRef}
+        type="button"
+        onClick={onClose}
+        className="absolute top-6 right-6 text-white/80 hover:text-white"
+        aria-label={closeLabel}
+      >
+        <X size={32} />
+      </button>
+      <img
+        src={src}
+        alt={alt}
+        className="max-w-[90vw] max-h-[90vh] object-contain rounded-md"
+        onClick={(e) => e.stopPropagation()}
+      />
+    </div>
+  );
+}
 
 export const VenueSection = () => {
   const { t } = useTranslation();
@@ -46,25 +104,12 @@ export const VenueSection = () => {
 
       {/* Lightbox */}
       {lightboxSrc && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80"
-          onClick={() => setLightboxSrc(null)}
-        >
-          <button
-            type="button"
-            onClick={() => setLightboxSrc(null)}
-            className="absolute top-6 right-6 text-white/80 hover:text-white"
-            aria-label={t.venue.closeLightbox}
-          >
-            <X size={32} />
-          </button>
-          <img
-            src={lightboxSrc}
-            alt={t.venue.venuePhotoAlt}
-            className="max-w-[90vw] max-h-[90vh] object-contain rounded-md"
-            onClick={(e) => e.stopPropagation()}
-          />
-        </div>
+        <Lightbox
+          src={lightboxSrc}
+          alt={t.venue.venuePhotoAlt}
+          closeLabel={t.venue.closeLightbox}
+          onClose={() => setLightboxSrc(null)}
+        />
       )}
 
       <div ref={cardsRef} className="max-w-4xl space-y-8 mt-8">
@@ -74,9 +119,8 @@ export const VenueSection = () => {
             {t.venue.venueDesc}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            {/* TODO: Replace # with actual Google Maps link */}
             <a
-              href="#"
+              href="https://maps.app.goo.gl/RB7pQqUN3CEwZDsX7"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
