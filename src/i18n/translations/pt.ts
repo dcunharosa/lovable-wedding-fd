@@ -120,6 +120,7 @@ export const pt: Translations = {
     a4: "Sim, haverá estacionamento disponível. Partilharemos direções detalhadas mais perto da data.",
     q5: "Até quando devo confirmar presença?",
     a5: "Por favor confirmem até 1 de Julho de 2026 para podermos finalizar todos os preparativos.",
+    closing: "Mal podemos esperar por vos ver lá!",
   },
   rsvp: {
     weLoveToKnow: "Gostaríamos de Saber",

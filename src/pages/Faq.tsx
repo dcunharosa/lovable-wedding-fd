@@ -34,6 +34,10 @@ export const FaqSection = () => {
           ))}
         </Accordion>
       </div>
+
+      <p className="font-display text-2xl md:text-3xl italic text-foreground/80 mt-16">
+        {t.faq.closing}
+      </p>
     </section>
   );
 };

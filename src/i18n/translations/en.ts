@@ -118,6 +118,7 @@ export const en = {
     a4: "Yes, there will be parking available. We'll share detailed directions closer to the date.",
     q5: "When should I RSVP by?",
     a5: "Please RSVP by July 1st, 2026 so we can finalize all the arrangements.",
+    closing: "Can't wait to see you there!",
   },
   rsvp: {
     weLoveToKnow: "We'd Love to Know",
