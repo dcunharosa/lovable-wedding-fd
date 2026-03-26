@@ -11,7 +11,7 @@ export const GiftsSection = () => {
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.gifts.gifts}</p>
       <h1 className="font-display text-4xl md:text-6xl font-light text-foreground mb-8">{t.gifts.title}</h1>
 
-      <div className="max-w-lg space-y-8 animate-fade-in">
+      <div className="max-w-2xl space-y-8 animate-fade-in">
         <p className="font-display text-2xl text-foreground/80 italic leading-relaxed">
           {t.gifts.subtitle}
         </p>

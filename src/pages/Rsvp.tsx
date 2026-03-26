@@ -114,10 +114,10 @@ export const RsvpSection = () => {
         <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8 animate-scale-in">
           {form.attending === "yes" ? t.rsvp.seeYouThere : t.rsvp.wellMissYou}
         </h1>
-        <p className="font-display text-xl text-foreground/70 italic max-w-md">
+        <p className="font-display text-xl text-foreground/70 italic max-w-2xl">
           {form.attending === "yes" ? t.rsvp.cantWait : t.rsvp.thinkingOfYou}
         </p>
-        <p className="font-body text-base text-foreground/60 max-w-md mt-6">
+        <p className="font-body text-base text-foreground/60 max-w-2xl mt-6">
           {t.rsvp.checkSpam}
         </p>
         {calendarUrl && (
@@ -141,7 +141,7 @@ export const RsvpSection = () => {
         <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-4">{t.rsvp.rsvp}</h1>
         <p className="font-display text-xl text-foreground/70 italic mb-12">{t.rsvp.deadline}</p>
 
-        <form onSubmit={handleSubmit} className="max-w-lg w-full space-y-6 animate-fade-in">
+        <form onSubmit={handleSubmit} className="max-w-2xl w-full space-y-6 animate-fade-in">
           <div>
             <label htmlFor="name" className="font-body text-sm tracking-widest uppercase text-foreground/50 mb-2 block">
               {t.rsvp.fullName}
