@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import PageLayout from "@/components/PageLayout";
 import { HomeSection } from "./Index";
 import { WeekendSection } from "./Weekend";
+import { DressCodeSection } from "./DressCode";
 import { VenueSection } from "./Venue";
 import { TravelSection } from "./Travel";
 import { StaySection } from "./Stay";
@@ -24,6 +25,7 @@ const SinglePage = () => {
     <PageLayout>
       <HomeSection />
       <WeekendSection />
+      <DressCodeSection />
       <VenueSection />
       <TravelSection />
       <StaySection />

@@ -171,7 +171,7 @@ export const RsvpSection = () => {
                   role="radio"
                   aria-checked={form.attending === opt}
                   onClick={() => setForm({ ...form, attending: opt })}
-                  className={`flex-1 py-3 rounded-sm border font-body text-base tracking-widest uppercase transition-colors ${
+                  className={`flex-1 py-3 px-6 rounded-sm border font-body text-base tracking-widest uppercase transition-colors ${
                     form.attending === opt
                       ? "bg-primary text-primary-foreground border-primary"
                       : "border-foreground/30 text-foreground/70 hover:border-foreground/50"

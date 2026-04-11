@@ -20,7 +20,7 @@ export const en = {
     location: "Comporta, Portugal",
     date: "September 12, 2026",
     rsvpButton: "RSVP",
-    viewWeekend: "View Weekend",
+    viewWeekend: "View Details",
     scroll: "Scroll",
     heroAlt: "Filipa and Duarte sharing a kiss",
     ourStory: "Our Story",
@@ -37,7 +37,7 @@ export const en = {
     fridayTitle: "Pre-Wedding Sunset Drinks",
     fridayTime: "From 6pm",
     fridayDesc:
-      "A casual gathering at the beach with drinks & music to get the weekend started. For the younger crowd, those with the energy for 2 nights in a row! :)",
+      "A casual gathering at the beach for the younger crowd, those with the energy for 2 nights in a row! :). No dress code.",
     fridayLocation: "Location TBC",
     addToCalendar: "Add to calendar",
     dressCode: "Dress Code",
@@ -52,7 +52,7 @@ export const en = {
     partyTime: "Celebration",
     partyTimeSpan: "2pm – our feet get tired",
     partyDesc:
-      "After the ceremony we'll have a cocktail, late lunch and even a cheeky dinner. Music will never stop and neither will the drinks and our good spirits. Be ready for a different wedding where sitting down for a long time is overrated!",
+      "Cocktail, late lunch, all day dancing and even a cheeky dinner. Be ready for a different wedding where sitting down for a long time is overrated!",
     saturdayDressCode:
       'Beach Chic. What does that mean? Think linen suits, light fabrics, and "no socks". Sneakers are a no no though. Leave the stilettos at home!',
     inspirationHim: "Inspiration for Him",
@@ -62,13 +62,11 @@ export const en = {
     whereItHappens: "Where It Happens",
     theVenue: "The Venue",
     locationLabel: "Comporta, Portugal",
-    venueIntro:
-      "A hidden stretch of Portugal's coast, Comporta is all pine forests, open skies, and endless golden shore. We can't wait for you to see it.",
     ceremonyReception: "Directions",
     venueDesc:
-      "Ceremony and reception will both be held at Monte da Várzea venue. Bring comfortable shoes. Parking will be available.",
+      "Ceremony and reception will both be held at Monte da Várzea. Bring comfortable shoes. Parking will be available.",
     googleMaps: "Google Maps",
-    directionsPdf: "Directions PDF",
+    directionsPdf: "Directions",
     closeLightbox: "Close lightbox",
     venuePhotoAlt: "Venue photo",
     venueImgAlt: "Monte da Várzea venue",
@@ -81,7 +79,7 @@ export const en = {
       "Fly into Lisbon Humberto Delgado Airport (LIS). From there, Comporta is about a 1.5-hour drive south. We recommend renting a car or arranging a transfer.",
     byCar: "By Car",
     byCarDesc:
-      "From Lisbon, take the A2 motorway south and cross the Vasco da Gama bridge. Follow signs toward Alcácer do Sal and then Comporta. Parking will be available at the venue.",
+      "From Lisbon, take the A2 motorway south. Follow signs toward Alcácer do Sal and then Comporta. Parking will be available at the venue.",
     transfers: "Designated Drivers",
     transfersDesc:
       "We've arranged a designated driver service so you can arrive in your own car and leave it to them to get it — and you — home safely at the end of the night.\nMore details and booking information to follow.",
@@ -90,7 +88,7 @@ export const en = {
     whereWellBe: "Where We'll Be",
     stay: "Stay",
     stayIntro:
-      "The wedding will be at Monte da Várzea, nestled between the coast and the countryside. Here are some nearby areas to look for accommodation. Don't worry if it's 10-20 mins away from the venue, Uber is available and we'll also organize drivers that can drive your car back after the party (more details in Travel).",
+      "Here are some nearby areas to look for accommodation. Don't worry if it's 10-20 mins away from the venue, Uber is available and we'll also organize drivers that can drive your car back after the party (more details in Travel).",
     weddingVenue: "WEDDING VENUE",
     mapAria:
       "Stylized map of the Comporta region showing the wedding venue and nearby areas",
@@ -118,6 +116,8 @@ export const en = {
     a4: "Yes, there will be parking available. We'll share detailed directions closer to the date.",
     q5: "When should I RSVP by?",
     a5: "Please RSVP by July 1st, 2026 so we can finalize all the arrangements.",
+    q6: "What should I expect?",
+    a6: "This is a Brazilian-style wedding — think music festival more than formal sit-down dinner. You'll be dancing, mingling, and grabbing food as you go, rather than sitting down for a long meal. Comfortable shoes are a must for the sandy terrain — but please, no sneakers!",
     closing: "Can't wait to see you there!",
   },
   rsvp: {
@@ -151,6 +151,18 @@ export const en = {
     toastErrorGeneric: "Something went wrong. Please try again.",
     checkSpam:
       "A confirmation email is on its way! If you don't see it, please check your spam folder.",
+  },
+  dressCode: {
+    sectionLabel: "Dress Code",
+    title: "Beach Chic",
+    subtitle: "What does that mean?",
+    para1: "Think linen suits & light fabrics. No socks encouraged, sneakers strongly discouraged.",
+    para2: "For women, think colourful summer dresses and elegant footwear suitable for grass (best to skip high heels).",
+    para3: "We're creating our own kind of celebration: expect all-day dancing, little pauses, and a flowing lunch rather than a traditional seated meal. Think sunset party that goes long!",
+    para4: "There will be plenty of seating throughout, so don't worry!",
+    inspirationLabel: "For inspiration, see our links below \uD83D\uDE42",
+    inspirationHim: "Inspiration for Him",
+    inspirationHer: "Inspiration for Her",
   },
   notFound: {
     title: "404",

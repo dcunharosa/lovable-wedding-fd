@@ -22,7 +22,7 @@ export const pt: Translations = {
     location: "Comporta, Portugal",
     date: "12 de Setembro de 2026",
     rsvpButton: "RSVP",
-    viewWeekend: "Ver Programa",
+    viewWeekend: "Ver Detalhes",
     scroll: "Scroll",
     heroAlt: "Filipa e Duarte a dar um beijo",
     ourStory: "A Nossa História",
@@ -39,7 +39,7 @@ export const pt: Translations = {
     fridayTitle: "Drinks ao Pôr do Sol",
     fridayTime: "A partir das 18h",
     fridayDesc:
-      "Um encontro informal na praia com bebidas e música para dar início ao fim de semana. Para os mais jovens, aqueles com energia para 2 noites seguidas! :)",
+      "Um encontro informal na praia para os mais jovens, aqueles com energia para 2 noites seguidas! :). Sem dress code.",
     fridayLocation: "Local a confirmar",
     addToCalendar: "Adicionar ao calendário",
     dressCode: "Dress Code",
@@ -54,7 +54,7 @@ export const pt: Translations = {
     partyTime: "Celebração",
     partyTimeSpan: "14h – até os pés cansarem",
     partyDesc:
-      "Depois da cerimónia teremos um cocktail, almoço tardio e até um jantarinho. A música nunca vai parar e as bebidas e boa disposição também não. Preparem-se para um casamento diferente onde estar sentado muito tempo é sobrevalorizado!",
+      "Cocktail, almoço tardio, dança o dia todo e até um jantarinho. Preparem-se para um casamento diferente onde estar sentado muito tempo é sobrevalorizado!",
     saturdayDressCode:
       "Beach Chic. O que é que isso quer dizer? Pensem em fatos de linho, tecidos leves e \"sem meias\". Ténis é que não. Deixem os saltos altos em casa!",
     inspirationHim: "Inspiração para Ele",
@@ -64,13 +64,11 @@ export const pt: Translations = {
     whereItHappens: "Onde Acontece",
     theVenue: "O Local",
     locationLabel: "Comporta, Portugal",
-    venueIntro:
-      "Um recanto escondido da costa portuguesa, a Comporta é feita de pinhais, céu aberto e areal dourado sem fim. Mal podemos esperar que a conheçam.",
     ceremonyReception: "Direções",
     venueDesc:
       "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
     googleMaps: "Google Maps",
-    directionsPdf: "PDF com Direções",
+    directionsPdf: "Direções",
     closeLightbox: "Fechar imagem",
     venuePhotoAlt: "Foto do local",
     venueImgAlt: "Monte da Várzea",
@@ -83,7 +81,7 @@ export const pt: Translations = {
       "Voem até ao Aeroporto Humberto Delgado de Lisboa (LIS). A partir daí, a Comporta fica a cerca de 1h30 de carro para sul. Recomendamos alugar um carro ou organizar um transfer.",
     byCar: "De Carro",
     byCarDesc:
-      "A partir de Lisboa, sigam pela autoestrada A2 para sul e atravessem a ponte Vasco da Gama. Sigam as indicações para Alcácer do Sal e depois para a Comporta. Haverá estacionamento no local.",
+      "A partir de Lisboa, sigam pela autoestrada A2 para sul. Sigam as indicações para Alcácer do Sal e depois para a Comporta. Haverá estacionamento no local.",
     transfers: "Motoristas Designados",
     transfersDesc:
       "Organizámos um serviço de motorista designado para que possam chegar no vosso próprio carro e deixar que eles o levem — a ele e a vocês — para casa em segurança no final da noite.\nMais detalhes e informações de reserva em breve.",
@@ -92,7 +90,7 @@ export const pt: Translations = {
     whereWellBe: "Onde Vamos Estar",
     stay: "Alojamento",
     stayIntro:
-      "O casamento será no Monte da Várzea, entre a costa e o campo. Aqui ficam algumas zonas próximas para procurar alojamento. Não se preocupem se ficar a 10-20 minutos do local, Uber está disponível e também vamos organizar motoristas que podem levar o vosso carro de volta depois da festa (mais detalhes em Viagem).",
+      "Aqui ficam algumas zonas próximas para procurar alojamento. Não se preocupem se ficar a 10-20 minutos do local, Uber está disponível e também vamos organizar motoristas que podem levar o vosso carro de volta depois da festa (mais detalhes em Viagem).",
     weddingVenue: "LOCAL DO CASAMENTO",
     mapAria:
       "Mapa estilizado da região da Comporta mostrando o local do casamento e áreas próximas",
@@ -120,6 +118,8 @@ export const pt: Translations = {
     a4: "Sim, haverá estacionamento disponível. Partilharemos direções detalhadas mais perto da data.",
     q5: "Até quando devo confirmar presença?",
     a5: "Por favor confirmem até 1 de Julho de 2026 para podermos finalizar todos os preparativos.",
+    q6: "O que devo esperar?",
+    a6: "Este é um casamento ao estilo brasileiro — pensem mais num festival de música do que num jantar formal sentados. Vão estar a dançar, a conviver e a petiscar ao longo do dia, em vez de estarem sentados durante uma refeição longa. Sapatos confortáveis são essenciais para o terreno arenoso — mas por favor, sem ténis!",
     closing: "Mal podemos esperar por vos ver lá!",
   },
   rsvp: {
@@ -153,6 +153,18 @@ export const pt: Translations = {
     toastErrorGeneric: "Algo correu mal. Por favor tentem novamente.",
     checkSpam:
       "Um email de confirmação está a caminho! Se não o encontrarem, verifiquem a pasta de spam.",
+  },
+  dressCode: {
+    sectionLabel: "Dress Code",
+    title: "Beach Chic",
+    subtitle: "O que é que isso quer dizer?",
+    para1: "Pensem em fatos de linho e tecidos leves. Sem meias, e ténis são fortemente desaconselhados.",
+    para2: "Para as mulheres, pensem em vestidos coloridos de verão e calçado elegante adequado para relva (melhor evitar saltos altos).",
+    para3: "Estamos a criar a nossa própria celebração: esperem dança o dia todo, pequenas pausas e um almoço fluido em vez de uma refeição tradicional sentados. Pensem numa festa ao pôr do sol que se prolonga!",
+    para4: "Haverá bastante lugares para sentar, por isso não se preocupem!",
+    inspirationLabel: "Para inspiração, vejam os nossos links abaixo \uD83D\uDE42",
+    inspirationHim: "Inspiração para Ele",
+    inspirationHer: "Inspiração para Ela",
   },
   notFound: {
     title: "404",

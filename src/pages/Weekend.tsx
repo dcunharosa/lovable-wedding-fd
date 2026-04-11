@@ -1,5 +1,5 @@
 import PageLayout from "@/components/PageLayout";
-import { CalendarPlus, ExternalLink } from "lucide-react";
+import { CalendarPlus } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
 import { googleCalUrl, VENUE_LOCATION } from "@/lib/googleCalUrl";
@@ -59,12 +59,6 @@ export const WeekendSection = () => {
             </a>
           </div>
 
-          <div className="pt-2">
-            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">{t.weekend.dressCode}</p>
-            <p className="font-body text-base text-foreground/70 leading-relaxed">
-              {t.weekend.fridayDressCode}
-            </p>
-          </div>
         </div>
 
         {/* Saturday */}
@@ -108,32 +102,6 @@ export const WeekendSection = () => {
             </p>
           </div>
 
-          <div className="pt-2">
-            <p className="font-body text-xs tracking-[0.25em] uppercase text-foreground/60 mb-2">{t.weekend.dressCode}</p>
-            <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
-              {t.weekend.saturdayDressCode}
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <a
-                href="https://pin.it/2tUm1nliO"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-foreground/30 text-foreground/80 font-body text-xs tracking-wider uppercase rounded-sm hover:bg-foreground/10 transition-colors"
-              >
-                <ExternalLink size={12} />
-                {t.weekend.inspirationHim}
-              </a>
-              <a
-                href="https://pin.it/1509lQmGi"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-1.5 px-4 py-2 border border-foreground/30 text-foreground/80 font-body text-xs tracking-wider uppercase rounded-sm hover:bg-foreground/10 transition-colors"
-              >
-                <ExternalLink size={12} />
-                {t.weekend.inspirationHer}
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>

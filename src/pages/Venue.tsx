@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import PageLayout from "@/components/PageLayout";
-import { MapPin, ExternalLink, Download, X } from "lucide-react";
+import { MapPin, ExternalLink, X } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
 
@@ -78,14 +78,15 @@ export const VenueSection = () => {
       <h1 className="font-display text-5xl md:text-7xl font-light text-foreground mb-8">{t.venue.theVenue}</h1>
 
       <div className="max-w-4xl animate-fade-in">
-        <div className="flex items-center justify-center gap-2 text-foreground/70">
+        <a
+          href="https://maps.google.com/?q=Comporta,Portugal"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center gap-2 text-foreground/70 hover:text-foreground/90 transition-colors"
+        >
           <MapPin size={18} />
           <p className="font-body text-base tracking-widest uppercase">{t.venue.locationLabel}</p>
-        </div>
-
-        <p className="font-display text-2xl text-foreground/80 italic leading-relaxed mt-8">
-          {t.venue.venueIntro}
-        </p>
+        </a>
       </div>
 
       {/* Venue photos */}
@@ -128,13 +129,13 @@ export const VenueSection = () => {
               <ExternalLink size={14} />
               {t.venue.googleMaps}
             </a>
-            {/* TODO: Add directions.pdf to public/ */}
             <a
-              href="/directions.pdf"
-              download
+              href="https://maps.app.goo.gl/nAtXArjfvt5Dsu31A"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
             >
-              <Download size={14} />
+              <ExternalLink size={14} />
               {t.venue.directionsPdf}
             </a>
           </div>

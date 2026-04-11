@@ -127,7 +127,7 @@ const ComportaMap = () => {
       ].map((town) => (
         <g key={town.label}>
           <circle cx={town.cx} cy={town.cy} r="5" fill={blue} opacity={0.5} filter="url(#sketch-light)" />
-          <text x={town.tx} y={town.ty} fill={blue} opacity={0.75} fontSize="22" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
+          <text x={town.tx} y={town.ty} fill={blue} opacity={0.75} fontSize="29" fontFamily="'Cormorant Garamond', serif" fontWeight="300">
             {town.label}
           </text>
         </g>
@@ -147,7 +147,7 @@ const ComportaMap = () => {
         x="445"
         y="400"
         fill={blue}
-        fontSize="24"
+        fontSize="31"
         fontFamily="'Cormorant Garamond', serif"
         fontWeight="600"
         fontStyle="italic"
@@ -159,7 +159,7 @@ const ComportaMap = () => {
         y="422"
         fill={blue}
         opacity={0.45}
-        fontSize="14"
+        fontSize="18"
         fontFamily="'Josefin Sans', sans-serif"
         letterSpacing="3"
       >
