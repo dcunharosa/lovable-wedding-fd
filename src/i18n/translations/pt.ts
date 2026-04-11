@@ -4,6 +4,7 @@ export const pt: Translations = {
   nav: {
     home: "Início",
     weekend: "Fim de Semana",
+    dresscode: "Dress Code",
     venue: "Local",
     travel: "Como Chegar",
     stay: "Onde Ficar",
@@ -158,7 +159,7 @@ export const pt: Translations = {
     sectionLabel: "Dress Code",
     title: "Beach Chic",
     subtitle: "O que é que isso quer dizer?",
-    para1: "Pensem em fatos de linho e tecidos leves. Sem meias, e ténis são fortemente desaconselhados.",
+    para1: "Pensem em fatos de linho e tecidos leves. Sem meias, e ténis são proibidos!",
     para2: "Para as mulheres, pensem em vestidos coloridos de verão e calçado elegante adequado para relva (melhor evitar saltos altos).",
     para3: "Estamos a criar a nossa própria celebração: esperem dança o dia todo, pequenas pausas e um almoço fluido em vez de uma refeição tradicional sentados. Pensem numa festa ao pôr do sol que se prolonga!",
     para4: "Haverá bastante lugares para sentar, por isso não se preocupem!",

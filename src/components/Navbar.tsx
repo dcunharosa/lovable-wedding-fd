@@ -8,6 +8,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 const navKeys = [
   { key: "home" as const, path: "/", id: "home" },
   { key: "weekend" as const, path: "/weekend", id: "weekend" },
+  { key: "dresscode" as const, path: "/dresscode", id: "dresscode" },
   { key: "venue" as const, path: "/venue", id: "venue" },
   { key: "travel" as const, path: "/travel", id: "travel" },
   { key: "stay" as const, path: "/stay", id: "stay" },

@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/i18n";
 import SinglePage from "./pages/SinglePage";
 import Weekend from "./pages/Weekend";
+import DressCode from "./pages/DressCode";
 import Venue from "./pages/Venue";
 import Travel from "./pages/Travel";
 import Stay from "./pages/Stay";
@@ -21,6 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<SinglePage />} />
           <Route path="/weekend" element={<Weekend />} />
+          <Route path="/dresscode" element={<DressCode />} />
           <Route path="/venue" element={<Venue />} />
           <Route path="/travel" element={<Travel />} />
           <Route path="/stay" element={<Stay />} />

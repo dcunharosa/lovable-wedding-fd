@@ -102,15 +102,15 @@ const ComportaMap = () => {
         "M 420 420 Q 490 560, 555 700",
         "M 300 270 Q 290 180, 290 100",
         "M 380 530 Q 310 650, 245 755",
-        "M 420 400 Q 530 300, 635 185",
+        "M 420 400 Q 470 290, 480 185",
       ].map((d) => (
         <path
           key={d}
           d={d}
           fill="none"
           stroke={blue}
-          opacity={0.1}
-          strokeWidth="1.5"
+          opacity={0.3}
+          strokeWidth="2"
           strokeDasharray="6 8"
           filter="url(#sketch-light)"
         />
@@ -123,7 +123,7 @@ const ComportaMap = () => {
         { cx: 380, cy: 530, label: "Muda", tx: 400, ty: 536 },
         { cx: 240, cy: 760, label: "Melides", tx: 260, ty: 766 },
         { cx: 560, cy: 710, label: "Grândola", tx: 580, ty: 716 },
-        { cx: 640, cy: 180, label: "Alcácer do Sal", tx: 660, ty: 186 },
+        { cx: 480, cy: 185, label: "Alcácer do Sal", tx: 500, ty: 191 },
       ].map((town) => (
         <g key={town.label}>
           <circle cx={town.cx} cy={town.cy} r="5" fill={blue} opacity={0.5} filter="url(#sketch-light)" />

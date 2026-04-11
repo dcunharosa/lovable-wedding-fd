@@ -2,6 +2,7 @@ export const en = {
   nav: {
     home: "Home",
     weekend: "Weekend",
+    dresscode: "Dress Code",
     venue: "Venue",
     travel: "Travel",
     stay: "Stay",
@@ -156,7 +157,7 @@ export const en = {
     sectionLabel: "Dress Code",
     title: "Beach Chic",
     subtitle: "What does that mean?",
-    para1: "Think linen suits & light fabrics. No socks encouraged, sneakers strongly discouraged.",
+    para1: "Think linen suits & light fabrics. No socks encouraged and sneakers are a no go!",
     para2: "For women, think colourful summer dresses and elegant footwear suitable for grass (best to skip high heels).",
     para3: "We're creating our own kind of celebration: expect all-day dancing, little pauses, and a flowing lunch rather than a traditional seated meal. Think sunset party that goes long!",
     para4: "There will be plenty of seating throughout, so don't worry!",
