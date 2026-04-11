@@ -37,7 +37,8 @@ export const pt: Translations = {
     thePlan: "O Programa",
     theWeekend: "O Fim de Semana",
     fridayDate: "Sexta-feira, 11 de Setembro",
-    fridayTitle: "Drinks ao Pôr do Sol",
+    fridayTitle: "Pré-Casamento",
+    fridaySubtitle: "Drinks ao Pôr do Sol",
     fridayTime: "A partir das 18h",
     fridayDesc:
       "Um encontro informal na praia para os mais jovens, aqueles com energia para 2 noites seguidas! :). Sem dress code.",
@@ -120,7 +121,7 @@ export const pt: Translations = {
     q5: "Até quando devo confirmar presença?",
     a5: "Por favor confirmem até 1 de Julho de 2026 para podermos finalizar todos os preparativos.",
     q6: "O que devo esperar?",
-    a6: "Este é um casamento ao estilo brasileiro — pensem mais num festival de música do que num jantar formal sentados. Vão estar a dançar, a conviver e a petiscar ao longo do dia, em vez de estarem sentados durante uma refeição longa. Sapatos confortáveis são essenciais para o terreno arenoso — mas por favor, sem ténis!",
+    a6: "Este é um casamento ao estilo brasileiro — pensem mais num festival de música do que num jantar formal sentados. Vão estar a dançar, a conviver e a petiscar ao longo do dia, em vez de estarem sentados durante uma refeição longa. Sapatos confortáveis são essenciais para o terreno irregular.",
     closing: "Mal podemos esperar por vos ver lá!",
   },
   rsvp: {
@@ -159,7 +160,7 @@ export const pt: Translations = {
     sectionLabel: "Dress Code",
     title: "Beach Chic",
     subtitle: "O que é que isso quer dizer?",
-    para1: "Pensem em fatos de linho e tecidos leves. Sem meias, e ténis são proibidos!",
+    para1: "Pensem em fatos de linho e tecidos leves. Sem gravata, sem meias, e ténis são proibidos!",
     para2: "Para as mulheres, pensem em vestidos coloridos de verão e calçado elegante adequado para relva (melhor evitar saltos altos).",
     para3: "Estamos a criar a nossa própria celebração: esperem dança o dia todo, pequenas pausas e um almoço fluido em vez de uma refeição tradicional sentados. Pensem numa festa ao pôr do sol que se prolonga!",
     para4: "Haverá bastante lugares para sentar, por isso não se preocupem!",

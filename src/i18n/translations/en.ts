@@ -35,7 +35,8 @@ export const en = {
     thePlan: "The Plan",
     theWeekend: "The Weekend",
     fridayDate: "Friday, 11th of September",
-    fridayTitle: "Pre-Wedding Sunset Drinks",
+    fridayTitle: "Pre-Wedding",
+    fridaySubtitle: "Sunset Drinks",
     fridayTime: "From 6pm",
     fridayDesc:
       "A casual gathering at the beach for the younger crowd, those with the energy for 2 nights in a row! :). No dress code.",
@@ -118,7 +119,7 @@ export const en = {
     q5: "When should I RSVP by?",
     a5: "Please RSVP by July 1st, 2026 so we can finalize all the arrangements.",
     q6: "What should I expect?",
-    a6: "This is a Brazilian-style wedding — think music festival more than formal sit-down dinner. You'll be dancing, mingling, and grabbing food as you go, rather than sitting down for a long meal. Comfortable shoes are a must for the sandy terrain — but please, no sneakers!",
+    a6: "This is a Brazilian-style wedding — think music festival more than formal sit-down dinner. You'll be dancing, mingling, and grabbing food as you go, rather than sitting down for a long meal. Comfortable shoes are a must for the uneven terrain.",
     closing: "Can't wait to see you there!",
   },
   rsvp: {
@@ -157,7 +158,7 @@ export const en = {
     sectionLabel: "Dress Code",
     title: "Beach Chic",
     subtitle: "What does that mean?",
-    para1: "Think linen suits & light fabrics. No socks encouraged and sneakers are a no go!",
+    para1: "Think linen suits & light fabrics. No ties needed, no socks encouraged and sneakers are a no go!",
     para2: "For women, think colourful summer dresses and elegant footwear suitable for grass (best to skip high heels).",
     para3: "We're creating our own kind of celebration: expect all-day dancing, little pauses, and a flowing lunch rather than a traditional seated meal. Think sunset party that goes long!",
     para4: "There will be plenty of seating throughout, so don't worry!",

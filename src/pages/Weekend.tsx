@@ -39,6 +39,7 @@ export const WeekendSection = () => {
           </div>
 
           <div className="bg-white/[0.07] rounded-lg p-6 border border-white/[0.1]">
+            <h4 className="font-display text-2xl text-foreground mb-1">{t.weekend.fridaySubtitle}</h4>
             <span className="inline-block font-body text-xs tracking-widest uppercase text-foreground/80 bg-white/[0.12] px-3 py-1 rounded-full mb-4">
               {t.weekend.fridayTime}
             </span>
