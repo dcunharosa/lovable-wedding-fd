@@ -374,14 +374,69 @@ function GuestTable({
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
-      <div className="overflow-x-auto">
+      {/* Mobile card list */}
+      <ul className="md:hidden divide-y divide-[hsl(220,30%,92%)]">
+        {filtered.map((g) => (
+          <li key={g._row} className="px-4 py-4">
+            <div className="flex items-start justify-between gap-3">
+              <div className="min-w-0 flex-1">
+                <p className="font-body text-sm font-semibold text-[hsl(220,30%,20%)] leading-snug">{g.name}</p>
+                <p className="font-body text-xs text-[hsl(220,20%,55%)] mt-0.5 truncate">{g.email}</p>
+                <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2">
+                  <span
+                    className={`inline-block px-2 py-0.5 rounded-full text-xs font-body uppercase tracking-wider ${
+                      g.attending === "yes"
+                        ? "bg-green-100 text-green-700"
+                        : "bg-red-100 text-red-600"
+                    }`}
+                  >
+                    {g.attending === "yes" ? "Confirmed" : "Declined"}
+                  </span>
+                  {g.attending === "yes" && (
+                    <span className="font-body text-xs text-[hsl(220,20%,55%)]">
+                      {g.guests || 1} guest{Number(g.guests || 1) !== 1 ? "s" : ""}
+                    </span>
+                  )}
+                  {g.dietary && (
+                    <span className="font-body text-xs text-[hsl(220,20%,55%)]">· {g.dietary}</span>
+                  )}
+                </div>
+              </div>
+              <div className="flex items-center gap-1 shrink-0 pt-0.5">
+                <button
+                  onClick={() => onEdit(g)}
+                  className="p-2 rounded hover:bg-[hsl(220,30%,92%)] transition-colors"
+                  aria-label={`Edit ${g.name}`}
+                >
+                  <Pencil size={15} className="text-[hsl(220,30%,45%)]" />
+                </button>
+                <button
+                  onClick={() => onDelete(g)}
+                  className="p-2 rounded hover:bg-red-100 transition-colors"
+                  aria-label={`Delete ${g.name}`}
+                >
+                  <Trash2 size={15} className="text-red-400 hover:text-red-600" />
+                </button>
+              </div>
+            </div>
+          </li>
+        ))}
+        {!filtered.length && (
+          <li className="px-4 py-10 text-center font-body text-sm text-[hsl(220,20%,60%)]">
+            No guests found.
+          </li>
+        )}
+      </ul>
+
+      {/* Desktop table */}
+      <div className="hidden md:block overflow-x-auto">
       <Table>
         <TableHeader>
           <TableRow className="bg-[hsl(40,30%,96%)]">
             <TableHead className={thClass} onClick={() => toggleSort("name")}>
               <span className="inline-flex items-center gap-1">Name <ArrowUpDown size={12} /></span>
             </TableHead>
-            <TableHead className={`${thClass} hidden sm:table-cell`} onClick={() => toggleSort("email")}>
+            <TableHead className={thClass} onClick={() => toggleSort("email")}>
               <span className="inline-flex items-center gap-1">Email <ArrowUpDown size={12} /></span>
             </TableHead>
             <TableHead className={thClass} onClick={() => toggleSort("attending")}>
@@ -390,7 +445,7 @@ function GuestTable({
             <TableHead className={thClass} onClick={() => toggleSort("guests")}>
               <span className="inline-flex items-center gap-1">Guests <ArrowUpDown size={12} /></span>
             </TableHead>
-            <TableHead className={`${thClass} hidden md:table-cell`}>Dietary</TableHead>
+            <TableHead className={thClass}>Dietary</TableHead>
             <TableHead className={`${thClass} hidden lg:table-cell`} onClick={() => toggleSort("timestamp")}>
               <span className="inline-flex items-center gap-1">Date <ArrowUpDown size={12} /></span>
             </TableHead>
@@ -401,7 +456,7 @@ function GuestTable({
           {filtered.map((g) => (
             <TableRow key={g._row} className="hover:bg-[hsl(40,30%,97%)] text-[hsl(220,30%,20%)]">
               <TableCell className="font-body text-sm">{g.name}</TableCell>
-              <TableCell className="font-body text-sm hidden sm:table-cell">{g.email}</TableCell>
+              <TableCell className="font-body text-sm">{g.email}</TableCell>
               <TableCell>
                 <span
                   className={`inline-block px-2 py-0.5 rounded-full text-xs font-body uppercase tracking-wider ${
@@ -416,7 +471,7 @@ function GuestTable({
               <TableCell className="font-body text-sm text-center">
                 {g.attending === "yes" ? g.guests || 1 : "—"}
               </TableCell>
-              <TableCell className="font-body text-sm hidden md:table-cell">
+              <TableCell className="font-body text-sm">
                 {g.dietary || "—"}
               </TableCell>
               <TableCell className="font-body text-sm hidden lg:table-cell text-[hsl(220,20%,60%)]">
