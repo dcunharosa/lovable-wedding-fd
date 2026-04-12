@@ -165,7 +165,7 @@ function EditModal({
 
   return (
     <Dialog open={open} onOpenChange={(v) => !v && onClose()}>
-      <DialogContent className="bg-[hsl(40,30%,97%)] text-[hsl(220,30%,20%)] max-w-md">
+      <DialogContent className="bg-[hsl(40,30%,97%)] text-[hsl(220,30%,20%)] w-[calc(100vw-2rem)] max-w-md">
         <DialogHeader>
           <DialogTitle className="font-display text-xl">Edit Guest</DialogTitle>
         </DialogHeader>
@@ -297,7 +297,7 @@ function EmailComposer({ guests }: { guests: Guest[] }) {
         <button
           onClick={handleSend}
           disabled={sending}
-          className="px-6 py-2 bg-[hsl(220,30%,30%)] text-white font-body text-sm tracking-widest uppercase rounded-sm hover:bg-[hsl(220,30%,25%)] transition-colors disabled:opacity-60"
+          className="w-full sm:w-auto px-6 py-2 bg-[hsl(220,30%,30%)] text-white font-body text-sm tracking-widest uppercase rounded-sm hover:bg-[hsl(220,30%,25%)] transition-colors disabled:opacity-60"
         >
           {sending ? "Sending..." : "Send"}
         </button>
@@ -374,13 +374,14 @@ function GuestTable({
           onChange={(e) => setSearch(e.target.value)}
         />
       </div>
+      <div className="overflow-x-auto">
       <Table>
         <TableHeader>
           <TableRow className="bg-[hsl(40,30%,96%)]">
             <TableHead className={thClass} onClick={() => toggleSort("name")}>
               <span className="inline-flex items-center gap-1">Name <ArrowUpDown size={12} /></span>
             </TableHead>
-            <TableHead className={thClass} onClick={() => toggleSort("email")}>
+            <TableHead className={`${thClass} hidden sm:table-cell`} onClick={() => toggleSort("email")}>
               <span className="inline-flex items-center gap-1">Email <ArrowUpDown size={12} /></span>
             </TableHead>
             <TableHead className={thClass} onClick={() => toggleSort("attending")}>
@@ -400,7 +401,7 @@ function GuestTable({
           {filtered.map((g) => (
             <TableRow key={g._row} className="hover:bg-[hsl(40,30%,97%)] text-[hsl(220,30%,20%)]">
               <TableCell className="font-body text-sm">{g.name}</TableCell>
-              <TableCell className="font-body text-sm">{g.email}</TableCell>
+              <TableCell className="font-body text-sm hidden sm:table-cell">{g.email}</TableCell>
               <TableCell>
                 <span
                   className={`inline-block px-2 py-0.5 rounded-full text-xs font-body uppercase tracking-wider ${
@@ -452,6 +453,7 @@ function GuestTable({
           )}
         </TableBody>
       </Table>
+      </div>
     </div>
   );
 }
@@ -549,8 +551,8 @@ const Admin = () => {
 
   return (
     <div className="min-h-screen bg-[hsl(40,30%,95%)]">
-      <header className="bg-white border-b border-[hsl(220,30%,90%)] px-6 py-4 flex items-center justify-between">
-        <h1 className="font-display text-2xl text-[hsl(220,30%,20%)]">
+      <header className="bg-white border-b border-[hsl(220,30%,90%)] px-6 py-4 flex flex-wrap items-center justify-between gap-3">
+        <h1 className="font-display text-xl sm:text-2xl text-[hsl(220,30%,20%)]">
           Guest Management
         </h1>
         <div className="flex items-center gap-4">
