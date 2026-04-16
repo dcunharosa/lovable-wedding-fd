@@ -103,6 +103,8 @@ export const en = {
     showBankDetails: "See where you can send your gift",
     bankDetails: "Bank Details",
     bankHolder: "Filipa & Duarte",
+    orDivider: "or",
+    revolut: "Revolut",
     photoCaption: "Where your gift goes: a honeymoon to remember & a home to build",
   },
   faq: {

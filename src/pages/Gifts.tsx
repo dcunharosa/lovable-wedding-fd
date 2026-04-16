@@ -17,13 +17,29 @@ export const GiftsSection = () => {
         </p>
 
         {showIban ? (
-          <div className="animate-scale-in bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-6 border border-foreground/10 space-y-3">
-            <p className="font-body text-sm tracking-widest uppercase text-foreground/50">{t.gifts.bankDetails}</p>
-            {/* TODO: Replace with actual IBAN */}
-            <p className="font-body text-lg text-foreground tracking-wide">
-              PT50 0000 0000 0000 0000 0000 0
+          <div className="animate-scale-in flex flex-col md:flex-row items-center gap-4 md:gap-6">
+            {/* Bank Transfer */}
+            <div className="bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-6 border border-foreground/10 space-y-3 w-full md:flex-1">
+              <p className="font-body text-sm tracking-widest uppercase text-foreground/50">{t.gifts.bankDetails}</p>
+              {/* TODO: Replace with actual IBAN */}
+              <p className="font-body text-lg text-foreground tracking-wide">
+                PT50 0000 0000 0000 0000 0000 0
+              </p>
+              <p className="font-body text-sm text-foreground/50">{t.gifts.bankHolder}</p>
+            </div>
+
+            {/* Divider */}
+            <p className="font-body text-sm tracking-widest uppercase text-foreground/40 shrink-0">
+              {t.gifts.orDivider}
             </p>
-            <p className="font-body text-sm text-foreground/50">{t.gifts.bankHolder}</p>
+
+            {/* Revolut */}
+            <div className="bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-6 border border-foreground/10 space-y-3 w-full md:flex-1">
+              <p className="font-body text-sm tracking-widest uppercase text-foreground/50">{t.gifts.revolut}</p>
+              <p className="font-body text-lg text-foreground tracking-wide">@duartecrosa</p>
+              <p className="font-body text-sm text-foreground/70 tracking-wide">GB31 REVO 0099 7099 9750 90</p>
+              <p className="font-body text-sm text-foreground/50">{t.gifts.bankHolder}</p>
+            </div>
           </div>
         ) : (
           <button
