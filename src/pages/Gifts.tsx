@@ -21,11 +21,9 @@ export const GiftsSection = () => {
             {/* Bank Transfer */}
             <div className="bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-6 border border-foreground/10 space-y-3 w-full md:flex-1">
               <p className="font-body text-sm tracking-widest uppercase text-foreground/50">{t.gifts.bankDetails}</p>
-              {/* TODO: Replace with actual IBAN */}
               <p className="font-body text-lg text-foreground tracking-wide">
-                PT50 0000 0000 0000 0000 0000 0
+                GB31 REVO 0099 7099 9750 90
               </p>
-              <p className="font-body text-sm text-foreground/50">{t.gifts.bankHolder}</p>
             </div>
 
             {/* Divider */}
@@ -38,7 +36,6 @@ export const GiftsSection = () => {
               <p className="font-body text-sm tracking-widest uppercase text-foreground/50">{t.gifts.revolut}</p>
               <p className="font-body text-lg text-foreground tracking-wide">@duartecrosa</p>
               <p className="font-body text-sm text-foreground/70 tracking-wide">GB31 REVO 0099 7099 9750 90</p>
-              <p className="font-body text-sm text-foreground/50">{t.gifts.bankHolder}</p>
             </div>
           </div>
         ) : (
