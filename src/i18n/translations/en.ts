@@ -90,17 +90,18 @@ export const en = {
     transfersDetailIntro:
       "Each car gets its own assigned driver who arrives at the venue at a pre-arranged time, ready to take your car — and you — home safely. Your car will be left at the address you provide in advance.",
     transfersOptions: "Service options:",
-    transfersOption1: "1 — We pick you up and drop you off in our car",
-    transfersOption2: "2 — We pick you up in our car",
-    transfersOption3: "3 — A driver brings your car home for you",
+    transfersOption1: "1 — They pick you up and drop you off in our car",
+    transfersOption2: "2 — They pick you up in our car",
+    transfersOption3: "3 — A driver brings you and your car home for you",
     transfersInfoNeeded: "Info needed when booking:",
+    transfersInfoNameDate: "Name and date of wedding: Duarte and Filipa, 12th of September",
     transfersInfo1: "Pick-up address (if choosing option 1)",
     transfersInfo2: "Drop-off address",
-    transfersInfo3: "Estimated time of departure from the wedding (driver has a 30–40 min tolerance window)",
+    transfersInfo3: "Estimated time of departure from the wedding (driver has a 30–40 min tolerance window) — I'd suggest between 2am and 5am, depending on your stamina",
     transfersInfo4: "Number of cars",
     transfersNote:
       "Note: additional charges apply if pick-up is requested outside the tolerance window — ask when booking.",
-    transfersContact: "To book, contact Manel Drivers:",
+    transfersContact: "To book, contact Manel:",
     transfersPhone: "+351 911 110 911",
   },
   stay: {

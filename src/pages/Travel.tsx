@@ -71,6 +71,7 @@ export const TravelSection = () => {
               <div>
                 <p className="font-semibold text-foreground/80 mb-2">{t.travel.transfersInfoNeeded}</p>
                 <ul className="list-disc pl-5 space-y-1">
+                  <li>{t.travel.transfersInfoNameDate}</li>
                   <li>{t.travel.transfersInfo1}</li>
                   <li>{t.travel.transfersInfo2}</li>
                   <li>{t.travel.transfersInfo3}</li>

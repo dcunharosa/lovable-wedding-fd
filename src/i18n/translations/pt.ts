@@ -92,18 +92,19 @@ export const pt: Translations = {
     transfersDetailIntro:
       "A cada carro é atribuído um motorista que, a uma hora combinada, chega ao local pronto para levar o vosso carro — e vocês — para casa em segurança. O carro fica na morada que indicarem previamente.",
     transfersOptions: "Opções de serviço:",
-    transfersOption1: "1 — Vamos buscar e levar no nosso carro",
-    transfersOption2: "2 — Vamos buscar no nosso carro",
-    transfersOption3: "3 — Um motorista leva o vosso carro para casa",
+    transfersOption1: "1 — Vão buscar e levar no nosso carro",
+    transfersOption2: "2 — Vão buscar no nosso carro",
+    transfersOption3: "3 — Um motorista leva-vos a vocês e ao carro para casa",
     transfersInfoNeeded: "Informação necessária ao reservar:",
+    transfersInfoNameDate: "Nome e data do casamento: Duarte e Filipa, 12 de setembro",
     transfersInfo1: "Morada de recolha (caso escolham a opção 1)",
     transfersInfo2: "Morada de entrega",
     transfersInfo3:
-      "Hora prevista de saída do casamento (o motorista tem uma tolerância de 30–40 min)",
+      "Hora prevista de saída do casamento (o motorista tem uma tolerância de 30–40 min) — sugiro entre as 2h e as 5h, consoante a vossa resistência",
     transfersInfo4: "Número de carros",
     transfersNote:
       "Nota: aplica-se um valor adicional se a recolha for pedida fora da janela de tolerância — consultem ao reservar.",
-    transfersContact: "Para reservar, contactem a Manel Drivers:",
+    transfersContact: "Para reservar, contactem o Manel:",
     transfersPhone: "+351 911 110 911",
   },
   stay: {
