@@ -84,7 +84,24 @@ export const en = {
       "From Lisbon, take the A2 motorway south. Follow signs toward Alcácer do Sal and then Comporta. Parking will be available at the venue.",
     transfers: "Designated Drivers",
     transfersDesc:
-      "We've arranged a designated driver service so you can arrive in your own car and leave it to them to get it — and you — home safely at the end of the night.\nMore details and booking information to follow.",
+      "We've arranged a designated driver service so you can arrive in your own car and leave it to them to get it — and you — home safely at the end of the night.",
+    transfersMoreInfo: "See more info & book",
+    transfersLessInfo: "Close",
+    transfersDetailIntro:
+      "Each car gets its own assigned driver who arrives at the venue at a pre-arranged time, ready to take your car — and you — home safely. Your car will be left at the address you provide in advance.",
+    transfersOptions: "Service options:",
+    transfersOption1: "1 — We pick you up and drop you off in our car",
+    transfersOption2: "2 — We pick you up in our car",
+    transfersOption3: "3 — A driver brings your car home for you",
+    transfersInfoNeeded: "Info needed when booking:",
+    transfersInfo1: "Pick-up address (if choosing option 1)",
+    transfersInfo2: "Drop-off address",
+    transfersInfo3: "Estimated time of departure from the wedding (driver has a 30–40 min tolerance window)",
+    transfersInfo4: "Number of cars",
+    transfersNote:
+      "Note: additional charges apply if pick-up is requested outside the tolerance window — ask when booking.",
+    transfersContact: "To book, contact Manel Drivers:",
+    transfersPhone: "+351 911 110 911",
   },
   stay: {
     whereWellBe: "Where We'll Be",
