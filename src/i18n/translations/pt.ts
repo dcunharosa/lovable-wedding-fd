@@ -42,7 +42,7 @@ export const pt: Translations = {
     fridayTime: "A partir das 18h",
     fridayDesc:
       "Um encontro informal na praia para os mais jovens, aqueles com energia para 2 noites seguidas! :). Sem dress code.",
-    fridayLocation: "Local a confirmar",
+    fridayLocation: "Na zona da Comporta, local exato a confirmar",
     addToCalendar: "Adicionar ao calendário",
     dressCode: "Dress Code",
     fridayDressCode:

@@ -40,7 +40,7 @@ export const en = {
     fridayTime: "From 6pm",
     fridayDesc:
       "A casual gathering at the beach for the younger crowd, those with the energy for 2 nights in a row! :). No dress code.",
-    fridayLocation: "Location TBC",
+    fridayLocation: "In the Comporta area, exact location TBC",
     addToCalendar: "Add to calendar",
     dressCode: "Dress Code",
     fridayDressCode:
