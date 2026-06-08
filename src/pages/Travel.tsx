@@ -1,10 +1,17 @@
 import PageLayout from "@/components/PageLayout";
-import { Plane, Car, UserCheck } from "lucide-react";
+import { Plane, Car, UserCheck, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from "@/components/ui/collapsible";
 
 export const TravelSection = () => {
   const { t } = useTranslation();
+  const [transfersOpen, setTransfersOpen] = useState(false);
   const cardsRef = useScrollReveal<HTMLDivElement>(".travel-card");
 
   return (
@@ -39,10 +46,52 @@ export const TravelSection = () => {
             <h3 className="font-display text-3xl text-foreground">{t.travel.transfers}</h3>
           </div>
           <div className="font-body text-base text-foreground/70 leading-relaxed space-y-3">
-            {t.travel.transfersDesc.split("\n").map((paragraph, i, arr) => (
-              <p key={i} className={i === arr.length - 1 ? "italic" : undefined}>{paragraph}</p>
+            {t.travel.transfersDesc.split("\n").map((paragraph, i) => (
+              <p key={i}>{paragraph}</p>
             ))}
           </div>
+
+          <Collapsible open={transfersOpen} onOpenChange={setTransfersOpen} className="mt-5">
+            <CollapsibleTrigger className="flex items-center gap-2 font-body text-sm tracking-wide uppercase text-foreground/70 hover:text-foreground transition-colors">
+              <span>{transfersOpen ? t.travel.transfersLessInfo : t.travel.transfersMoreInfo}</span>
+              <ChevronDown size={16} className={`transition-transform duration-300 ${transfersOpen ? "rotate-180" : ""}`} />
+            </CollapsibleTrigger>
+            <CollapsibleContent className="font-body text-base text-foreground/70 leading-relaxed space-y-4 pt-5">
+              <p>{t.travel.transfersDetailIntro}</p>
+
+              <div>
+                <p className="font-semibold text-foreground/80 mb-2">{t.travel.transfersOptions}</p>
+                <ol className="space-y-1">
+                  <li>{t.travel.transfersOption1}</li>
+                  <li>{t.travel.transfersOption2}</li>
+                  <li>{t.travel.transfersOption3}</li>
+                </ol>
+              </div>
+
+              <div>
+                <p className="font-semibold text-foreground/80 mb-2">{t.travel.transfersInfoNeeded}</p>
+                <ul className="list-disc pl-5 space-y-1">
+                  <li>{t.travel.transfersInfoNameDate}</li>
+                  <li>{t.travel.transfersInfo1}</li>
+                  <li>{t.travel.transfersInfo2}</li>
+                  <li>{t.travel.transfersInfo3}</li>
+                  <li>{t.travel.transfersInfo4}</li>
+                </ul>
+              </div>
+
+              <p className="text-sm italic">{t.travel.transfersNote}</p>
+
+              <p>
+                {t.travel.transfersContact}{" "}
+                <a
+                  href={`tel:${t.travel.transfersPhone.replace(/\s/g, "")}`}
+                  className="font-semibold text-foreground underline underline-offset-4 hover:text-foreground/70 transition-colors"
+                >
+                  {t.travel.transfersPhone}
+                </a>
+              </p>
+            </CollapsibleContent>
+          </Collapsible>
         </div>
       </div>
     </section>
