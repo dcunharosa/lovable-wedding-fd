@@ -24,6 +24,12 @@ export const GiftsSection = () => {
               <p className="font-body text-lg text-foreground tracking-wide">
                 GB31 REVO 0099 7099 9750 90
               </p>
+              <p className="font-body text-sm tracking-widest uppercase text-foreground/40">
+                {t.gifts.orDivider}
+              </p>
+              <p className="font-body text-lg text-foreground tracking-wide">
+                PT50 0023 0000 4572 1634 6279 4
+              </p>
             </div>
 
             {/* Divider */}
