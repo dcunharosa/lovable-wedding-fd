@@ -18,3 +18,6 @@ export function googleCalUrl(
 
 /** Canonical venue location for calendar events */
 export const VENUE_LOCATION = "Monte da Várzea, Comporta, Portugal";
+
+/** Friday pre-wedding drinks location */
+export const PRE_WEDDING_LOCATION = "Comporta Roots, Comporta, Portugal";

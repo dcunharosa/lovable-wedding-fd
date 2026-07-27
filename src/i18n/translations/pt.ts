@@ -42,11 +42,10 @@ export const pt: Translations = {
     fridayTime: "A partir das 18h",
     fridayDesc:
       "Um encontro informal na praia para os mais jovens, aqueles com energia para 2 noites seguidas! :). Sem dress code.",
-    fridayLocation: "Na zona da Comporta, local exato a confirmar",
+    fridayDesc2:
+      "Vai haver comida, bebidas e música, por isso venham ajudar-nos a dar início ao fim de semana de casamento!",
+    fridayLocation: "Comporta Roots",
     addToCalendar: "Adicionar ao calendário",
-    dressCode: "Dress Code",
-    fridayDressCode:
-      "Estilo casual de praia. Pensem em calções, vestidos leves e sandálias. Atenção que à noite refresca bastante!",
     saturdayDate: "Sábado, 12 de Setembro",
     saturdayTitle: "O Dia do Casamento",
     ceremony: "Cerimónia",
@@ -57,10 +56,6 @@ export const pt: Translations = {
     partyTimeSpan: "14h – até os pés cansarem",
     partyDesc:
       "Cocktail, almoço tardio, dança o dia todo e até um jantarinho. Preparem-se para um casamento diferente onde estar sentado muito tempo é sobrevalorizado!",
-    saturdayDressCode:
-      "Beach Chic. O que é que isso quer dizer? Pensem em fatos de linho, tecidos leves e \"sem meias\". Ténis é que não. Deixem os saltos altos em casa!",
-    inspirationHim: "Inspiração para Ele",
-    inspirationHer: "Inspiração para Ela",
   },
   venue: {
     whereItHappens: "Onde Acontece",
@@ -197,7 +192,7 @@ export const pt: Translations = {
   calendar: {
     welcomeDrinksTitle: "Filipa & Duarte — Drinks ao Pôr do Sol",
     welcomeDrinksDetails:
-      "Encontro informal na praia com bebidas e música.",
+      "Encontro informal na praia com comida, bebidas e música.",
     weddingTitle: "Filipa & Duarte — Casamento",
     weddingDetails:
       "Cerimónia às 13h, cocktail às 14h, almoço e festa a partir das 15:30.",
