@@ -40,11 +40,10 @@ export const en = {
     fridayTime: "From 6pm",
     fridayDesc:
       "A casual gathering at the beach for the younger crowd, those with the energy for 2 nights in a row! :). No dress code.",
-    fridayLocation: "In the Comporta area, exact location TBC",
+    fridayDesc2:
+      "There will be food, drinks and music so come and help us get the wedding weekend started!",
+    fridayLocation: "Comporta Roots",
     addToCalendar: "Add to calendar",
-    dressCode: "Dress Code",
-    fridayDressCode:
-      "Casual beach vibes. Think shorts, sundresses, and sandals. Beware that it gets very chilly at night!",
     saturdayDate: "Saturday, 12th of September",
     saturdayTitle: "The Wedding Day",
     ceremony: "Ceremony",
@@ -55,10 +54,6 @@ export const en = {
     partyTimeSpan: "2pm – our feet get tired",
     partyDesc:
       "Cocktail, late lunch, all day dancing and even a cheeky dinner. Be ready for a different wedding where sitting down for a long time is overrated!",
-    saturdayDressCode:
-      'Beach Chic. What does that mean? Think linen suits, light fabrics, and "no socks". Sneakers are a no no though. Leave the stilettos at home!',
-    inspirationHim: "Inspiration for Him",
-    inspirationHer: "Inspiration for Her",
   },
   venue: {
     whereItHappens: "Where It Happens",
@@ -194,7 +189,7 @@ export const en = {
   calendar: {
     welcomeDrinksTitle: "Filipa & Duarte — Pre-Wedding Sunset Drinks",
     welcomeDrinksDetails:
-      "Casual gathering at the beach with drinks & music.",
+      "Casual gathering at the beach with food, drinks & music.",
     weddingTitle: "Filipa & Duarte — Wedding",
     weddingDetails:
       "Ceremony at 1pm, cocktail at 2pm, lunch & party from 3:30pm.",

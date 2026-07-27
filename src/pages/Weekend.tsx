@@ -1,8 +1,8 @@
 import PageLayout from "@/components/PageLayout";
-import { CalendarPlus } from "lucide-react";
+import { CalendarPlus, MapPin } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
-import { googleCalUrl, VENUE_LOCATION } from "@/lib/googleCalUrl";
+import { googleCalUrl, PRE_WEDDING_LOCATION, VENUE_LOCATION } from "@/lib/googleCalUrl";
 
 export const WeekendSection = () => {
   const { t } = useTranslation();
@@ -13,7 +13,7 @@ export const WeekendSection = () => {
       t.calendar.welcomeDrinksTitle,
       "20260911T180000",
       "20260911T230000",
-      VENUE_LOCATION,
+      PRE_WEDDING_LOCATION,
       t.calendar.welcomeDrinksDetails,
     ),
     ceremony: googleCalUrl(
@@ -46,18 +46,29 @@ export const WeekendSection = () => {
             <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
               {t.weekend.fridayDesc}
             </p>
-            <p className="font-body text-sm text-foreground/60 italic mb-3">
-              {t.weekend.fridayLocation}
+            <p className="font-body text-base text-foreground/70 leading-relaxed mb-3">
+              {t.weekend.fridayDesc2}
             </p>
-            <a
-              href={calendarEvents.welcomeDrinks}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
-            >
-              <CalendarPlus size={13} />
-              {t.weekend.addToCalendar}
-            </a>
+            <div className="flex flex-col items-start gap-1.5">
+              <a
+                href="https://maps.app.goo.gl/i9qFjC4AR1txe97A9"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
+              >
+                <MapPin size={13} />
+                {t.weekend.fridayLocation}
+              </a>
+              <a
+                href={calendarEvents.welcomeDrinks}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 font-body text-xs tracking-widest uppercase text-foreground/50 hover:text-foreground/80 transition-colors"
+              >
+                <CalendarPlus size={13} />
+                {t.weekend.addToCalendar}
+              </a>
+            </div>
           </div>
 
         </div>
