@@ -174,10 +174,10 @@ export const pt: Translations = {
   },
   dressCode: {
     sectionLabel: "Dress Code",
-    title: "Beach Chic",
+    title: "Summer Chic",
     subtitle: "O que é que isso quer dizer?",
-    para1: "Pensem em fatos de linho e tecidos leves. Sem gravata, sem meias, e ténis são proibidos!",
-    para2: "Para as mulheres, pensem em vestidos coloridos de verão e calçado elegante adequado para relva (melhor evitar saltos altos).",
+    para1: "Pensem em fatos de linho e tecidos leves. Sem gravata, sem meias, mas por favor, sem ténis!",
+    para2: "Para as mulheres, pensem em vestidos coloridos de verão.",
     para3: "Estamos a criar a nossa própria celebração: esperem dança o dia todo, pequenas pausas e um almoço fluido em vez de uma refeição tradicional sentados. Pensem numa festa ao pôr do sol que se prolonga!",
     para4: "Haverá bastante lugares para sentar, por isso não se preocupem!",
     inspirationLabel: "Para inspiração, vejam os nossos links abaixo \uD83D\uDE42",

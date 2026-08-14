@@ -171,10 +171,10 @@ export const en = {
   },
   dressCode: {
     sectionLabel: "Dress Code",
-    title: "Beach Chic",
+    title: "Summer Chic",
     subtitle: "What does that mean?",
-    para1: "Think linen suits & light fabrics. No ties needed, no socks encouraged and sneakers are a no go!",
-    para2: "For women, think colourful summer dresses and elegant footwear suitable for grass (best to skip high heels).",
+    para1: "Think linen suits & light fabrics. No ties needed, no socks encouraged but please, no sneakers!",
+    para2: "For women, think colourful summer dresses.",
     para3: "We're creating our own kind of celebration: expect all-day dancing, little pauses, and a flowing lunch rather than a traditional seated meal. Think sunset party that goes long!",
     para4: "There will be plenty of seating throughout, so don't worry!",
     inspirationLabel: "For inspiration, see our links below \uD83D\uDE42",
