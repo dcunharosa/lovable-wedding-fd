@@ -65,7 +65,6 @@ export const pt: Translations = {
     venueDesc:
       "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
     mapsTurnOff: "Google Maps — Saída",
-    directionsPdf: "Direções",
     mapCaption:
       "O Google Maps às vezes leva as pessoas para o lado errado da propriedade. Ponham o pin no ponto de saída assinalado acima e sigam depois pelo caminho para norte durante cerca de 1,6 km.",
     mapAria:
@@ -87,6 +86,7 @@ export const pt: Translations = {
     byCar: "De Carro",
     byCarDesc:
       "A partir de Lisboa, sigam pela autoestrada A2 para sul. Sigam as indicações para Alcácer do Sal e depois para a Comporta. Haverá estacionamento no local.",
+    byCarDirections: "Vejam o mapa da aproximação final",
     transfers: "Motoristas Designados",
     transfersDesc:
       "Organizámos um serviço de motorista designado para que possam chegar no vosso próprio carro e deixar que eles o levem — a ele e a vocês — para casa em segurança no final da noite.",

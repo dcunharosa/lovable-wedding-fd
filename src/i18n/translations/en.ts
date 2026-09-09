@@ -63,7 +63,6 @@ export const en = {
     venueDesc:
       "Ceremony and reception will both be held at Monte da Várzea. Bring comfortable shoes. Parking will be available.",
     mapsTurnOff: "Google Maps — Turn-off",
-    directionsPdf: "Directions",
     mapCaption:
       "Google Maps sometimes sends people to the wrong side of the property. Pin the turn-off marked above, then follow the track north for about 1.6 km.",
     mapAria:
@@ -85,6 +84,7 @@ export const en = {
     byCar: "By Car",
     byCarDesc:
       "From Lisbon, take the A2 motorway south. Follow signs toward Alcácer do Sal and then Comporta. Parking will be available at the venue.",
+    byCarDirections: "See the final approach map",
     transfers: "Designated Drivers",
     transfersDesc:
       "We've arranged a designated driver service so you can arrive in your own car and leave it to them to get it — and you — home safely at the end of the night.",

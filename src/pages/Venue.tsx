@@ -139,15 +139,6 @@ export const VenueSection = () => {
               <ExternalLink size={14} />
               {t.venue.mapsTurnOff}
             </a>
-            <a
-              href="https://maps.app.goo.gl/nAtXArjfvt5Dsu31A"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
-            >
-              <ExternalLink size={14} />
-              {t.venue.directionsPdf}
-            </a>
           </div>
         </div>
       </div>
