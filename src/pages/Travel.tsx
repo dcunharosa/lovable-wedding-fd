@@ -13,7 +13,7 @@ import {
 export const TravelSection = () => {
   const { t } = useTranslation();
   const [transfersOpen, setTransfersOpen] = useState(false);
-  // The venue lives in a section on the single-page layout, on its own route otherwise.
+  // The directions card is a section anchor on the single-page layout, on the venue route otherwise.
   const isRoot = useLocation().pathname === "/";
   const cardsRef = useScrollReveal<HTMLDivElement>(".travel-card");
 
@@ -45,12 +45,12 @@ export const TravelSection = () => {
             {t.travel.byCarDesc}
           </p>
           {isRoot ? (
-            <a href="#venue" className={directionsLinkCls}>
+            <a href="#directions" className={directionsLinkCls}>
               <MapPin size={15} />
               {t.travel.byCarDirections}
             </a>
           ) : (
-            <Link to="/venue" className={directionsLinkCls}>
+            <Link to="/venue#directions" className={directionsLinkCls}>
               <MapPin size={15} />
               {t.travel.byCarDirections}
             </Link>

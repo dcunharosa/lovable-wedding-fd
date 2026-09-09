@@ -135,7 +135,7 @@ export const VenueSection = () => {
       )}
 
       <div ref={cardsRef} className="max-w-4xl space-y-8 mt-8">
-        <div className="venue-card scroll-scale-in bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-8 border border-foreground/10">
+        <div id="directions" className="venue-card scroll-scale-in scroll-mt-24 bg-gradient-to-br from-foreground/10 to-foreground/5 rounded-lg p-8 border border-foreground/10">
           <h3 className="font-display text-3xl text-foreground mb-4">{t.venue.ceremonyReception}</h3>
           <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
             {t.venue.venueDesc}
