@@ -64,8 +64,10 @@ export const en = {
       "Ceremony and reception will both be held at Monte da Várzea. Bring comfortable shoes. Parking will be available.",
     mapsStep1: "1 — Google Maps: turn-off",
     mapsStep2: "2 — Google Maps: Monte da Várzea",
-    mapCaption:
-      "Google Maps sometimes sends people to the wrong side of the property. Pin the turn-off marked above, then follow the track north for about 1.6 km. There may not be a sign at the turn-off — once you are on the track, you can set Google Maps to Monte da Várzea, which routes correctly from there.",
+    directionsStep1:
+      "Pin the turn-off marked above and follow the track north for about 1.6 km. The venue pin on its own can send you to the wrong side of the property, so use the turn-off first.",
+    directionsStep2:
+      "There may not be a sign at the turn-off. Once you are on the track, set Google Maps to Monte da Várzea — it routes correctly from there.",
     mapAria:
       "Hand-drawn map of the final approach: the turn-off from the EN 261-1 and the track north to Monte da Várzea",
     mapTurnOff: "Turn off here",

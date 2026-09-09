@@ -125,9 +125,10 @@ export const VenueSection = () => {
           <div className="max-w-md mx-auto mb-4">
             <ApproachMap />
           </div>
-          <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6 max-w-md mx-auto">
-            {t.venue.mapCaption}
-          </p>
+          <ol className="list-decimal pl-5 space-y-2 text-left font-body text-sm text-foreground/70 leading-relaxed mb-6 max-w-md mx-auto">
+            <li>{t.venue.directionsStep1}</li>
+            <li>{t.venue.directionsStep2}</li>
+          </ol>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
