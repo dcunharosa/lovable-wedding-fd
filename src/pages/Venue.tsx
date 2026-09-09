@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import PageLayout from "@/components/PageLayout";
+import ApproachMap from "@/components/ApproachMap";
 import { MapPin, ExternalLink, X } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
@@ -62,6 +63,26 @@ function Lightbox({
   );
 }
 
+const TURN_OFF_URL = "https://maps.app.goo.gl/r8nZQCDTzeeZKRWR9";
+const VENUE_URL = "https://maps.app.goo.gl/kxXm88gomzgiuQ5f6";
+
+const linkClass =
+  "text-foreground underline underline-offset-4 hover:text-foreground/70 transition-colors";
+
+/** Splits a translated sentence on its {link} placeholder and links the label. */
+function LinkedStep({ text, label, href }: { text: string; label: string; href: string }) {
+  const [before, after = ""] = text.split("{link}");
+  return (
+    <>
+      {before}
+      <a href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+        {label}
+      </a>
+      {after}
+    </>
+  );
+}
+
 export const VenueSection = () => {
   const { t } = useTranslation();
   const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
@@ -119,24 +140,46 @@ export const VenueSection = () => {
           <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
             {t.venue.venueDesc}
           </p>
+
+          {/* Final approach — the venue pin alone can route to the wrong side */}
+          <div className="max-w-md mx-auto mb-4">
+            <ApproachMap />
+          </div>
+          <ol className="list-decimal pl-5 space-y-2 text-left font-body text-sm text-foreground/70 leading-relaxed mb-6 max-w-md mx-auto">
+            <li>
+              <LinkedStep
+                text={t.venue.directionsStep1}
+                label={t.venue.directionsStep1Link}
+                href={TURN_OFF_URL}
+              />
+            </li>
+            <li>
+              <LinkedStep
+                text={t.venue.directionsStep2}
+                label={t.venue.directionsStep2Link}
+                href={VENUE_URL}
+              />
+            </li>
+          </ol>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://maps.app.goo.gl/kxXm88gomzgiuQ5f6"
+              href={TURN_OFF_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground font-body text-sm tracking-widest uppercase rounded-sm hover:bg-primary/90 transition-colors"
             >
               <ExternalLink size={14} />
-              {t.venue.googleMaps}
+              {t.venue.mapsStep1}
             </a>
             <a
-              href="https://maps.app.goo.gl/nAtXArjfvt5Dsu31A"
+              href={VENUE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
             >
               <ExternalLink size={14} />
-              {t.venue.directionsPdf}
+              {t.venue.mapsStep2}
             </a>
           </div>
         </div>

@@ -1,6 +1,7 @@
 import PageLayout from "@/components/PageLayout";
-import { Plane, Car, UserCheck, ChevronDown } from "lucide-react";
+import { Plane, Car, UserCheck, ChevronDown, MapPin } from "lucide-react";
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
 import {
@@ -12,7 +13,12 @@ import {
 export const TravelSection = () => {
   const { t } = useTranslation();
   const [transfersOpen, setTransfersOpen] = useState(false);
+  // The venue lives in a section on the single-page layout, on its own route otherwise.
+  const isRoot = useLocation().pathname === "/";
   const cardsRef = useScrollReveal<HTMLDivElement>(".travel-card");
+
+  const directionsLinkCls =
+    "inline-flex items-center gap-2 mt-4 font-body text-sm text-foreground underline underline-offset-4 hover:text-foreground/70 transition-colors";
 
   return (
     <section id="travel" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_55%_75%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
@@ -38,6 +44,17 @@ export const TravelSection = () => {
           <p className="font-body text-base text-foreground/70 leading-relaxed">
             {t.travel.byCarDesc}
           </p>
+          {isRoot ? (
+            <a href="#venue" className={directionsLinkCls}>
+              <MapPin size={15} />
+              {t.travel.byCarDirections}
+            </a>
+          ) : (
+            <Link to="/venue" className={directionsLinkCls}>
+              <MapPin size={15} />
+              {t.travel.byCarDirections}
+            </Link>
+          )}
         </div>
 
         <div className="travel-card scroll-fade-up border-l-2 border-foreground/30 pl-8 py-6 text-left hover:border-foreground/60 transition-colors duration-300" style={{ transitionDelay: "0.3s" }}>
