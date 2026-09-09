@@ -64,9 +64,11 @@ export const pt: Translations = {
     ceremonyReception: "Direções",
     venueDesc:
       "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
-    directionsStep1: "Ponham o pin na {link} e sigam pelo caminho para norte 1,6 km.",
+    directionsStep1: "Ponham o pin na {link} e sigam pelo caminho para norte.",
     directionsStep1Link: "saída",
-    directionsStep2: "Sem placa? Já no caminho, ponham o Google Maps no {link}.",
+    mapsStep1: "1 — Google Maps: saída",
+    mapsStep2: "2 — Google Maps: Monte da Várzea",
+    directionsStep2: "Já no caminho, ponham o Google Maps no {link}.",
     directionsStep2Link: "Monte da Várzea",
     mapAria:
       "Mapa desenhado à mão da aproximação final: a saída da EN 261-1 e o caminho para norte até ao Monte da Várzea",

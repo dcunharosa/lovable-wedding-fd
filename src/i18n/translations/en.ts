@@ -62,9 +62,11 @@ export const en = {
     ceremonyReception: "Directions",
     venueDesc:
       "Ceremony and reception will both be held at Monte da Várzea. Bring comfortable shoes. Parking will be available.",
-    directionsStep1: "Pin the {link} and follow the track north for 1.6 km.",
+    directionsStep1: "Pin the {link} and follow the track north.",
     directionsStep1Link: "turn-off",
-    directionsStep2: "No sign? Once on the track, set Google Maps to {link}.",
+    mapsStep1: "1 — Google Maps: turn-off",
+    mapsStep2: "2 — Google Maps: Monte da Várzea",
+    directionsStep2: "Once on the track, set Google Maps to {link}.",
     directionsStep2Link: "Monte da Várzea",
     mapAria:
       "Hand-drawn map of the final approach: the turn-off from the EN 261-1 and the track north to Monte da Várzea",

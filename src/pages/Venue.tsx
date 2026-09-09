@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import PageLayout from "@/components/PageLayout";
 import ApproachMap from "@/components/ApproachMap";
-import { MapPin, X } from "lucide-react";
+import { MapPin, ExternalLink, X } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
 
@@ -145,7 +145,7 @@ export const VenueSection = () => {
           <div className="max-w-md mx-auto mb-4">
             <ApproachMap />
           </div>
-          <ol className="list-decimal pl-5 space-y-2 text-left font-body text-sm text-foreground/70 leading-relaxed max-w-md mx-auto">
+          <ol className="list-decimal pl-5 space-y-2 text-left font-body text-sm text-foreground/70 leading-relaxed mb-6 max-w-md mx-auto">
             <li>
               <LinkedStep
                 text={t.venue.directionsStep1}
@@ -161,6 +161,27 @@ export const VenueSection = () => {
               />
             </li>
           </ol>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href={TURN_OFF_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-primary text-primary-foreground font-body text-sm tracking-widest uppercase rounded-sm hover:bg-primary/90 transition-colors"
+            >
+              <ExternalLink size={14} />
+              {t.venue.mapsStep1}
+            </a>
+            <a
+              href={VENUE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
+            >
+              <ExternalLink size={14} />
+              {t.venue.mapsStep2}
+            </a>
+          </div>
         </div>
       </div>
     </section>
