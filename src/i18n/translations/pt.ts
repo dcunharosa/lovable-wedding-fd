@@ -64,8 +64,16 @@ export const pt: Translations = {
     ceremonyReception: "Direções",
     venueDesc:
       "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
-    googleMaps: "Google Maps",
+    mapsTurnOff: "Google Maps — Saída",
     directionsPdf: "Direções",
+    mapCaption:
+      "O Google Maps às vezes leva as pessoas para o lado errado da propriedade. Ponham o pin no ponto de saída assinalado acima e sigam depois pelo caminho para norte durante cerca de 1,6 km.",
+    mapAria:
+      "Mapa desenhado à mão da aproximação final: a saída da EN 261-1 e o caminho para norte até ao Monte da Várzea",
+    mapTurnOff: "Saiam aqui",
+    mapTurnOffNote: "PONHAM O PIN AQUI",
+    mapDistance: "≈ 1,6 km",
+    mapFinalTurn: "virem à esquerda no fim",
     closeLightbox: "Fechar imagem",
     venuePhotoAlt: "Foto do local",
     venueImgAlt: "Monte da Várzea",

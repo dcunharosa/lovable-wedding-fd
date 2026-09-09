@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import PageLayout from "@/components/PageLayout";
+import ApproachMap from "@/components/ApproachMap";
 import { MapPin, ExternalLink, X } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 import { useTranslation } from "@/i18n";
@@ -119,15 +120,24 @@ export const VenueSection = () => {
           <p className="font-body text-base text-foreground/70 leading-relaxed mb-6">
             {t.venue.venueDesc}
           </p>
+
+          {/* Final approach — the venue pin alone can route to the wrong side */}
+          <div className="max-w-md mx-auto mb-4">
+            <ApproachMap />
+          </div>
+          <p className="font-body text-sm text-foreground/70 leading-relaxed mb-6 max-w-md mx-auto">
+            {t.venue.mapCaption}
+          </p>
+
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://maps.app.goo.gl/kxXm88gomzgiuQ5f6"
+              href="https://maps.app.goo.gl/r8nZQCDTzeeZKRWR9"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-2.5 border border-foreground/30 text-foreground/80 font-body text-sm tracking-widest uppercase rounded-sm hover:bg-foreground/10 transition-colors"
             >
               <ExternalLink size={14} />
-              {t.venue.googleMaps}
+              {t.venue.mapsTurnOff}
             </a>
             <a
               href="https://maps.app.goo.gl/nAtXArjfvt5Dsu31A"

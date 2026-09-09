@@ -62,8 +62,16 @@ export const en = {
     ceremonyReception: "Directions",
     venueDesc:
       "Ceremony and reception will both be held at Monte da Várzea. Bring comfortable shoes. Parking will be available.",
-    googleMaps: "Google Maps",
+    mapsTurnOff: "Google Maps — Turn-off",
     directionsPdf: "Directions",
+    mapCaption:
+      "Google Maps sometimes sends people to the wrong side of the property. Pin the turn-off marked above, then follow the track north for about 1.6 km.",
+    mapAria:
+      "Hand-drawn map of the final approach: the turn-off from the EN 261-1 and the track north to Monte da Várzea",
+    mapTurnOff: "Turn off here",
+    mapTurnOffNote: "PIN THIS POINT",
+    mapDistance: "≈ 1.6 km",
+    mapFinalTurn: "turn left at the top",
     closeLightbox: "Close lightbox",
     venuePhotoAlt: "Venue photo",
     venueImgAlt: "Monte da Várzea venue",
