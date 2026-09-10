@@ -63,7 +63,7 @@ export const pt: Translations = {
     locationLabel: "Comporta, Portugal",
     ceremonyReception: "Direções",
     venueDesc:
-      "A cerimónia e a receção serão ambas no Monte da Várzea. Tragam sapatos confortáveis. Haverá estacionamento disponível.",
+      "A cerimónia e a receção serão ambas no Monte da Várzea. Haverá estacionamento disponível.",
     directionsStep1: "Ponham o pin na {link} e sigam pelo caminho para norte.",
     directionsStep1Link: "saída",
     mapsStep1: "1 — Google Maps: saída",
