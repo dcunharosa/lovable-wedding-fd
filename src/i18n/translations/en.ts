@@ -61,7 +61,7 @@ export const en = {
     locationLabel: "Comporta, Portugal",
     ceremonyReception: "Directions",
     venueDesc:
-      "Ceremony and reception will both be held at Monte da Várzea. Bring comfortable shoes. Parking will be available.",
+      "Ceremony and reception will both be held at Monte da Várzea. Parking will be available.",
     directionsStep1: "Pin the {link} and follow the track north.",
     directionsStep1Link: "turn-off",
     mapsStep1: "1 — Google Maps: turn-off",
