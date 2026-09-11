@@ -95,10 +95,10 @@ export const VenueSection = () => {
 
   // Visual cues for the drive in, in the order guests meet them.
   const directionsPhotos = [
-    { src: "/venue/directions/directions-1.jpg", alt: t.venue.directionsPhoto1Alt, caption: t.venue.directionsPhoto1Caption },
-    { src: "/venue/directions/directions-2.jpg", alt: t.venue.directionsPhoto2Alt, caption: t.venue.directionsPhoto2Caption },
-    { src: "/venue/directions/directions-3.jpg", alt: t.venue.directionsPhoto3Alt, caption: t.venue.directionsPhoto3Caption },
-    { src: "/venue/directions/directions-4.jpg", alt: t.venue.directionsPhoto4Alt, caption: t.venue.directionsPhoto4Caption },
+    { src: "/venue/directions/directions-1.jpg", alt: t.venue.directionsPhoto1Alt },
+    { src: "/venue/directions/directions-2.jpg", alt: t.venue.directionsPhoto2Alt },
+    { src: "/venue/directions/directions-3.jpg", alt: t.venue.directionsPhoto3Alt },
+    { src: "/venue/directions/directions-4.jpg", alt: t.venue.directionsPhoto4Alt },
   ];
 
   return (
@@ -197,21 +197,17 @@ export const VenueSection = () => {
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {directionsPhotos.map((photo, i) => (
-              <figure key={photo.src} className="m-0">
-                <button
-                  type="button"
-                  onClick={() => setLightboxSrc(photo.src)}
-                  className="relative block w-full aspect-[16/9] rounded-md overflow-hidden bg-foreground/10 cursor-pointer transition-transform duration-300 hover:scale-[1.03]"
-                >
-                  <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
-                  <span className="absolute top-2 left-2 w-6 h-6 rounded-full bg-background/80 text-foreground font-body text-xs flex items-center justify-center">
-                    {i + 1}
-                  </span>
-                </button>
-                <figcaption className="mt-2 text-left font-body text-sm text-foreground/70 leading-relaxed">
-                  {photo.caption}
-                </figcaption>
-              </figure>
+              <button
+                key={photo.src}
+                type="button"
+                onClick={() => setLightboxSrc(photo.src)}
+                className="relative aspect-[16/9] rounded-md overflow-hidden bg-foreground/10 cursor-pointer transition-transform duration-300 hover:scale-[1.03]"
+              >
+                <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
+                <span className="absolute top-2 left-2 w-12 h-12 rounded-full bg-background/80 text-foreground font-body text-2xl flex items-center justify-center">
+                  {i + 1}
+                </span>
+              </button>
             ))}
           </div>
         </div>
