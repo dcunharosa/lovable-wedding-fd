@@ -64,7 +64,7 @@ function Lightbox({
 }
 
 const TURN_OFF_URL = "https://maps.app.goo.gl/r8nZQCDTzeeZKRWR9";
-const VENUE_URL = "https://maps.app.goo.gl/kxXm88gomzgiuQ5f6";
+const VENUE_URL = "https://maps.app.goo.gl/ePiphdqQs7sZDB5o9";
 
 const linkClass =
   "text-foreground underline underline-offset-4 hover:text-foreground/70 transition-colors";
