@@ -93,6 +93,14 @@ export const VenueSection = () => {
     { src: "/venue/venue-2.jpg", alt: t.venue.venueImgAlt },
   ];
 
+  // Visual cues for the drive in, in the order guests meet them.
+  const directionsPhotos = [
+    { src: "/venue/directions/directions-1.jpg", alt: t.venue.directionsPhoto1Alt },
+    { src: "/venue/directions/directions-2.jpg", alt: t.venue.directionsPhoto2Alt },
+    { src: "/venue/directions/directions-3.jpg", alt: t.venue.directionsPhoto3Alt },
+    { src: "/venue/directions/directions-4.jpg", alt: t.venue.directionsPhoto4Alt },
+  ];
+
   return (
     <section id="venue" className="min-h-[80vh] flex flex-col items-center justify-center px-4 py-20 text-center bg-[hsl(220_50%_65%)]" style={{ textShadow: "0 1px 6px rgba(0,0,0,0.15)" }}>
       <p className="font-body text-base tracking-[0.3em] uppercase text-foreground/60 mb-4">{t.venue.whereItHappens}</p>
@@ -181,6 +189,26 @@ export const VenueSection = () => {
               <ExternalLink size={14} />
               {t.venue.mapsStep2}
             </a>
+          </div>
+
+          {/* Photos of the drive in — the track is easy to second-guess */}
+          <p className="font-body text-xs tracking-[0.3em] uppercase text-foreground/50 mt-10 mb-4">
+            {t.venue.directionsPhotosLabel}
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {directionsPhotos.map((photo, i) => (
+              <button
+                key={photo.src}
+                type="button"
+                onClick={() => setLightboxSrc(photo.src)}
+                className="relative aspect-[16/9] rounded-md overflow-hidden bg-foreground/10 cursor-pointer transition-transform duration-300 hover:scale-[1.03]"
+              >
+                <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" loading="lazy" />
+                <span className="absolute top-2 left-2 w-6 h-6 rounded-full bg-background/80 text-foreground font-body text-xs flex items-center justify-center">
+                  {i + 1}
+                </span>
+              </button>
+            ))}
           </div>
         </div>
       </div>
