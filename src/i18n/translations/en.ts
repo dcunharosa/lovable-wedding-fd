@@ -79,9 +79,9 @@ export const en = {
     venueImgAlt: "Monte da Várzea venue",
     directionsPhotosLabel: "Along the way",
     directionsPhoto1Alt: "The turn-off from the paved road, beside the turismo rural sign",
-    directionsPhoto2Alt: "Fork in the sand track, with an arrow marking the left turn",
+    directionsPhoto2Alt: "Sand track continuing through the pine trees",
     directionsPhoto3Alt: "Sand track running straight between the vineyards",
-    directionsPhoto4Alt: "Sand track continuing through the pine trees",
+    directionsPhoto4Alt: "Fork in the sand track, with an arrow marking the left turn",
   },
   travel: {
     gettingThere: "Getting There",
