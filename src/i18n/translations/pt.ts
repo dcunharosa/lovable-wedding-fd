@@ -79,6 +79,11 @@ export const pt: Translations = {
     closeLightbox: "Fechar imagem",
     venuePhotoAlt: "Foto do local",
     venueImgAlt: "Monte da Várzea",
+    directionsPhotosLabel: "Pelo caminho",
+    directionsPhoto1Alt: "A saída da estrada alcatroada, junto ao sinal de turismo rural",
+    directionsPhoto2Alt: "Caminho de areia a continuar por entre os pinheiros",
+    directionsPhoto3Alt: "Caminho de areia a seguir a direito entre as vinhas",
+    directionsPhoto4Alt: "Bifurcação no caminho de areia, com uma seta a marcar a curva à esquerda",
   },
   travel: {
     gettingThere: "Como Chegar",
